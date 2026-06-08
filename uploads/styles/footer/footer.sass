@@ -1,0 +1,131 @@
+footer
+    .upper
+        background: var(--bglight)
+        padding: 25px 0
+        .flex
+            display: flex
+            justify-content: space-between
+            align-items: center
+            h5
+                color: var(--primary)
+                font-weight: 700
+            .form
+                display: flex
+                align-items: center
+                gap: 45px
+                input
+                    width: 440px
+                .btn
+                    width: 160px
+    .lower
+        background: var(--primary)
+        padding: 50px 0
+        .container
+            display: flex
+            align-items: flex-start
+            justify-content: space-between
+            gap: 60px
+            .logo
+                img
+                    width: 100%
+                    filter: brightness(0) invert(1)
+            .menu
+                flex: 0 1 auto
+                display: flex
+                flex-direction: column
+                gap: 10px
+                li
+                    a
+                        font-size: 20px
+                        font-weight: 500
+                        color: rgba(255, 255, 255, 1)
+                        transition: .3s ease
+                        &:hover
+                            opacity: 0.75
+            .links
+                flex: 0 1 auto
+                display: flex
+                flex-direction: column
+                gap: 10px
+                p
+                    font-size: 12px
+                    font-weight: 700
+                    text-transform: uppercase
+                    letter-spacing: 0.1em
+                    color: rgba(255, 255, 255, 0.5)
+                    margin-bottom: 5px
+                li
+                    a
+                        font-size: 14px
+                        color: rgba(255, 255, 255, 1)
+                        transition: .3s ease
+                        &:hover
+                            color: #fff
+
+            .contact
+                flex: 1
+                display: flex
+                flex-direction: column
+                gap: 10px
+                p.label
+                    font-size: 11px
+                    font-weight: 700
+                    text-transform: uppercase
+                    letter-spacing: 0.1em
+                    color: #ffffffa0
+                    margin-bottom: 5px
+                a
+                    font-size: 14px
+                    color: #ffffffcc
+                    transition: .3s ease
+                    &:hover
+                        color: #fff
+
+            .social_media
+                flex: 0 1 auto
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                gap: 20px
+                ul
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                    li
+                        a
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            width: 45px
+                            height: 45px
+                            border: 1px solid var(--white)
+                            border-radius: 50%
+                            transition: .3s ease
+                            img
+                                width: 20px
+                                height: 20px
+                                filter: brightness(0) invert(1)
+                            &:hover
+                                border-color: #fff
+                                background: #ffffff20
+
+                .btn-primary
+                    background: #fff
+                    color: var(--primary)
+                    border: none
+                    cursor: pointer
+                    transition: .3s ease
+                    padding: 10px 30px
+                    margin-top: 20px
+                    &:hover
+                        background: #ffffffcc
+    .madeBy
+        display: flex
+        justify-content: center
+        padding: 20px 0 
+        border-top: 1px solid rgba(255, 255, 255, 0.16)
+        background: var(--primary)
+        p
+            font-size: 14px
+            font-weight: 600
+            color: rgba(255, 255, 255, 0.7)

@@ -1,0 +1,32 @@
+{
+  "Homepage": {
+    "HeroSection": {
+      "videoSrc": "/assets/video/home-banner.mp4",
+      "heading": "Cooling the Earth from the Surface up",
+      "subheading": "Practical, affordable cooling that protectspeople from extremeheat today and helps reduce global temperatures over time.",
+      "buttonText": "Learn how it works"
+    },
+    "Section1": 
+      {
+        "imgSrc": "/assets/image/home/homeAbout.png",
+        "heading": "Extreme Heat is Already Affecting Millions   ",
+        "subheading": "We are living through the hottest period in more than 100,000 years. Even if emissions stopped today, temperatures would continue rising due to heat already stored in the system.",
+        "listTitle": "The impact is already being felt:",
+        "bulletList":[
+            {"id":1,
+            "text": "Crop yields are falling due to heat stress"
+            },
+            {"id":2,
+            "text": "Water sources are drying up faster"
+            },
+            {"id":3,
+            "text": "Millions of people are exposed to dangerous temperatures without cooling"
+            },
+            {"id":4,
+            "text": "Heat-related illness and deaths are increasing"
+            }
+        ]
+    }
+    
+  }
+}

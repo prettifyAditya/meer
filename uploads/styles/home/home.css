@@ -1,0 +1,44 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.home_banner .banner-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 2;
+}
+.home_banner .banner-wrapper .content {
+  width: 100%;
+  max-width: 450px;
+}
+.home_banner .banner-wrapper .content h1 {
+  font-weight: 300;
+}
+.home_banner .banner-wrapper .content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 15px 0 25px;
+  color: var(--white);
+  opacity: 0.8;
+}
+@media only screen and (max-width: 768px) {
+  .home_banner .banner-wrapper .content p {
+    line-height: 1.2;
+  }
+}
+
+.home-secA {
+  padding: 70px 0;
+}/*# sourceMappingURL=home.css.map */
