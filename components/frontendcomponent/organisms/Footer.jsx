@@ -102,7 +102,7 @@ const Footer = () => {
       <div className="lower">
         <div className="container">
           <div className="logo">
-            <Image src="/assets/logo.svg" width={100} height={40} alt="Meer" />
+            <Image src="/assets/image/logo.svg" width={100} height={40} alt="Meer" />
           </div>
           <ul className="menu">
             <li>

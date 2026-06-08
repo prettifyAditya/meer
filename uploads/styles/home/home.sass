@@ -21,6 +21,59 @@
                 opacity: .8
                 @include media(768)
                     line-height: 1.2
-.home-secA
+.home-secA,
+.who-we-are,
+.SolutionDesigned
     padding: 70px 0
+    
+.missingPiece
+    padding: 70px 0
+    background: var(--gradient-a)
+    .grid
+        display: grid
+        grid-template-columns: repeat(3,1fr)
+        align-items: center
+        gap: 5rem
+        @include media(768)
+            gap: 40px
+            grid-template-columns: 1fr
+        .heading
+            width: 100%
+            max-width: 300px
+            h2
+                color: var(--primary)
+                margin-top: 24px
+            img
+                width: 60px
+                height: 38px
+        .earth
+            width: 520px
+            height: 520px
+            position: relative
+            overflow: hidden
+            border-radius: 50%
+            &::before
+                content: ""
+                position: absolute
+                inset: 0
+                background: var(--gradient-b)
+                pointer-events: none
+            video
+                width: 100%
+                height: 100%
+                object-fit: cover
+                mask: url("/assets/icon/earthMask.png") center / contain no-repeat
+                -webkit-mask: url("/assets/icon/earthMask.png") center / contain no-repeat
+                z-index: 2
+        .content
+            width: 100%
+            max-width: 270px
+            p
+                color: var(--para)
+                &:not(:last-child)
+                    margin-bottom: 20px
+            h6
+                font-size: 16px
+                color: var(--primary)
+                font-weight: 600
    

@@ -26,7 +26,38 @@
             "text": "Heat-related illness and deaths are increasing"
             }
         ]
+    },
+    "Section2":{
+        "videoSrc": "/assets/video/earth.mp4",
+        "heading": "There is a Missing Piece ",
+        "para":[
+            {
+                "id":1,
+                "text": "Reducing emissions is essential, but it won’t cool the planet fast enough to help those suffering now."
+            },
+            {
+                "id":2,
+                "text": "Most climate solutions focus on reducing emissions or removing carbon. Both are important, but neither directly reduces heat today."
+            }
+        ],
+        "title": "MEER focuses on cooling."
+    },
+    "Section3": 
+      {
+        "videoSrc": "/assets/video/whoWeAre.mp4",
+        "heading": "Who We Are",
+        "para":[
+            {
+                "id":1,
+                "text": "MEER (Mirrors for Earth’s Energy Rebalancing) is an independent nonprofit organisation addressing one of the most urgent and under-recognised climate threats: extreme heat."
+            },
+            {
+                "id":2,
+                "text": "MEER operates at the intersection of humanitarian protection, climate adaptation, and physical climate science. We focus on what can be done now: deploying, measuring, and improving cooling solutions in real environments, with real communities, under real heat conditions"
+            }
+        ],
+        "buttonText": "Learn More About Us"
     }
-    
+   
   }
 }

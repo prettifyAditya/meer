@@ -590,11 +590,12 @@
 :root {
   --headerpadding: 12px;
   --headerheight: 90px;
-  --headerfixed: 80px;
+  --headerfixed: 85px;
   --footerstrip: 60px;
   --primary: rgba(0, 77, 153, 1);
   --secondary: #003c77;
   --bglight: rgba(242, 249, 255, 1);
+  --bgPink: rgba(255, 251, 230, 1);
   --text: #666666;
   --white: #FFFFFF;
   --black: #000000;
@@ -602,9 +603,8 @@
   --para: rgba(102, 102, 102, 1);
   --container: 1280px;
   --containerfluid: 2rem;
-  --gradient-a: linear-gradient(270deg, #052559, #0F469F);
-  --gradient-b: linear-gradient(90deg, #052559, #0F469F);
-  --gradient-c: linear-gradient(270deg, #052559 50%, #0F469F 100%);
+  --gradient-a:linear-gradient(180deg, #C0D6F6 0%, #FFFFFF 50%, #C0D6F6 100%);
+  --gradient-b:radial-gradient(66.9% 66.9% at 37.11% 37.56%, #ACCEEB 0%, #5F96D1 35.54%, #325BA4 78.81%, #345795 100%);
 }
 @media only screen and (max-width: 1152px) {
   :root {
@@ -809,6 +809,7 @@ h1 {
 h2 {
   font-size: 36px;
   line-height: 1.2;
+  font-weight: bold;
 }
 @media only screen and (max-width: 1024px) {
   h2 {
@@ -848,7 +849,7 @@ h3 {
 
 .heading h3, .heading h2 {
   font-size: 36px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
 }
 @media only screen and (max-width: 1280px) {
@@ -1449,14 +1450,14 @@ img, video {
 .play-btn {
   --btnsize: 56px;
   --border: 2px;
-  --bordercolor: var(--primary);
-  --playbtncolor: var(--white);
+  --bordercolor: var(--white);
+  --playbtncolor: var(--primary);
   height: var(--btnsize);
   width: var(--btnsize);
   border-radius: 50%;
   border: var(--border) solid var(--bordercolor);
   position: relative;
-  background: var(--primary);
+  background: var(--white);
 }
 @media only screen and (max-width: 1024px) {
   .play-btn {
@@ -1798,6 +1799,7 @@ em {
 .InsightSection .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   gap: 50px;
 }
 @media only screen and (max-width: 991px) {
@@ -1805,6 +1807,11 @@ em {
     grid-template-columns: 100%;
     gap: 30px;
   }
+}
+.InsightSection .grid .media {
+  position: relative;
+  width: 571px;
+  height: 416px;
 }
 .InsightSection .grid .media img,
 .InsightSection .grid .media video {
@@ -1814,6 +1821,12 @@ em {
      object-fit: cover;
   display: block;
 }
+.InsightSection .grid .media .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .InsightSection .grid .item-content {
   width: 100%;
   max-width: 520px;
@@ -1821,6 +1834,7 @@ em {
 .InsightSection .grid .item-content h2 {
   font-size: 36px;
   color: var(--primary);
+  margin-bottom: 20px;
 }
 @media only screen and (max-width: 675px) {
   .InsightSection .grid .item-content h2 {
@@ -1829,7 +1843,9 @@ em {
 }
 .InsightSection .grid .item-content p {
   color: var(--para);
-  margin: 20px 0 30px;
+}
+.InsightSection .grid .item-content p:not(:last-child) {
+  margin-bottom: 20px;
 }
 .InsightSection .grid .item-content ul {
   margin-top: 20px;
@@ -1878,7 +1894,7 @@ header::after {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  background: rgba(255, 255, 255, 0.8);
+  background: #000;
   transition: 0.5s ease;
 }
 header::after {
@@ -2115,7 +2131,6 @@ header .header-container .colC .lang_select .selected_lang .icon {
 header.header-fixed {
   transition: 0.5s ease;
   height: var(--headerfixed);
-  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
 }
 header.header-fixed::after {
   height: 100%;

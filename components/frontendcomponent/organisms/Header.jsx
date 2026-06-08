@@ -1,17 +1,37 @@
+"use client"
+
 import Link from "next/link";
 import Button from "../atoms/Button";
 import Image from "next/image";
-import "@/uploads/styles/header/header.css"
+import "@/uploads/styles/header/header.css";
+import { useState , useEffect } from "react";
 
-Link
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header>
+    <header className={isScrolled ? "header-fixed" : ""}>
       <div className="container-fluid">
         <div className="header-container">
           <div className="colA">
             <Link href="/" className="logo">
-                <Image src="/assets/logo.svg" width={100} height={40} alt="Meer"/>
+              <Image
+                src="/assets/image/logo.svg"
+                width={100}
+                height={40}
+                alt="Meer"
+              />
             </Link>
           </div>
 
@@ -37,10 +57,11 @@ const Header = () => {
               </li>
             </ul>
             <div>
-                <Button variant="btn-primary" href="/donate">Donate Now</Button>
+              <Button variant="btn-primary" href="/donate">
+                Donate Now
+              </Button>
             </div>
           </div>
-
         </div>
       </div>
     </header>
