@@ -32,6 +32,9 @@ footer .lower .container {
   justify-content: space-between;
   gap: 60px;
 }
+footer .lower .container .logo {
+  flex: 0 0 182px;
+}
 footer .lower .container .logo img {
   width: 100%;
   filter: brightness(0) invert(1);
@@ -44,7 +47,7 @@ footer .lower .container .menu {
 }
 footer .lower .container .menu li a {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   color: rgb(255, 255, 255);
   transition: 0.3s ease;
 }

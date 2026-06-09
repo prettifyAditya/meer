@@ -46,32 +46,32 @@ const Footer = () => {
 
     social: [
       {
-        icon: "/assets/icon/facebook.svg",
+        icon: "/icon/facebook.svg",
         alt: "Facebook",
         href: "#",
       },
       {
-        icon: "/assets/icon/instagram.svg",
+        icon: "/icon/instagram.svg",
         alt: "Instagram",
         href: "#",
       },
       {
-        icon: "/assets/icon/twitter.svg",
+        icon: "/icon/twitter.svg",
         alt: "Twitter",
         href: "#",
       },
       {
-        icon: "/assets/icon/linkedin.svg",
+        icon: "/icon/linkedin.svg",
         alt: "LinkedIn",
         href: "#",
       },
       {
-        icon: "/assets/icon/youtube.svg",
+        icon: "/icon/youtube.svg",
         alt: "YouTube",
         href: "#",
       },
       {
-        icon: "/assets/icon/email.svg",
+        icon: "/icon/email.svg",
         alt: "Email",
         href: "mailto:info@meer.org",
       },
@@ -102,7 +102,7 @@ const Footer = () => {
       <div className="lower">
         <div className="container">
           <div className="logo">
-            <Image src="/assets/image/logo.svg" width={100} height={40} alt="Meer" />
+            <Image src="/image/logo.svg" width={100} height={40} alt="Meer" />
           </div>
           <ul className="menu">
             <li>

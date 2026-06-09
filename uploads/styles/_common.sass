@@ -12,8 +12,8 @@ $scrollwidth: 8px
 
 :root
     --headerpadding: 12px
-    --headerheight: 90px
-    --headerfixed: 85px
+    --headerheight: 76px
+    --headerfixed: 76px
     --footerstrip: 60px
     --primary: rgba(0, 77, 153, 1)
     --secondary: #003c77
@@ -26,9 +26,8 @@ $scrollwidth: 8px
     --para: rgba(102, 102, 102, 1)
     --container: 1280px
     --containerfluid: 2rem
-    --gradient-a:linear-gradient(180deg, #C0D6F6 0%, #FFFFFF 50%, #C0D6F6 100%)
-    --gradient-b:radial-gradient(66.9% 66.9% at 37.11% 37.56%, #ACCEEB 0%, #5F96D1 35.54%, #325BA4 78.81%, #345795 100%)
-
+    --gradient-a: linear-gradient(180deg, #C0D6F6 0%, #FFFFFF 50%, #C0D6F6 100%)
+    --gradient-b: radial-gradient(66.9% 66.9% at 37.11% 37.56%, #ACCEEB 0%, #5F96D1 35.54%, #325BA4 78.81%, #345795 100%)
 
     @include media(1152)
         --containerfluid: 1rem
@@ -69,7 +68,7 @@ body
         box-shadow: none
     &::-webkit-scrollbar-thumb
         background-color: var(--primary)
-        border-radius: 10px
+        border-radius: 0px
     &.overflow-hidden
         overflow: hidden
         margin-right: $scrollwidth
@@ -150,6 +149,7 @@ h3
         font-size: 36px
         font-weight: 700
         line-height: 1.2
+        color: var(--primary)
         @include media(1280)
             font-size: 58px
         @include media(1024)
@@ -339,7 +339,7 @@ img, video
     transition: .5s ease
 
 .btn
-    --height: 40px
+    --height: 38px
     --padding: 18px
     display: inline-flex
     align-items: center
@@ -349,6 +349,7 @@ img, video
     height: var(--height)
     line-height: var(--height)
     padding: 0 var(--padding)
+    @include font(500)
     border-radius: 25px
     overflow: hidden
     text-transform: capitalize
@@ -790,7 +791,13 @@ em
     align-items: center
     gap: 10px
 
-.InsightSection
+.InsightContainer
+    &.invert
+        .grid
+            .media
+                order: 2
+            .item-content
+                order: 1
     .grid
         display: grid
         grid-template-columns: repeat(2,1fr)
@@ -810,6 +817,7 @@ em
                 object-fit: cover
                 display: block
             .play-btn
+                --btnsize: 73px
                 position: absolute
                 top: 50%
                 left: 50%
@@ -828,7 +836,7 @@ em
                 &:not(:last-child)
                     margin-bottom: 20px
             ul
-                margin-top: 20px
+                margin: 20px 0
                 display: flex
                 flex-direction: column
                 gap: 15px
@@ -847,3 +855,5 @@ em
                         width: 24px
                         height: 24px
                         content: ""
+            .btn
+                margin-top: 26px

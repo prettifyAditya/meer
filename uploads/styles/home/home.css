@@ -44,6 +44,15 @@
 .SolutionDesigned {
   padding: 70px 0;
 }
+.home-secA .heading h2,
+.who-we-are .heading h2,
+.SolutionDesigned .heading h2 {
+  text-align: center;
+}
+
+.SolutionDesigned .InsightContainer {
+  margin-top: 70px;
+}
 
 .missingPiece {
   padding: 70px 0;
@@ -92,8 +101,8 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  mask: url("/assets/icon/earthMask.png") center/contain no-repeat;
-  -webkit-mask: url("/assets/icon/earthMask.png") center/contain no-repeat;
+  mask: url("/icon/earthMask.png") center/contain no-repeat;
+  -webkit-mask: url("/icon/earthMask.png") center/contain no-repeat;
   z-index: 2;
 }
 .missingPiece .grid .content {

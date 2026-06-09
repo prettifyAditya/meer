@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "../atoms/Button";
 import Image from "next/image";
 import "@/uploads/styles/header/header.css";
-import { useState , useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +27,7 @@ const Header = () => {
           <div className="colA">
             <Link href="/" className="logo">
               <Image
-                src="/assets/image/logo.svg"
+                src="/image/logo.svg"
                 width={100}
                 height={40}
                 alt="Meer"
@@ -58,7 +58,7 @@ const Header = () => {
             </ul>
             <div>
               <Button variant="btn-primary" href="/donate">
-                Donate Now
+                Donate
               </Button>
             </div>
           </div>
