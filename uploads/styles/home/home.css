@@ -43,6 +43,7 @@
 .globalImpact,
 .who-we-are,
 .whatWeDo,
+.communityVoice,
 .safePractical,
 .projectHighlight,
 .SolutionDesigned {
@@ -52,6 +53,7 @@
 .globalImpact .heading h2,
 .who-we-are .heading h2,
 .whatWeDo .heading h2,
+.communityVoice .heading h2,
 .safePractical .heading h2,
 .projectHighlight .heading h2,
 .SolutionDesigned .heading h2 {
@@ -311,8 +313,8 @@
   margin: 20px auto 0px;
 }
 .projectHighlight .info {
-  margin: 30px var(--containerfluid) 0;
-  max-width: 1280px;
+  margin: 30px auto 0;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background: var(--bglight);
@@ -328,4 +330,161 @@
 .projectHighlight .info .project-highlight .icon {
   width: 38px;
   height: 38px;
+}
+.projectHighlight .highlight-slider {
+  margin-top: 50px;
+  position: relative;
+}
+.projectHighlight .highlight-slider .swiper .swiper-wrapper .swiper-slide .highlight-card {
+  height: 426px;
+  position: relative;
+}
+.projectHighlight .highlight-slider .swiper .swiper-wrapper .swiper-slide .highlight-card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projectHighlight .highlight-slider .swiper .swiper-wrapper .swiper-slide .highlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 24.53%, rgba(0, 0, 0, 0) 100%);
+}
+.projectHighlight .highlight-slider .swiper .swiper-wrapper .swiper-slide .highlight-card .content {
+  z-index: 2;
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.projectHighlight .highlight-slider .swiper .swiper-wrapper .swiper-slide .highlight-card .content h4 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--white);
+  font-weight: 700;
+}
+.projectHighlight .highlight-slider .swiper .swiper-wrapper .swiper-slide .highlight-card .content p {
+  text-align: center;
+  max-width: 425px;
+  color: var(--white);
+  margin: 16px auto 42px;
+}
+.projectHighlight .highlight-slider .swiper .swiper-wrapper .swiper-slide .highlight-card .content .btn {
+  padding: 10px 24px;
+}
+.projectHighlight .highlight-slider .swiper-nav {
+  max-width: 82%;
+}
+
+.getInvolved {
+  position: relative;
+}
+.getInvolved .content {
+  max-width: 533px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 7%;
+}
+.getInvolved .content h2 {
+  font-size: 36px;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+.getInvolved .content ul li {
+  position: relative;
+  padding-left: 30px;
+  color: var(--white);
+}
+.getInvolved .content ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.getInvolved .content ul li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  content: "";
+}
+.getInvolved .content .action {
+  margin-top: 32px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.communityVoice .container .heading {
+  position: relative;
+}
+.communityVoice .container .heading h6 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--primary);
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.communityVoice .container .heading .swiper-nav {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 16px;
+}
+.communityVoice .container .communitySlider {
+  margin-top: 60px;
+}
+.communityVoice .container .communitySlider .swiper-wrapper .swiper-slide .community-card {
+  height: 386px;
+  position: relative;
+  overflow: hidden;
+}
+.communityVoice .container .communitySlider .swiper-wrapper .swiper-slide .community-card::before {
+  content: "";
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 75%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.communityVoice .container .communitySlider .swiper-wrapper .swiper-slide .community-card:hover .img {
+  transform: scale(1.2);
+}
+.communityVoice .container .communitySlider .swiper-wrapper .swiper-slide .community-card .logo {
+  position: absolute;
+  right: 20px;
+  top: 26px;
+  z-index: 2;
+  height: 20px;
+  width: 72px;
+}
+.communityVoice .container .communitySlider .swiper-wrapper .swiper-slide .community-card figcaption {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  left: 30px;
+  z-index: 2;
+}
+.communityVoice .container .communitySlider .swiper-wrapper .swiper-slide .community-card figcaption p {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.communityVoice .container .communitySlider .swiper-wrapper .swiper-slide .community-card figcaption .btn-container {
+  display: flex;
+  justify-content: end;
+}
+.communityVoice .container .communitySlider .swiper-wrapper .swiper-slide .community-card figcaption .btn-container .play-btn {
+  --btnsize: 33px;
+  margin: 4px 0 0px;
 }/*# sourceMappingURL=home.css.map */

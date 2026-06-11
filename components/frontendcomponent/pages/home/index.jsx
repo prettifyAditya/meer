@@ -9,9 +9,10 @@ import WhatWeDo from "./WhatWeDo";
 import CoolingMatters from "./CoolingMatters";
 import Safe from "./Safe";
 import ProjectHighlight from "./ProjectHighlight";
+import GetInvolved from "./GetInvolved";
+import CommunityVoice from "./CommunityVoice";
 
 const HomePage = () => {
-
   return (
     <>
       <HeroSection />
@@ -22,8 +23,10 @@ const HomePage = () => {
       <SolutionDesigned />
       <GlobalImpact />
       <CoolingMatters />
-      <Safe/>
+      <Safe />
       <ProjectHighlight />
+      <GetInvolved />
+      <CommunityVoice/>
     </>
   );
 };

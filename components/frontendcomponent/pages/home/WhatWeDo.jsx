@@ -77,7 +77,7 @@ const WhatWeDo = () => {
               0: { slidesPerView: 1.2, spaceBetween: 20 },
               768: { slidesPerView: 1.9 },
             }}
-            modules={[ Pagination, Navigation]}
+            modules={[Pagination, Navigation]}
           >
             {slideData?.map(({ image, title }, i) => {
               return (
@@ -116,15 +116,20 @@ export default WhatWeDo;
 
 const slideData = [
   {
-    image: "/image/home/what-we-do/1.png",
+    image: "/image/home/what-we-do/2.png",
     title: "Reduce indoor and outdoor heat exposure",
   },
   {
-    image: "/image/home/what-we-do/2.png",
+    image: "/image/home/what-we-do/4.png",
     title: "Lower dependence on mechanical cooling",
   },
   {
-    image: "/image/home/what-we-do/2.png",
-    title: "Lower dependence on mechanical cooling",
+    image: "/image/home/what-we-do/3.jpg",
+    title: "Protect people, crops, livestock, and water supplies",
   },
+  {
+    image: "/image/home/what-we-do/1.png",
+    title: "Scale from individual homes to neighbourhoods and regions",
+  }
+  
 ];
