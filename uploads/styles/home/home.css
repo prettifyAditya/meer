@@ -39,13 +39,17 @@
   }
 }
 
-.home-secA,
+.extremeHeat,
+.globalImpact,
 .who-we-are,
+.whatWeDo,
 .SolutionDesigned {
   padding: 70px 0;
 }
-.home-secA .heading h2,
+.extremeHeat .heading h2,
+.globalImpact .heading h2,
 .who-we-are .heading h2,
+.whatWeDo .heading h2,
 .SolutionDesigned .heading h2 {
   text-align: center;
 }
@@ -119,4 +123,24 @@
   font-size: 16px;
   color: var(--primary);
   font-weight: 600;
+}
+
+.globalImpact {
+  background: var(--bglight);
+}
+
+.whatWeDo {
+  background: var(--bgpink);
+}
+.whatWeDo .container {
+  display: grid;
+  grid-template-columns: 1fr 713px;
+  gap: 60px;
+}
+.whatWeDo .container .left h2 {
+  color: var(--primary);
+  margin-bottom: 32px;
+}
+.whatWeDo .container .left .btn {
+  margin: 28px 0 0;
 }/*# sourceMappingURL=home.css.map */

@@ -10,7 +10,12 @@ const SolutionDesigned = () => {
         <div className="heading">
           <h2>Our Solutions are Designed To</h2>
         </div>
-        <InsightContainer className="invert" imgSrc={imgSrc} detail={detail} isBtn={{ text: "Science behind", href: "#" }} />
+        <InsightContainer
+          className="invert"
+          imgSrc={imgSrc}
+          detail={detail}
+          isBtn={{ text: "Science behind", href: "#" }}
+        />
       </div>
     </section>
   );

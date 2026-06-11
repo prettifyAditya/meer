@@ -4,7 +4,7 @@ const ExtremeHeats = () => {
   if (!data) return null
   const { heading, imgSrc, detail } = data
   return (
-    <section className="home-secA">
+    <section className="extremeHeat">
       <InsightContainer className="container" heading={heading} imgSrc={imgSrc} detail={detail} />
     </section>
   );

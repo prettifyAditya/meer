@@ -4,6 +4,8 @@ import ExtremeHeats from "./ExtremeHeats";
 import MissingPiece from "./MissingPiece";
 import WhoWeAre from "./WhoWeAre";
 import SolutionDesigned from "./SolutionDesigned";
+import GlobalImpact from "./GlobalImpact";
+import WhatWeDo from "./WhatWeDo";
 
 const HomePage = () => {
 
@@ -13,7 +15,9 @@ const HomePage = () => {
       <ExtremeHeats />
       <MissingPiece />
       <WhoWeAre />
+      <WhatWeDo />
       <SolutionDesigned />
+      <GlobalImpact />
     </>
   );
 };
