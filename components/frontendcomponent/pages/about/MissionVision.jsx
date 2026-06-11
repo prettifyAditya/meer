@@ -6,6 +6,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import SwiperButton from "../../atoms/SwiperButton";
 
 export default function MissionVision({ data }) {
   if (!data) return null;
@@ -13,7 +14,7 @@ export default function MissionVision({ data }) {
   return (
     <section>
       <div className="mission_vision sec-pad-all">
-        <div className="container">
+        <div className="container-fluid">
           <div className="heading">
             <h2>Our Mission & Vision</h2>
           </div>
@@ -49,6 +50,10 @@ export default function MissionVision({ data }) {
                   slidesPerView: 3.2,
                   spaceBetween: 20,
                 },
+                1440: {
+                  slidesPerView: 4.3,
+                  spaceBetween: 20,
+                },
               }}
               onSwiper={(swiper) => (swiperRef.current = swiper)}
             >
@@ -73,7 +78,11 @@ export default function MissionVision({ data }) {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="swiper-nav"></div>
+            <div className="swiper-nav white-border">
+              <SwiperButton classname="mission-prev swiper-prev" />
+              <div className="progressbar"></div>
+              <SwiperButton classname="mission-next swiper-next" />
+            </div>
           </div>
         </div>
       </div>

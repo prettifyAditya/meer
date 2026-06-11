@@ -1397,6 +1397,20 @@ img, video {
 .swiper-nav.primary-border button:hover svg path {
   fill: var(--white);
 }
+.swiper-nav.white-border button {
+  background: none;
+  border: 1px solid var(--white);
+  transition: 0.5s ease;
+}
+.swiper-nav.white-border button svg path {
+  fill: var(--white);
+}
+.swiper-nav.white-border button:hover {
+  background: var(--white);
+}
+.swiper-nav.white-border button:hover svg path {
+  fill: var(--black);
+}
 .swiper-nav button {
   width: 40px;
   height: 40px;

@@ -517,6 +517,19 @@ img, video
                 svg
                     path
                         fill: $white
+    &.white-border
+        button
+            background: none
+            border: 1px solid $white
+            transition: .5s ease
+            svg
+                path
+                    fill: $white
+            &:hover
+                background: $white
+                svg
+                    path 
+                        fill: $black
     button
         width: 40px
         height: 40px

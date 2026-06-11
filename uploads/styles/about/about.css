@@ -45,6 +45,10 @@
 .mission_vision {
   background: var(--primary);
 }
+.mission_vision .container-fluid {
+  margin-right: 0;
+  padding-right: 0;
+}
 .mission_vision .heading {
   text-align: center;
   margin-bottom: 60px;
@@ -77,4 +81,77 @@
 }
 .mission_vision .main_wrapper .mission_slider .mission_col .desc p:not(:last-child) {
   margin-bottom: 10px;
+}
+.mission_vision .main_wrapper .swiper-nav {
+  margin: 50px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .mission_vision .main_wrapper .swiper-nav {
+    margin: 40px auto 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .mission_vision .main_wrapper .swiper-nav {
+    margin: 30px auto 0;
+    display: flex !important;
+  }
+}
+.mission_vision .main_wrapper .swiper-nav .swiper-prev, .mission_vision .main_wrapper .swiper-nav .swiper-next {
+  flex: 0 1 auto;
+}
+.mission_vision .main_wrapper .swiper-nav .progressbar {
+  flex: 1;
+  width: 220px;
+  max-width: 220px;
+  position: relative;
+}
+@media only screen and (max-width: 540px) {
+  .mission_vision .main_wrapper .swiper-nav .progressbar {
+    max-width: 180px;
+    height: 2px;
+  }
+}
+.mission_vision .main_wrapper .swiper-nav .swiper-pagination-progressbar {
+  height: 3px;
+  --swiper-pagination-color: var(--white);
+  background: rgba(255, 255, 255, 0.4196078431);
+}
+
+.our_strategy {
+  background: #FFFBE6;
+}
+.our_strategy .heading {
+  text-align: center;
+  max-width: 450px;
+  margin: 0 auto 60px;
+}
+.our_strategy .strategy_wrapper {
+  position: relative;
+}
+.our_strategy .strategy_wrapper .swiper-nav {
+  max-width: 80%;
+  width: 80%;
+}
+.our_strategy .info_details {
+  margin-top: 50px;
+  background: var(--white);
+  padding: 40px;
+  align-items: center;
+}
+.our_strategy .info_details figure {
+  flex: 0 1 auto;
+  padding-right: 55px;
+}
+.our_strategy .info_details figcaption {
+  flex: 1;
+  padding-left: 55px;
+  border-left: 1px solid var(--primary);
+}
+.our_strategy .info_details figcaption p:not(:last-child) {
+  margin-bottom: 20px;
 }/*# sourceMappingURL=about.css.map */

@@ -4,10 +4,12 @@ import InfoGraphic from "../../molecules/InfoGraphic";
 import ImpactSection from "./ImpactSection";
 import WhyWeExist from "./WhyWeExist";
 import MissionVision from "./MissionVision";
+import OurStrategy from "./OurStrategy";
 import "@/uploads/styles/about/about.css";
 
 export default function AboutUsPage() {
   const MissionVisionData = staticData.AboutUs.Section6;
+  const strategyData = staticData.AboutUs.Section8;
   return (
     <main>
       <HeroSection
@@ -28,6 +30,7 @@ export default function AboutUsPage() {
       <ImpactSection />
       <WhyWeExist />
       <MissionVision data={MissionVisionData} />
+      <OurStrategy data={strategyData} />
     </main>
   );
 }

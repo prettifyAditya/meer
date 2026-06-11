@@ -31,6 +31,10 @@
 
 .mission_vision
     background: $primary
+    .container-fluid
+        margin-right: 0
+        padding-right: 0
+        
     .heading
         text-align: center
         margin-bottom: 60px
@@ -61,3 +65,56 @@
                     p
                         &:not(:last-child)
                             margin-bottom: 10px
+        .swiper-nav
+            margin: 50px auto 0
+            display: flex
+            align-items: center
+            gap: 15px
+            justify-content: center
+            position: relative
+            @include media(768)
+                margin: 40px auto 0 
+            @include media(540)
+                margin: 30px auto 0
+                display: flex !important
+            .swiper-prev, .swiper-next
+                flex: 0 1 auto
+            .progressbar
+                flex: 1
+                width: 220px
+                max-width: 220px
+                position: relative
+                @include media(540)
+                    max-width: 180px
+                    height: 2px
+            .swiper-pagination-progressbar
+                height: 3px
+                --swiper-pagination-color: var(--white)
+                background: #FFFFFF6B
+
+.our_strategy
+    background: #FFFBE6
+    .heading 
+        text-align: center
+        max-width: 450px
+        margin: 0 auto 60px
+    .strategy_wrapper
+        position: relative
+        .swiper-nav
+            max-width: 80%
+            width: 80%
+    .info_details
+        margin-top: 50px
+        background: $white
+        padding: 40px
+        align-items: center
+        figure
+            flex: 0 1 auto
+            padding-right: 55px
+        figcaption
+            flex: 1
+            padding-left: 55px
+            border-left: 1px solid $primary
+            p
+                &:not(:last-child)
+                    margin-bottom: 20px
