@@ -1,0 +1,36 @@
+{
+    "AboutUs": {
+        "Section6": [
+            {
+                "id": 1,
+                "title": "Our Mission",
+                "imgSrc": "/icon/about/mission1.svg",
+                "desc": "MEER’s mission is to develop, deploy, and promote surface-based cooling technologies that reduce global heat stress, rebalance the planet’s energy system, and support climate justice through open, evidence-driven solutions."
+            },
+            {
+                "id": 2,
+                "title": "Research",
+                "imgSrc": "/icon/about/mission2.svg",
+                "desc": "We combine scientific research, engineering innovation, and community partnership to deliver real-world impact — coolingcities, protecting livelihoods, and restoring local resilience in regions most affected by extreme heat."
+            },
+            {
+                "id": 3,
+                "title": "Trust & Integrity",
+                "imgSrc": "/icon/about/mission3.svg",
+                "desc": "MEER is an independent, globally connected nonprofit committed to transparency, inclusivity, and measurable impact-collaborating widely without compromising research integrity or independence."
+            },
+            {
+                "id": 4,
+                "title": "Our Approach",
+                "imgSrc": "/icon/about/mission4.svg",
+                "desc": "Our approach focuses on practical action and open science, not ideology - working within real-world systems to drive meaningful climate solutions through ethical design, education, and community empowerment."
+            },
+            {
+                "id": 5,
+                "title": "Technology",
+                "imgSrc": "/icon/about/mission5.svg",
+                "desc": "Ultimately, MEER seeks to demonstrate that global cooling and local equity are achievable together-that technology, science, and collaboration can unite to rebalance the Earth’s climate system and build a more livable, just, and sustainable planet for all."
+            }
+        ]
+    }
+}

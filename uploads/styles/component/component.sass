@@ -1,0 +1,70 @@
+@import '../_var'
+
+// Hero Section
+
+.banner
+    &.hero_banner
+        .bg
+            .banner-wrapper
+                top: unset 
+                bottom: 20%
+                transform: translate(0, 20%)
+                .heading
+                    max-width: 570px
+
+.info_grahphic
+    &.who_we_are
+        .main_wrapper
+            --gap: 65px
+    .main_wrapper
+        align-items: center
+        --gap: 50px
+        gap: var(--gap)
+        figure
+            flex: 1
+            position: relative
+            width: 100%
+            max-width: 50%
+            line-height: 0
+            .play-btn
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+            .logoIcon
+                width: 60px
+                height: 45px
+                position: absolute
+                top: 30px
+                left: 30px
+                // transform: translate(-30px, -30px)
+            .ceo_details
+                position: absolute
+                bottom: 40px
+                left: 30px
+                line-height: 1.2
+                p
+                    font-weight: 600
+                    margin-bottom: 5px
+                    color: $white
+                h6
+                    font-size: 40px
+                    font-weight: 500
+                    color: $white
+        figcaption
+            flex: 1
+            width: 100%
+            max-width: calc( 100% - var(--gap) )
+            .heading
+                h2
+                    font-size: 36px
+                    color: $primary
+                    font-weight: 700
+            .desc
+                margin-top: 20px
+                p
+                    font-weight: 400
+                    line-height: 1.5
+                    &:not(:last-child)
+                        margin-bottom: 20px
+                                  
