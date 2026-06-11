@@ -25,6 +25,8 @@
 .globalImpact,
 .who-we-are,
 .whatWeDo,
+.safePractical,
+.projectHighlight,
 .SolutionDesigned
     padding: 70px 0
     .heading
@@ -146,3 +148,107 @@
                     background: rgba(224, 224, 224, 1)
                     .swiper-pagination-progressbar-fill
                         background: var(--primary)
+
+.coolingMatters
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    .left
+        background: $primary
+        padding: 60px 80px 60px 50px
+        .heading
+            max-width: 340px
+            h2
+                color: var(--white)
+        .website-content
+            margin-top: 32px
+            >*
+                color: var(--white)
+            ul
+                li
+                    position: relative
+                    padding-left: 30px
+                    color: var(--white)
+                    &:not(:last-child)
+                        margin-bottom: 10px
+                    &::before
+                        position: absolute
+                        left: 0
+                        top: 0
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat
+                        background-size: contain
+                        width: 24px
+                        height: 24px
+                        content: ""
+    .right
+        position: relative
+        video
+            width: 100%
+            height: 100%
+            object-fit: cover
+        .play-btn
+            position: absolute
+            left: 40px
+            bottom: 50px
+
+.safePractical
+    background: var(--bgpink)
+    .container
+        .heading
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            .icon
+                max-width: 61px
+                margin-bottom: 20px
+            h2
+                margin-bottom: 6px
+            p
+                text-align: center
+                max-width: 566px
+        .content
+            margin-top: 70px
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            gap: 20px
+            .safe-card
+                padding: 36px
+                width: 100%
+                border: 1px solid #E5E5E5
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column
+                background: $white
+                border-radius: 5px
+                .icon
+                    width: 52px
+                    height: 52px
+                    margin-bottom: 16px
+                p
+                    text-align: center
+
+.projectHighlight
+    .heading
+        text-align: center
+        p
+            max-width: 529px
+            margin: 20px auto 0px
+    .info
+        margin: 30px var(--containerfluid) 0
+        max-width: 1280px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        background: var(--bglight)
+        border-radius: 5px
+        .project-highlight
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 16px
+            padding: 18px
+            .icon
+                width: 38px
+                height: 38px
+    .highlight-slider
+        

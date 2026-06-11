@@ -43,6 +43,8 @@
 .globalImpact,
 .who-we-are,
 .whatWeDo,
+.safePractical,
+.projectHighlight,
 .SolutionDesigned {
   padding: 70px 0;
 }
@@ -50,6 +52,8 @@
 .globalImpact .heading h2,
 .who-we-are .heading h2,
 .whatWeDo .heading h2,
+.safePractical .heading h2,
+.projectHighlight .heading h2,
 .SolutionDesigned .heading h2 {
   text-align: center;
 }
@@ -198,4 +202,130 @@
 }
 .whatWeDo .container .right .whatWeDo-pagination .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background: var(--primary);
+}
+
+.coolingMatters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.coolingMatters .left {
+  background: var(--primary);
+  padding: 60px 80px 60px 50px;
+}
+.coolingMatters .left .heading {
+  max-width: 340px;
+}
+.coolingMatters .left .heading h2 {
+  color: var(--white);
+}
+.coolingMatters .left .website-content {
+  margin-top: 32px;
+}
+.coolingMatters .left .website-content > * {
+  color: var(--white);
+}
+.coolingMatters .left .website-content ul li {
+  position: relative;
+  padding-left: 30px;
+  color: var(--white);
+}
+.coolingMatters .left .website-content ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.coolingMatters .left .website-content ul li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  content: "";
+}
+.coolingMatters .right {
+  position: relative;
+}
+.coolingMatters .right video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.coolingMatters .right .play-btn {
+  position: absolute;
+  left: 40px;
+  bottom: 50px;
+}
+
+.safePractical {
+  background: var(--bgpink);
+}
+.safePractical .container .heading {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.safePractical .container .heading .icon {
+  max-width: 61px;
+  margin-bottom: 20px;
+}
+.safePractical .container .heading h2 {
+  margin-bottom: 6px;
+}
+.safePractical .container .heading p {
+  text-align: center;
+  max-width: 566px;
+}
+.safePractical .container .content {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.safePractical .container .content .safe-card {
+  padding: 36px;
+  width: 100%;
+  border: 1px solid #E5E5E5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: 5px;
+}
+.safePractical .container .content .safe-card .icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 16px;
+}
+.safePractical .container .content .safe-card p {
+  text-align: center;
+}
+
+.projectHighlight .heading {
+  text-align: center;
+}
+.projectHighlight .heading p {
+  max-width: 529px;
+  margin: 20px auto 0px;
+}
+.projectHighlight .info {
+  margin: 30px var(--containerfluid) 0;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--bglight);
+  border-radius: 5px;
+}
+.projectHighlight .info .project-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 18px;
+}
+.projectHighlight .info .project-highlight .icon {
+  width: 38px;
+  height: 38px;
 }/*# sourceMappingURL=home.css.map */

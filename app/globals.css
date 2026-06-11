@@ -1569,14 +1569,6 @@ img, video {
 .website-content p, .website-content ul {
   margin-bottom: 20px;
 }
-.website-content ul {
-  padding-left: 18px;
-}
-@media only screen and (max-width: 675px) {
-  .website-content ul {
-    padding-left: 10px;
-  }
-}
 .website-content ul li {
   position: relative;
   padding-left: 28px;

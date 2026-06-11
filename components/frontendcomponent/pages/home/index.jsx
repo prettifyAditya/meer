@@ -6,6 +6,9 @@ import WhoWeAre from "./WhoWeAre";
 import SolutionDesigned from "./SolutionDesigned";
 import GlobalImpact from "./GlobalImpact";
 import WhatWeDo from "./WhatWeDo";
+import CoolingMatters from "./CoolingMatters";
+import Safe from "./Safe";
+import ProjectHighlight from "./ProjectHighlight";
 
 const HomePage = () => {
 
@@ -18,6 +21,9 @@ const HomePage = () => {
       <WhatWeDo />
       <SolutionDesigned />
       <GlobalImpact />
+      <CoolingMatters />
+      <Safe/>
+      <ProjectHighlight />
     </>
   );
 };

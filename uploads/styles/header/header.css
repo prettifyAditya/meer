@@ -708,7 +708,7 @@ p, li, a, span {
   color: var(--text);
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 a[href] {
@@ -1265,7 +1265,7 @@ img, video {
 }
 .banner::before {
   z-index: 1;
-  background: linear-gradient(90deg, #000000 0%, rgba(102, 102, 102, 0) 55%), linear-gradient(rgba(0, 0, 0, 0.4509803922) 0%, rgba(1, 1, 1, 0) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(102, 102, 102, 0) 59.13%), linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(1, 1, 1, 0) 100%);
 }
 .banner .bg {
   height: 100vh;
@@ -1285,37 +1285,42 @@ img, video {
   translate: 0 -50%;
   z-index: 2;
 }
-.banner .banner-wrapper .heading h1, .banner .banner-wrapper .heading h2, .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
-  margin-top: 70px;
+.banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
   font-size: 48px;
   line-height: 1.2;
   font-weight: 600;
   color: var(--white);
 }
 @media only screen and (max-width: 991px) {
-  .banner .banner-wrapper .heading h1, .banner .banner-wrapper .heading h2, .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
+  .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
     font-size: 32px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .banner .banner-wrapper .heading h1, .banner .banner-wrapper .heading h2, .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
+  .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
     font-size: 30px;
   }
 }
 @media only screen and (max-width: 540px) {
-  .banner .banner-wrapper .heading h1, .banner .banner-wrapper .heading h2, .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
+  .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
     font-size: 28px;
   }
 }
-.banner .banner-wrapper .heading p, .banner .banner-wrapper .content p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.4;
+.banner .banner-wrapper .content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 4px;
   color: var(--white);
+  opacity: 0.8;
+}
+@media only screen and (max-width: 768px) {
+  .banner .banner-wrapper .content p {
+    line-height: 1.2;
+  }
 }
 
 .swiper-slide {
-  height: auto !important;
+  height: auto;
 }
 
 .swiper-nav {
@@ -1371,20 +1376,6 @@ img, video {
 }
 .swiper-nav.primary-border button:hover svg path {
   stroke: var(--white);
-}
-.swiper-nav.white-border button {
-  background: none;
-  border: 1px solid var(--white);
-  transition: 0.5s ease;
-}
-.swiper-nav.white-border button svg path {
-  fill: var(--white);
-}
-.swiper-nav.white-border button:hover {
-  background: var(--white);
-}
-.swiper-nav.white-border button:hover svg path {
-  fill: var(--black);
 }
 .swiper-nav button {
   width: 40px;
@@ -1577,14 +1568,6 @@ img, video {
 }
 .website-content p, .website-content ul {
   margin-bottom: 20px;
-}
-.website-content ul {
-  padding-left: 18px;
-}
-@media only screen and (max-width: 675px) {
-  .website-content ul {
-    padding-left: 10px;
-  }
 }
 .website-content ul li {
   position: relative;
