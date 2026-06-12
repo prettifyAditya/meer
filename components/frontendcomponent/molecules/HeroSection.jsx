@@ -14,7 +14,13 @@ export default function HeroSection({ classname="", mediaSrc="", posterSrc="", t
                         playsInline
                         src={mediaSrc}
                         poster={posterSrc}
+<<<<<<< HEAD
                         ></video>
+=======
+                        >
+                            
+                        </video>
+>>>>>>> d6a9f96 (added molecules)
                     ) : (
                         <Image
                         src={mediaSrc}
@@ -23,7 +29,11 @@ export default function HeroSection({ classname="", mediaSrc="", posterSrc="", t
                         alt={`${tagline} Image`}
                         />
                     )}
+<<<<<<< HEAD
                     <div className="banner-wrapper">
+=======
+                    <div className="banner-wrapper">    
+>>>>>>> d6a9f96 (added molecules)
                         <div className="container">
                             <div className="heading">
                                 <p>{tagline}</p>
