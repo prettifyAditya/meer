@@ -1,0 +1,83 @@
+{
+    "AboutUs": {
+        "Section6": [
+            {
+                "id": 1,
+                "title": "Our Mission",
+                "imgSrc": "/icon/about/mission1.svg",
+                "desc": "MEER’s mission is to develop, deploy, and promote surface-based cooling technologies that reduce global heat stress, rebalance the planet’s energy system, and support climate justice through open, evidence-driven solutions."
+            },
+            {
+                "id": 2,
+                "title": "Research",
+                "imgSrc": "/icon/about/mission2.svg",
+                "desc": "We combine scientific research, engineering innovation, and community partnership to deliver real-world impact — coolingcities, protecting livelihoods, and restoring local resilience in regions most affected by extreme heat."
+            },
+            {
+                "id": 3,
+                "title": "Trust & Integrity",
+                "imgSrc": "/icon/about/mission3.svg",
+                "desc": "MEER is an independent, globally connected nonprofit committed to transparency, inclusivity, and measurable impact-collaborating widely without compromising research integrity or independence."
+            },
+            {
+                "id": 4,
+                "title": "Our Approach",
+                "imgSrc": "/icon/about/mission4.svg",
+                "desc": "Our approach focuses on practical action and open science, not ideology - working within real-world systems to drive meaningful climate solutions through ethical design, education, and community empowerment."
+            },
+            {
+                "id": 5,
+                "title": "Technology",
+                "imgSrc": "/icon/about/mission5.svg",
+                "desc": "Ultimately, MEER seeks to demonstrate that global cooling and local equity are achievable together-that technology, science, and collaboration can unite to rebalance the Earth’s climate system and build a more livable, just, and sustainable planet for all."
+            }
+        ],
+        "Section8": {
+            "smallDescription": "<p>In practice, this means prioritizing material efficiency, cost-effectiveness, and real-world deployability. Our currentreflective sheeting systemsare lightweight, modular,and low-cost, with material costs below $1 per square meter and installed system costs around $20 per square meter in real-world settings.</p><p>Alongside these systems, MEER is developing next-generation passive cooling coatings based on passive daytime radiative cooling (PDRC) principles. These coatings are designed not only to reflect incoming solar radiation but also to emit heat more effectively, improving overall cooling performance. Our current development pathway focuses on scalable, water-based formulations suitablefor low-cost deployment, with estimated costs around $5 per square meter today and a target of approximately $2 per square meter as the technology matures.</p>",
+            "strategyData": [
+                {
+                    "id": 1,
+                    "imgSrc": "/image/about/strategy1.png",
+                    "title": "Passive Technology",
+                    "desc": "Our reflectors work without electricity once installed, providing cooling that is reliable and low-maintenance."
+                },
+                {
+                    "id": 2,
+                    "imgSrc": "/image/about/strategy2.jpg",
+                    "title": "Sustainable Materials",
+                    "desc": "We design reflectors from recycled aluminum, PET plastics, and bamboo, reducing waste and avoiding new extraction."
+                },
+                {
+                    "id": 3,
+                    "imgSrc": "/image/about/strategy3.png",
+                    "title": "Community-First",
+                    "desc": "We partner directly with local communities to design, test, and implement cooling projects that meet real human needs"
+                },
+                {
+                    "id": 4,
+                    "imgSrc": "/image/about/strategy4.png",
+                    "title": "Scalable by Design",
+                    "desc": "From a single rooftop to entire neighborhoods, our technology can expand quickly and affordably."
+                },
+                {
+                    "id": 5,
+                    "imgSrc": "/image/about/strategy1.png",
+                    "title": "Passive Technology",
+                    "desc": "Our reflectors work without electricity once installed, providing cooling that is reliable and low-maintenance."
+                },
+                {
+                    "id": 6,
+                    "imgSrc": "/image/about/strategy2.jpg",
+                    "title": "Sustainable Materials",
+                    "desc": "We design reflectors from recycled aluminum, PET plastics, and bamboo, reducing waste and avoiding new extraction."
+                },
+                {
+                    "id": 7,
+                    "imgSrc": "/image/about/strategy3.png",
+                    "title": "Community-First",
+                    "desc": "We partner directly with local communities to design, test, and implement cooling projects that meet real human needs"
+                }
+            ]
+        }
+    }
+}
