@@ -8,6 +8,9 @@ const MeerResources = ({ data }) => {
         <h2>MEER Resource</h2>
       </div>
       <TabContainer card="resource" data={data} />
+      <a href="" className="btn view-all btn-primary">
+        See All News & Events{" "}
+      </a>
     </section>
   );
 };

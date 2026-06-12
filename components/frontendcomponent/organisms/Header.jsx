@@ -1,13 +1,16 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import Button from "../atoms/Button";
 import Image from "next/image";
 import "@/uploads/styles/header/header.css";
 import { useState, useEffect } from "react";
+import { useModal } from "@/hooks/useModal";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const { openModal } = useModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,12 +29,7 @@ const Header = () => {
         <div className="header-container">
           <div className="colA">
             <Link href="/" className="logo">
-              <Image
-                src="/image/logo.svg"
-                width={100}
-                height={40}
-                alt="Meer"
-              />
+              <Image src="/image/logo.svg" width={100} height={40} alt="Meer" />
             </Link>
           </div>
 
@@ -57,7 +55,7 @@ const Header = () => {
               </li>
             </ul>
             <div>
-              <Button variant="btn-primary" href="/donate">
+              <Button onClick={() => openModal("menu")} variant="btn-primary">
                 Donate
               </Button>
             </div>

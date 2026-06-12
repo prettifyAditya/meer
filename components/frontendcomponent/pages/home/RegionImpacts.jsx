@@ -1,9 +1,13 @@
 "use client";
-
+import Image from "next/image";
 import { useState } from "react";
+import MapFilter from "../../atoms/MapFilter";
+import ProjectsMap from "../../molecules/ProjectsMap";
 
 const RegionImpacts = () => {
   const [activeRegion, setActiveRegion] = useState(0);
+  const [projectStatus, setProjectStatus] = useState("");
+  const [activeProject, setActiveProject] = useState(0);
 
   return (
     <section className="regionImpacts">
@@ -12,18 +16,35 @@ const RegionImpacts = () => {
           <h6>Impact Across Regions</h6>
           <h2>MEER Global Projects</h2>
         </div>
-
         <div className="content">
           <div className="left">
             <div className="upper">
               <h4>Search Projects</h4>
-              <div className="map-filter"></div>
+              <div className="map-filter">
+                <MapFilter
+                  type="country"
+                  data={data.map(({ country }) => country)}
+                  state={projectStatus}
+                  setState={setProjectStatus}
+                />
+                <MapFilter
+                  type="status"
+                  data={["Ongoing", "Delivered"]}
+                  state={projectStatus}
+                  setState={setProjectStatus}
+                />
+              </div>
             </div>
             <ul className="filter-content">
               {data[activeRegion].projects.map(
                 ({ projectName, role, focus }, i) => {
+                  const isProjectActive = activeProject === i;
                   return (
-                    <li key={i}>
+                    <li
+                      key={i}
+                      className={isProjectActive ? "active" : ""}
+                      onClick={() => setActiveProject(i)}
+                    >
                       <div className="info">
                         <h5>{projectName}</h5>
                         <p>
@@ -33,13 +54,24 @@ const RegionImpacts = () => {
                           <strong>Focus:</strong> {focus}
                         </p>
                       </div>
+                      <figure className="icon">
+                        <Image
+                          src="/icon/right-large-blue.svg"
+                          alt="icon"
+                          width={26}
+                          height={11}
+                        />
+                      </figure>
                     </li>
                   );
                 },
               )}
             </ul>
           </div>
-          <div className="right"></div>
+
+          <div className="right">
+            <ProjectsMap projects={data[0].projects} />
+          </div>
         </div>
       </div>
     </section>
@@ -61,6 +93,7 @@ const data = [
           lat: 8.483833040218455,
           lng: -13.233723242889049,
         },
+        status: "ongoing",
       },
       {
         projectName: "Kroo Bay Settlement – Freetown, Sierra Leone",
@@ -71,6 +104,7 @@ const data = [
           lat: 8.49169,
           lng: -13.24062,
         },
+        status: "delivered",
       },
       {
         projectName: "Beach Site – Freetown, Sierra Leone",
@@ -81,7 +115,9 @@ const data = [
           lat: 8.489519778033253,
           lng: -13.290272987751994,
         },
+        status: "ongoing",
       },
+      
     ],
   },
   {
@@ -91,7 +127,11 @@ const data = [
         projectName: "Kijichi Secondary School Site – Dar es Salaam, Tanzania",
         role: "Preliminary Assessment Site",
         focus: "Roof-structure evaluation for MEER installations",
-        coordinates: "https://maps.app.goo.gl/9ZdLq9LN5QYSDEVi6",
+        coordinates: {
+          lat: "",
+          long: "",
+        },
+        status: "delivered",
       },
     ],
   },
@@ -107,6 +147,7 @@ const data = [
           lat: 18.511086,
           lng: 73.822747,
         },
+        status: "delivered",
       },
     ],
   },
@@ -117,7 +158,11 @@ const data = [
         projectName: "California Rooftop Experiment",
         role: "Historical Pilot Site",
         focus: "Early rooftop reflector testing under real-world conditions",
-        location: "225 Vera Ave, Redwood City, CA 94061",
+        coordinates: {
+          lat: "",
+          long: "",
+        },
+        status: "delivered",
       },
     ],
   },
@@ -128,7 +173,11 @@ const data = [
         projectName: "Beijing",
         role: "Material Science Testing Site",
         focus: "PDRC paint development",
-        location: "Beijing, China",
+        coordinates: {
+          lat: "",
+          long: "",
+        },
+        status: "delivered",
       },
     ],
   },

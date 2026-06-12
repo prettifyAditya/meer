@@ -6,7 +6,6 @@ import SlideBtn from "../atoms/SlideBtn";
 import ResourceCard from "../molecules/ResourceCard";
 import "@/uploads/styles/component/component.css";
 
-
 const TabContainer = ({ data, card }) => {
   const [activeTab, setActiveTab] = useState(0);
 

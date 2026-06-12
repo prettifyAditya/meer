@@ -388,12 +388,13 @@
 .partners
     border-top: 1px solid rgba(235, 235, 235, 1)
     padding: 14px 0
-    
 
 .meerResource
     background: var(--bgpink)
-    
-
+    .view-all
+        margin: 50px auto 0
+        display: block
+        width: fit-content
 
 .regionImpacts
     padding: 0px 0px 70px
@@ -413,9 +414,55 @@
                         color: var(--primary)
                         @include font(700)
                         margin-bottom: 20px
+                    .map-filter
+                        display: grid
+                        grid-template-columns: repeat(2, 1fr)
+                        gap: 16px
                 .filter-content
+                    max-height: 465px
+                    overflow-y: auto
+                    &::-webkit-scrollbar
+                        width: 4px
+                    &::-webkit-scrollbar-track
+                        background: transparent
+                    &::-webkit-scrollbar-thumb
+                        background: var(--primary)
+                    
                     li
+                        display: flex
+                        align-items: center
+                        gap: 42px
+                        cursor: pointer
                         background: $white
+                        padding: 20px
+                        transition: all .5s ease-in-out
                         &:not(:last-child)
-                            margin-bottom: 10px
+                            margin-bottom: 5px
+                        .info
+                            h5
+                                transition: all .5s ease
+                                font-size: 14px
+                                color: var(--primary)
+                                @include font(600)
+                                margin-bottom: 5px
+                            p
+                                transition: all .5s ease
+                                font-size: 12px
+                                &:not(:last-child)
+                                    margin-bottom: 2px
+                        .icon
+                            flex-shrink: 0
+                            img
+                                transition: all .5s ease
+                                width: 12px
+                        &.active
+                            background: var(--primary)
+                            .info
+                                h5
+                                    color: $white
+                                p
+                                    color: $white
+                            .icon
+                                img
+                                    filter: brightness(0) invert(1)
             .right

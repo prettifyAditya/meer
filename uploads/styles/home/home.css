@@ -502,6 +502,12 @@
 .meerResource {
   background: var(--bgpink);
 }
+.meerResource .view-all {
+  margin: 50px auto 0;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 
 .regionImpacts {
   padding: 0px 0px 70px;
@@ -525,9 +531,66 @@
   font-weight: 700;
   margin-bottom: 20px;
 }
+.regionImpacts .container .content .left .upper .map-filter {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.regionImpacts .container .content .left .filter-content {
+  max-height: 465px;
+  overflow-y: auto;
+}
+.regionImpacts .container .content .left .filter-content::-webkit-scrollbar {
+  width: 4px;
+}
+.regionImpacts .container .content .left .filter-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.regionImpacts .container .content .left .filter-content::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
 .regionImpacts .container .content .left .filter-content li {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  cursor: pointer;
   background: var(--white);
+  padding: 20px;
+  transition: all 0.5s ease-in-out;
 }
 .regionImpacts .container .content .left .filter-content li:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+.regionImpacts .container .content .left .filter-content li .info h5 {
+  transition: all 0.5s ease;
+  font-size: 14px;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.regionImpacts .container .content .left .filter-content li .info p {
+  transition: all 0.5s ease;
+  font-size: 12px;
+}
+.regionImpacts .container .content .left .filter-content li .info p:not(:last-child) {
+  margin-bottom: 2px;
+}
+.regionImpacts .container .content .left .filter-content li .icon {
+  flex-shrink: 0;
+}
+.regionImpacts .container .content .left .filter-content li .icon img {
+  transition: all 0.5s ease;
+  width: 12px;
+}
+.regionImpacts .container .content .left .filter-content li.active {
+  background: var(--primary);
+}
+.regionImpacts .container .content .left .filter-content li.active .info h5 {
+  color: var(--white);
+}
+.regionImpacts .container .content .left .filter-content li.active .info p {
+  color: var(--white);
+}
+.regionImpacts .container .content .left .filter-content li.active .icon img {
+  filter: brightness(0) invert(1);
 }/*# sourceMappingURL=home.css.map */
