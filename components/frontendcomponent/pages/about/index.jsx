@@ -6,8 +6,10 @@ import WhyWeExist from "./WhyWeExist";
 import MissionVision from "./MissionVision";
 import OurStrategy from "./OurStrategy";
 import "@/uploads/styles/about/about.css";
+import TheoryChange from "./TheoryChange";
 
 export default function AboutUsPage() {
+  const theoryData = staticData.AboutUs.Section3;
   const MissionVisionData = staticData.AboutUs.Section6;
   const strategyData = staticData.AboutUs.Section8;
   return (
@@ -27,6 +29,7 @@ export default function AboutUsPage() {
           "<p>MEER (Mirrors for Earth’s Energy Rebalancing) is a nonprofit organization dedicated to protecting communities from extreme heat, the deadliestand most overlooked climate threat. Our work begins with practical, low-cost cooling solutions that help people adapt to rising temperatures now, while also contributing to long-term climate balance.</p><p>Our planet is overheating. Heatwaves now kill more people than any other natural disaster, and communities in the Global South, who have contributed the least to climate change, are suffering the most. MEER exists to address this crisis by reflecting sunlight before it becomes heat, bringing relief today while helping rebalance Earth’s energy system for the future.</p>"
         }
       />
+      <TheoryChange data={theoryData} />
       <ImpactSection />
       <WhyWeExist />
       <MissionVision data={MissionVisionData} />
