@@ -114,4 +114,63 @@
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 8px;
+}
+
+.resource-card figure {
+  height: 196px;
+}
+.resource-card figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.resource-card figcaption {
+  background: var(--white);
+  padding: 16px;
+}
+.resource-card figcaption h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.resource-card figcaption .desc {
+  margin-bottom: 24px;
+}
+.resource-card figcaption .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.resource-card figcaption .info .date {
+  font-size: 12px;
+}
+.resource-card figcaption .info .tag {
+  border-radius: 50px;
+  background: var(--bgpink);
+  padding: 5px 16px;
+  font-size: 14px;
+  color: var(--black);
+  transition: 0.3s ease;
+}
+.resource-card figcaption .info .btn {
+  font-size: 14px;
+  padding: 6px 16px;
+  --height: 30px;
+  transition: 0.3s ease;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.resource-card:hover figcaption .tag {
+  opacity: 0;
+}
+.resource-card:hover figcaption .btn {
+  opacity: 1;
 }/*# sourceMappingURL=component.css.map */

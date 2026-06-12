@@ -51,7 +51,6 @@ $scrollwidth: 8px
 	@include media(768)
 		padding: 40px 0 0
 
-
 .sec-pad-all
 	padding: 60px 0
 	@include media(991)
@@ -89,10 +88,10 @@ select
 	display: none
 
 p, li , a , span
-    color: var(--text)
-    font-weight: 400
-    font-size: 16px
-    line-height: 1.4
+	color: var(--text)
+	font-weight: 400
+	font-size: 16px
+	line-height: 1.4
 
 a[href]
 	text-decoration: none
@@ -151,7 +150,6 @@ h3
 		font-weight: 700
 		line-height: 1.2
 		color: var(--primary)
-		
 
 	>p
 		margin-top: 10px
@@ -356,6 +354,8 @@ img, video
 		font-size: 12px
 		--padding: 12px
 		--height: 33px
+	&.square
+		border-radius: 0px
 	&.btn-white
 		background: $white
 		color: $primary
@@ -381,6 +381,29 @@ img, video
 		&:hover
 			color: $primary
 			border-color: $primary
+			box-shadow: 0 6px 20px rgba($primary, .35)
+			&::before
+				transform: scaleX(1)
+				transform-origin: left
+	&.btn-outline-primary
+		background: transparent
+		color: $primary
+		border-color: $primary
+		transition: color .3s ease, border-color .3s ease, box-shadow .3s ease
+		&::before
+			content: ''
+			position: absolute
+			inset: 0
+			background: $primary
+			border-radius: inherit
+			transform: scaleX(0)
+			transform-origin: right
+			transition: transform .4s cubic-bezier(.77,0,.18,1)
+			z-index: -1
+		&:hover
+			color: $white
+			border-color: $primary
+			background: $primary
 			box-shadow: 0 6px 20px rgba($primary, .35)
 			&::before
 				transform: scaleX(1)

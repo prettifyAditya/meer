@@ -510,4 +510,46 @@
 
 .meerResource {
   background: var(--bgpink);
+}
+.meerResource .container .row {
+  margin: 30px 0 40px 0;
+  border-bottom: 1px solid rgba(0, 77, 153, 0.22);
+}
+.meerResource .container .row .tabs {
+  display: flex;
+}
+.meerResource .container .row .tabs .tab {
+  font-weight: 500;
+  padding: 16px 40px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+.meerResource .container .row .tabs .tab::before {
+  content: "";
+  height: 3px;
+  background: rgb(51, 153, 255);
+  width: 0%;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  transition: width 0.5s ease-in-out;
+}
+.meerResource .container .row .tabs .tab.active {
+  color: rgb(51, 153, 255);
+}
+.meerResource .container .row .tabs .tab.active::before {
+  transform: scale(1);
+  width: 100%;
+}
+.meerResource .container .content {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: 0.5s ease-in-out;
+}
+.meerResource .container .content.active {
+  opacity: 1;
+  height: 100%;
+  transform: translateY(0);
 }/*# sourceMappingURL=home.css.map */
