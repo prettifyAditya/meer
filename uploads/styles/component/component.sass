@@ -90,3 +90,57 @@
                 font-size: 24px
                 font-weight: 700
                 margin-bottom: 8px
+
+.tab-container
+    .row
+        margin: 30px 0 40px 0 
+        border-bottom: 1px solid rgba(0, 77, 153, 0.22)
+        position: relative
+        .swiper-nav
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+        .tabs
+            display: flex
+            .tab
+                cursor: pointer
+                @include font(500)
+                padding: 16px 40px
+                position: relative
+                transition: .5s ease-in-out
+                &::before
+                    content: ""
+                    height: 3px
+                    background: rgba(51, 153, 255, 1)
+                    width: 0%
+                    left: 0
+                    position: absolute
+                    bottom: 0
+                    transition: width .5s ease-in-out
+                &.active
+                    color: rgba(51, 153, 255, 1)
+                    &::before
+                        transform: scale(1)
+                        width: 100%
+    .content
+        height: 0
+        opacity: 0
+        overflow: hidden
+        transform: translateY(20px)
+        transition: opacity .5s ease-in-out, transform .5s ease-in-out
+        &.active
+            opacity: 1
+            height: 100%
+            transform: translateY(0)
+
+.logo-slider
+    .swiper
+        .swiper-wrapper
+            transition-timing-function: linear
+            .swiper-slide
+                figure
+                    padding: 5px
+                    height: 72px
+                    img
+                        object-fit: contain

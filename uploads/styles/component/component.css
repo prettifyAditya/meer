@@ -114,4 +114,67 @@
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 8px;
+}
+
+.tab-container .row {
+  margin: 30px 0 40px 0;
+  border-bottom: 1px solid rgba(0, 77, 153, 0.22);
+  position: relative;
+}
+.tab-container .row .swiper-nav {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tab-container .row .tabs {
+  display: flex;
+}
+.tab-container .row .tabs .tab {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 16px 40px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+.tab-container .row .tabs .tab::before {
+  content: "";
+  height: 3px;
+  background: rgb(51, 153, 255);
+  width: 0%;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  transition: width 0.5s ease-in-out;
+}
+.tab-container .row .tabs .tab.active {
+  color: rgb(51, 153, 255);
+}
+.tab-container .row .tabs .tab.active::before {
+  transform: scale(1);
+  width: 100%;
+}
+.tab-container .content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.tab-container .content.active {
+  opacity: 1;
+  height: 100%;
+  transform: translateY(0);
+}
+
+.logo-slider .swiper .swiper-wrapper {
+  transition-timing-function: linear;
+}
+.logo-slider .swiper .swiper-wrapper .swiper-slide figure {
+  padding: 5px;
+  height: 72px;
+}
+.logo-slider .swiper .swiper-wrapper .swiper-slide figure img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=component.css.map */
