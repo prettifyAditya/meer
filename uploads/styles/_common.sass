@@ -361,10 +361,18 @@ img, video
     border: 1px solid transparent
     position: relative
     z-index: 1
+    transition: .5s ease
     @include media(540)
         font-size: 12px
         --padding: 12px
         --height: 33px
+    &.btn-white
+        border-color: $white
+        background: $white
+        color: $primary
+        &:hover
+            background: $primary
+            color: $white
 
     &.btn-primary
         background: $primary

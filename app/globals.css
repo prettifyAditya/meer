@@ -1189,6 +1189,7 @@ img, video {
   border: 1px solid transparent;
   position: relative;
   z-index: 1;
+  transition: 0.5s ease;
 }
 @media only screen and (max-width: 540px) {
   .btn {
@@ -1196,6 +1197,15 @@ img, video {
     --padding: 12px;
     --height: 33px;
   }
+}
+.btn.btn-white {
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--primary);
+}
+.btn.btn-white:hover {
+  background: var(--primary);
+  color: var(--white);
 }
 .btn.btn-primary {
   background: var(--primary);

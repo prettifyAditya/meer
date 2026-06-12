@@ -152,6 +152,38 @@
                 "desc": "Ultimately, MEER seeks to demonstrate that global cooling and local equity are achievable together-that technology, science, and collaboration can unite to rebalance the Earth’s climate system and build a more livable, just, and sustainable planet for all."
             }
         ],
+        "Section7": [
+            {
+                "id": "1",
+                "year": "2019",
+                "yeartitle": "",
+                "desc": "Dr. Ye Tao begins climate research"
+            },
+            {
+                "id": "2",
+                "year": "2021",
+                "yeartitle": "",
+                "desc": "MEER founded Pivot to climate solutions"
+            },
+            {
+                "id": "3",
+                "year": "2022",
+                "yeartitle": "",
+                "desc": "First SRTM prototypes built and tested"
+            },
+            {
+                "id": "4",
+                "year": "2023",
+                "yeartitle": "",
+                "desc": "Freetown & Pune community pilots launched"
+            },
+            {
+                "id": "5",
+                "year": "2024-25",
+                "yeartitle": "",
+                "desc": "55+ homes cooledScaling underway"
+            }
+        ],
         "Section8": {
             "smallDescription": "<p>In practice, this means prioritizing material efficiency, cost-effectiveness, and real-world deployability. Our currentreflective sheeting systemsare lightweight, modular,and low-cost, with material costs below $1 per square meter and installed system costs around $20 per square meter in real-world settings.</p><p>Alongside these systems, MEER is developing next-generation passive cooling coatings based on passive daytime radiative cooling (PDRC) principles. These coatings are designed not only to reflect incoming solar radiation but also to emit heat more effectively, improving overall cooling performance. Our current development pathway focuses on scalable, water-based formulations suitablefor low-cost deployment, with estimated costs around $5 per square meter today and a target of approximately $2 per square meter as the technology matures.</p>",
             "strategyData": [

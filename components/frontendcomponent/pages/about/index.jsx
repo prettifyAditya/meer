@@ -7,10 +7,13 @@ import MissionVision from "./MissionVision";
 import OurStrategy from "./OurStrategy";
 import "@/uploads/styles/about/about.css";
 import TheoryChange from "./TheoryChange";
+import MeerJourney from "./MeerJourney";
+import PartnerSponser from "./PartnerSponser";
 
 export default function AboutUsPage() {
   const theoryData = staticData.AboutUs.Section3;
   const MissionVisionData = staticData.AboutUs.Section6;
+  const journeyData = staticData.AboutUs.Section7;
   const strategyData = staticData.AboutUs.Section8;
   return (
     <main>
@@ -33,7 +36,9 @@ export default function AboutUsPage() {
       <ImpactSection />
       <WhyWeExist />
       <MissionVision data={MissionVisionData} />
+      <MeerJourney data={journeyData} />
       <OurStrategy data={strategyData} />
+      <PartnerSponser />
     </main>
   );
 }

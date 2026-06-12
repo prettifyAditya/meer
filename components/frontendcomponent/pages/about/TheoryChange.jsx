@@ -109,7 +109,7 @@ export default function TheoryChange({ data }) {
             ))}
           </div>
           <div className="btn_wrap">
-            <Button className="white">
+            <Button variant="btn-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={20}
