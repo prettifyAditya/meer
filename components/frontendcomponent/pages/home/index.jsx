@@ -13,6 +13,7 @@ import GetInvolved from "./GetInvolved";
 import CommunityVoice from "./CommunityVoice";
 import Partners from "./Partners";
 import MeerResources from "./MeerResources";
+import RegionImpacts from "./RegionImpacts";
 
 const HomePage = () => {
   return (
@@ -27,6 +28,7 @@ const HomePage = () => {
       <CoolingMatters />
       <Safe />
       <ProjectHighlight />
+      <RegionImpacts />
       <GetInvolved />
       <MeerResources data={meerResourceData} />
       <CommunityVoice />
@@ -57,6 +59,24 @@ export default HomePage;
     },
     {
       category: "Newsletters",
+      list: [
+        {
+          image: "/image/home/resource/3.png",
+          title: "Newsletter February 2026",
+          description:
+            "As 2026 progresses, MEER’s work continues to build momentum..",
+          date: "February 1 2026",
+        },
+        {
+          image: "/image/home/resource/4.png",
+          title: "MEERTalk February 2026",
+          description: "Carbon Removal Won't Scale in Time",
+          date: "February 1 2026",
+        },
+      ],
+    },
+    {
+      category: "Podcasts",
       list: [
         {
           image: "/image/home/resource/3.png",
