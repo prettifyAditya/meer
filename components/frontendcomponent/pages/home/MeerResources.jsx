@@ -1,5 +1,4 @@
 "use client";
-import "@/uploads/styles/component/component.css";
 import TabContainer from "../../organisms/TabContainer";
 
 const MeerResources = ({ data }) => {

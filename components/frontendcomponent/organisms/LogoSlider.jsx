@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "@/uploads/styles/component/component.css";
+
 
 const LogoSlider = ({data}) => {
   return (
