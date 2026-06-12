@@ -105,9 +105,6 @@ const Footer = () => {
             <Image src="/image/logo.svg" width={100} height={40} alt="Meer" />
           </div>
           <ul className="menu">
-            <li>
-              <Link href="/our-work">Our Work</Link>
-            </li>
             <ul className="menu">
               {allLinks.menu.map((link, index) => (
                 <li key={index}>

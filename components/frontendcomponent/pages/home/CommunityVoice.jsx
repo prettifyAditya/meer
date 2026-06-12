@@ -42,9 +42,9 @@ const CommunityVoice = () => {
                   <img className="logo" src="/image/logo.svg" alt="" />
                   <figcaption>
                     <p>{description}</p>
-                    <div className="btn-container">
+                    {/* <div className="btn-container">
                       <button className="play-btn outline"></button>
-                    </div>
+                    </div> */}
                   </figcaption>
                 </figure>
               </SwiperSlide>

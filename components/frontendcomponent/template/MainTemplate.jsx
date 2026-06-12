@@ -2,13 +2,11 @@ import Footer from "../organisms/Footer";
 import Header from "../organisms/Header";
 
 export default function MainTemplate({ children }) {
-    return (
-        <>
-            <Header />
-            <main>
-                {children}
-            </main>
-            <Footer />
-        </>
-    )
+  return (
+    <>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
 }
