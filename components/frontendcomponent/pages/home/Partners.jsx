@@ -2,8 +2,6 @@
 
 import LogoSlider from "../../organisms/LogoSlider";
 
-
-
 const Partners = () => {
   return (
     <section className="partners">
