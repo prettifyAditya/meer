@@ -79,5 +79,17 @@
                 }
             ]
         }
+    },
+     "globalCoolingPage": {
+        "heroSection":{
+            "title": "Global Cooling & Climate Relevance",
+            "heading": "Climate legitimacy without hype",
+            "mediaSrc": "/image/globalCooling/banner.png"
+        }
+       
     }
 }
+
+
+
+
