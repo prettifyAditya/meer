@@ -7,6 +7,148 @@
                 max-width: 640px
 
 .surface_radiative
-    background: #FFFBE6
+    background: var(--lightbg)
     .main_wrapper
         flex-direction: row-reverse
+
+.core_idea_sec
+    .main-head
+        text-align: center
+    .core_idea
+        .main_wrapper
+            figcaption
+                .heading
+                    h2
+                        font-weight: 400
+                .desc
+                    h6
+                        font-weight: 600
+                        color: $primary
+                        margin-bottom: 15px
+                    ul
+                        border-left: 1px solid $primary
+                        margin: 0 0 20px 10px
+                        padding-top: 10px
+                        li
+                            position: relative
+                            padding-left: 20px
+                            &:not(:last-child)
+                                margin-bottom: 15px
+                            font-weight: 400
+                            &::before
+                                content: ""
+                                position: absolute
+                                left: -9px
+                                top: 7px
+                                width: 16px
+                                height: 16px
+                                background: $white
+                                border: 1px solid $primary
+                                border-radius: 50%
+
+.strm_sec
+    background: var(--lightbg)
+    .main_wrapper
+        figcaption
+            .desc
+                ul
+                    border-left: none
+                    padding-top: 0
+                    li
+                        position: relative
+                        padding-left: 25px
+                        &:not(:last-child)
+                            margin-bottom: 10px
+                        &::before
+                            content: ''
+                            position: absolute
+                            width: 24px
+                            height: 24px
+                            border: none
+                            background: url(/icon/arrow-right.svg) no-repeat
+                            background-size: cover
+                            top: 0
+                            left: -5px
+
+.takeaway_sec
+    .main_wrapper
+        align-items: center
+        --gap: 50px
+        gap: var(--gap)
+        figure
+            flex: 1
+            position: relative
+            width: 100%
+            max-width: 50%
+            line-height: 0
+        figcaption
+            flex: 1
+            width: 100%
+            max-width: calc( 100% - var(--gap) )
+            .heading
+                h2
+                    font-size: 36px
+                    color: $primary
+                    font-weight: 700
+                p
+                    font-weight: 600
+                    color: $primary
+                    margin-top: 5px
+            .desc
+                margin-top: 20px
+                p
+                    font-weight: 400
+                    line-height: 1.5
+                    &:not(:last-child)
+                        margin-bottom: 20px
+            .btn_wrap
+                margin-top: 40px
+                gap: 15px
+
+.strm_works
+    background: var(--lightbg)
+    .heading
+        text-align: center
+        max-width: 460px
+        margin: 0 auto 40px
+    .main_wrapper
+        position: relative
+        .srtm-slider
+            max-width: 97%
+            .strm_col
+                align-items: center
+                width: 100%
+                height: 100%
+                background: $white
+                figure
+                    flex: 0 1 auto
+                    max-width: 45%
+                    width: 100%
+                figcaption
+                    flex: 1
+                    padding: 40px 50px
+                    h5
+                        font-size: 24px
+                        color: $primary
+                        margin-bottom: 10px
+                        font-weight: 600
+                    p
+                        &:not(:last-child)
+                            margin-bottom: 15px
+                    ul
+                        margin: 0 0 20px 10px
+                        li
+                            position: relative
+                            padding-left: 25px
+                            &:not(:last-child)
+                                margin-bottom: 10px
+                            &::before
+                                content: ''
+                                position: absolute
+                                width: 24px
+                                height: 24px
+                                border: none
+                                background: url(/icon/arrow-right.svg) no-repeat
+                                background-size: cover
+                                top: 0
+                                left: -5px

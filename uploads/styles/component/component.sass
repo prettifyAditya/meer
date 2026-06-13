@@ -67,6 +67,26 @@
                     line-height: 1.5
                     &:not(:last-child)
                         margin-bottom: 20px
+                ul
+                    border-left: 1px solid $primary
+                    margin: 0 0 20px 10px
+                    padding-top: 10px
+                    li
+                        position: relative
+                        padding-left: 20px
+                        &:not(:last-child)
+                            margin-bottom: 15px
+                        font-weight: 400
+                        &::before
+                            content: ""
+                            position: absolute
+                            left: -9px
+                            top: 7px
+                            width: 16px
+                            height: 16px
+                            background: $white
+                            border: 1px solid $primary
+                            border-radius: 50%
                                   
 .strategy_col.item-md
     width: 100%

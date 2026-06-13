@@ -18,7 +18,7 @@ export default function InfoGraphic({
                 src={mediaSrc}
                 width={571}
                 height={416}
-                alt="section imag"
+                alt="section image"
               ></Image>
               {playBtn && (
                 <button className="play-btn" data-video={playBtn}></button>

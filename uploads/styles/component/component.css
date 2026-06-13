@@ -84,6 +84,32 @@
 .info_grahphic .main_wrapper figcaption .desc p:not(:last-child) {
   margin-bottom: 20px;
 }
+.info_grahphic .main_wrapper figcaption .desc ul {
+  border-left: 1px solid var(--primary);
+  margin: 0 0 20px 10px;
+  padding-top: 10px;
+}
+.info_grahphic .main_wrapper figcaption .desc ul li {
+  position: relative;
+  padding-left: 20px;
+}
+.info_grahphic .main_wrapper figcaption .desc ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+.info_grahphic .main_wrapper figcaption .desc ul li {
+  font-weight: 400;
+}
+.info_grahphic .main_wrapper figcaption .desc ul li::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 7px;
+  width: 16px;
+  height: 16px;
+  background: var(--white);
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+}
 
 .strategy_col.item-md {
   width: 100%;
