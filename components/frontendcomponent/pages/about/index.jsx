@@ -5,10 +5,12 @@ import ImpactSection from "./ImpactSection";
 import WhyWeExist from "./WhyWeExist";
 import MissionVision from "./MissionVision";
 import OurStrategy from "./OurStrategy";
-import "@/uploads/styles/about/about.css";
 import TheoryChange from "./TheoryChange";
 import MeerJourney from "./MeerJourney";
 import PartnerSponser from "./PartnerSponser";
+import GlobalTeam from "./GlobalTeam";
+import TheoryPop from "./TheoryPop";
+import "@/uploads/styles/about/about.css";
 
 export default function AboutUsPage() {
   const theoryData = staticData.AboutUs.Section3;
@@ -38,7 +40,9 @@ export default function AboutUsPage() {
       <MissionVision data={MissionVisionData} />
       <MeerJourney data={journeyData} />
       <OurStrategy data={strategyData} />
+      <GlobalTeam />
       <PartnerSponser />
+      <TheoryPop />
     </main>
   );
 }

@@ -239,11 +239,22 @@
                 &:not(:last-child)
                     margin-bottom: 20px
 
+.global_team
+    .heading
+        text-align: center
+        max-width: 630px
+        margin: 0 auto 50px
+    .btn_wrap
+        justify-content: center
+        margin-top: 50px
+
 .partner_sec
     background: linear-gradient(0deg, #FFFFFF, #FFFBE6)
     .heading
         text-align: center
         margin-bottom: 60px
+    .logo-slider
+        margin-bottom: 80px
     .get_in_touch
         display: flex
         align-items: center
@@ -469,3 +480,75 @@
                             color: $primary
                     p
                         // font-size: 14px
+
+.theory-pop.model
+    max-width: 840px
+    height: fit-content
+    left: 50%
+    top: 50%
+    transform: translate(-50%, 100vh)
+    transition: 0.6s ease
+    @include media(768)
+        height: 100%
+        border-radius: 0
+        overflow-y: auto
+    &.is-open
+        transform: translate(-50%, -50%)
+        transition: 0.6s ease
+    .close:not(.btn)
+        display: flex
+        align-items: center
+        gap: 12px
+        font-size: 14px
+        top: 20px
+        right: 20px
+        z-index: 1
+        svg
+            width: 20px
+            height: 20px
+            path
+                stroke: $primary
+                stroke-width: 2px
+    .model-body
+        padding: 0 50px 50px
+        margin-top: 50px
+        background: $white
+        @include media(991)  
+            padding: 0 30px 80px
+        @include media(768)
+            padding: 0 20px 20px  
+            margin-top: 50px
+        @include media(540)
+            overflow-y: auto    
+        .theory_wrapper
+            .icon
+                margin-bottom: 30px
+                width: 60px
+                height: 42px
+                img
+                    object-fit: contain
+            h4
+                margin-bottom: 20px
+                color: $primary
+                font-size: 24px
+                font-weight: 600
+            .desc
+                p
+                    &:not(:last-child)
+                        margin-bottom: 15px
+                ul
+                    margin-bottom: 15px
+                    li
+                        position: relative
+                        padding-left: 25px
+                        &:not(:last-child)
+                            margin-bottom: 12px
+                        &::before
+                            content: ''
+                            position: absolute
+                            width: 24px
+                            height: 24px
+                            background: url(/icon/arrow-right.svg) no-repeat
+                            background-size: cover
+                            top: 0
+                            left: -5px

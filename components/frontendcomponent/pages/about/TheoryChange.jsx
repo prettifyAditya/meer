@@ -3,15 +3,17 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { useModalStore } from "@/store/modalStore";
 import SwiperButton from "../../atoms/SwiperButton";
+import Button from "../../atoms/Button";
 import "swiper/css";
 import "swiper/css/navigation";
-import Button from "../../atoms/Button";
 
 export default function TheoryChange({ data }) {
   if (!data) return null;
   const swiperRef = useRef(null);
   const [activeTab, setActiveTab] = useState(1);
+  const openTheoryPop = useModalStore((state) => state.openTheoryPop);
   return (
     <section>
       <div className="theory_sec sec-pad-all">
@@ -86,7 +88,11 @@ export default function TheoryChange({ data }) {
                             className="desc"
                             dangerouslySetInnerHTML={{ __html: data.desc }}
                           ></div>
-                          <Link href={data.linkHref} className="read_more">
+                          <button
+                            type="button"
+                            className="read_more"
+                            onClick={openTheoryPop}
+                          >
                             Read More{" "}
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +105,7 @@ export default function TheoryChange({ data }) {
                                 d="M754.8 480H160a32 32 0 1 0 0 64h594.8L521.3 777.3a32 32 0 0 0 45.4 45.4l288-288a32 32 0 0 0 0-45.4l-288-288a32 32 0 1 0-45.4 45.4z"
                               ></path>
                             </svg>
-                          </Link>
+                          </button>
                         </div>
                       </SwiperSlide>
                     ))}

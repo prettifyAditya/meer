@@ -1,0 +1,23 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.banner.how_works_hero .bg .banner-wrapper .heading {
+  max-width: 640px;
+}
+
+.surface_radiative {
+  background: #FFFBE6;
+}
+.surface_radiative .main_wrapper {
+  flex-direction: row-reverse;
+}/*# sourceMappingURL=how-works.css.map */
