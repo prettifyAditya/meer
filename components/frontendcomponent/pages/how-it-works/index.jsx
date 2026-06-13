@@ -1,9 +1,12 @@
 import HeroSection from "../../molecules/HeroSection";
-import "@/uploads/styles/how-it-works/how-works.css";
 import InfoGraphic from "../../molecules/InfoGraphic";
 import CoreIdea from "./CoreIdea";
 import TakeAway from "./TakeAway";
 import StrmWorks from "./StrmWorks";
+import ThermalManagement from "./ThermalManagement";
+import LocalCooling from "./LocalCooling";
+import MeerApproach from "./MeerApproach";
+import "@/uploads/styles/how-it-works/how-works.css";
 
 export default function HowItWorksPage() {
   return (
@@ -29,6 +32,9 @@ export default function HowItWorksPage() {
       />
       <CoreIdea />
       <StrmWorks />
+      <ThermalManagement />
+      <LocalCooling />
+      <MeerApproach />
       <InfoGraphic
         classname="strm_sec"
         heading="Where SRTM Can Be Applied"

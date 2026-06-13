@@ -91,6 +91,10 @@
 .strategy_col.item-md
     width: 100%
     height: 100%
+    &:hover
+        figure
+            img
+                transform: scale(1.2)
     &::before
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(102, 102, 102, 0.00) 100%), 
     .logoIcon
@@ -104,12 +108,16 @@
         .content
             @include media-min(1440)
                 max-width: 80%
-            * 
-                color: $white
+            *
+                &:not(.btn)
+                    color: $white
             h5
                 font-size: 24px
                 font-weight: 700
                 margin-bottom: 8px
+            .btn
+                z-index: 1
+                margin-top: 20px
 
 .tab-container
     .row

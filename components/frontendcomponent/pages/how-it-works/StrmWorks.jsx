@@ -97,36 +97,31 @@ const data = [
     desc: `<p>Hot surfaces warm the surrounding air through radiation and convection.</p>
             <p>When a surface stays cooler:</p>
             <ul>
-                <li>More sunlight is reflected away before it becomes heat</li>
-                <li>Less solar energy is absorbed by the surface</li>
-                <li>Surfaces heat up more slowly and reach lower peak temperatures</li>
+                <li>Less heat is radiated into the air just above it</li>
+                <li>Less hot air rises from roofs, roads, and ground surfaces</li>
+                <li>Nearby outdoor and indoor air temperatures are lower</li>
             </ul>
-            <p>This immediately reduces heat build-up during the hottest parts of the day — especially in streets, rooftops, and open areas.</p>`,
+            <p>This is why reflective roofs, shaded surfaces, and cooled ground areas can significantly reduce heat exposure for people nearby.</p>`,
   },
   {
-    id: 1,
-    imgSrc: "/image/how-works/strm1.jpg",
-    heading: "Reflecting Sunlight Away",
-    desc: `<p>Most conventional surfaces absorb a large portion of incoming sunlight, converting it directly into heat.</p>
-            <p>SRTM systems increase surface reflectivity, meaning:</p>
+    id: 3,
+    imgSrc: "/image/how-works/strm3.jpg",
+    heading: "Reducing Evaporation and Humidity",
+    desc: `<p>Hot surfaces accelerate evaporation from soil, water containers, rooftops, and vegetation. Evaporation adds water vapour to the air and water vapour is the strongest natural greenhouse gas.</p>
+            <p>By cooling surfaces : </p>
             <ul>
-                <li>More sunlight is reflected away before it becomes heat</li>
-                <li>Less solar energy is absorbed by the surface</li>
-                <li>Surfaces heat up more slowly and reach lower peak temperatures</li>
+                <li>Evaporation rates decrease</li>
+                <li>Humidity levels can be lower near the surface</li>
+                <li>Heat stress becomes more manageable</li>
             </ul>
-            <p>This immediately reduces heat build-up during the hottest parts of the day — especially in streets, rooftops, and open areas.</p>`,
+            <p>Lower humidity also makes existing cooling — such as shade, ventilation, and fans — far more effective.</p>`,
   },
   {
-    id: 1,
-    imgSrc: "/image/how-works/strm1.jpg",
-    heading: "Reflecting Sunlight Away",
-    desc: `<p>Most conventional surfaces absorb a large portion of incoming sunlight, converting it directly into heat.</p>
-            <p>SRTM systems increase surface reflectivity, meaning:</p>
-            <ul>
-                <li>More sunlight is reflected away before it becomes heat</li>
-                <li>Less solar energy is absorbed by the surface</li>
-                <li>Surfaces heat up more slowly and reach lower peak temperatures</li>
-            </ul>
-            <p>This immediately reduces heat build-up during the hottest parts of the day — especially in streets, rooftops, and open areas.</p>`,
+    id: 4,
+    imgSrc: "/image/how-works/strm4.jpg",
+    heading: "Releasing Heat Back to Space",
+    desc: `<p>Some SRTM materials are designed not only to reflect sunlight, but also to emit heat efficiently as infrared radiation.</p>
+            <p>This emitted heat can travel upward and escape into space, rather than remaining trapped near the surface or within the lower atmosphere.</p>
+            <p>In this way, SRTM helps reduce heat both where people feel it directly and higher in the climate system, supporting regional cooling and long-term global heat balance.</p>`,
   },
 ];
