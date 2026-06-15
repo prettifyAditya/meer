@@ -110,6 +110,9 @@
   border: 1px solid var(--primary);
   border-radius: 50%;
 }
+.info_grahphic .main_wrapper figcaption .btn {
+  margin-top: 40px;
+}
 
 .strategy_col.item-md {
   width: 100%;

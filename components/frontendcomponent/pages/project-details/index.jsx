@@ -41,6 +41,13 @@ MEER’s team began by engaging residents, youth leaders, and vulnerable groups 
         cta={<Button>Human Impact Stories</Button>}
         playBtn="/video/about-banner.mp4"
       />
+      <InfoGraphic
+        classname="results_impact_sec blue_arrow"
+        heading="Results & Impact"
+        desc="<p>Kroo Bay was MEER’s first Freetown project site. Homes are arranged so tightly that almost all sunlight hits the roofs directly — meaning rooftop interventions can dramatically influence indoor temperatures.</p><p>
+MEER’s team began by engaging residents, youth leaders, and vulnerable groups to understand the severity of heat stress in their daily lives. Children, elders, and people with medical conditions were often unable to remain indoors during the day. Many families described “sleeping outside” or feeling “cooked alive” in overheated rooms.</p><p>From the start, the Freetown project has been guided by a <strong>community-first model.</strong> Local residents are directly involved in:</p><ul><li><strong>Fabrication:</strong> Cutting, sealing, and clamping reflective panels</li><li><strong>Installation:</strong> Mounting and securing systems over homes and community structures.</li><li><strong>Maintenance:</strong> Training households to care for and repair their reflective roofs.</li><li><strong>Documentation:</strong> Gathering feedback and performance data.</li></ul><p>This inclusive approach has created <strong>employment opportunities</strong> for residents, including several <strong>disabled workers</strong> who now hold permanent roles in fabrication, outreach, and data collection.</p>"
+        mediaSrc="/image/project/result-media.mp4"
+      />
     </main>
   );
 }
