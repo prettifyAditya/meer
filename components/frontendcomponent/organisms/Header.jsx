@@ -1,16 +1,17 @@
 "use client";
-
 import Link from "next/link";
 import Button from "../atoms/Button";
 import Image from "next/image";
 import "@/uploads/styles/header/header.css";
 import { useState, useEffect } from "react";
 import { useModal } from "@/hooks/useModal";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isHeaderBlue, setIsHeaderBlue] = useState(false);
   const { openModal } = useModal();
+  const pathName = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,8 +24,14 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    pathName === "/resources" || pathName === "/why-support-meer"
+      ? setIsHeaderBlue(true)
+      : setIsHeaderBlue(false);
+  }, [pathName]);
+
   return (
-    <header className={isScrolled ? "header-fixed" : ""}>
+    <header className={isScrolled || isHeaderBlue ? "header-fixed" : ""}>
       <div className="container-fluid">
         <div className="header-container">
           <div className="colA">

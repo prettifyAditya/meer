@@ -1,45 +1,72 @@
-import "@/uploads/styles/home/home.css";
-import HeroSection from "./HeroSection";
-import ExtremeHeats from "./ExtremeHeats";
-import MissingPiece from "./MissingPiece";
-import WhoWeAre from "./WhoWeAre";
-import SolutionDesigned from "./SolutionDesigned";
-import GlobalImpact from "./GlobalImpact";
-import WhatWeDo from "./WhatWeDo";
-import CoolingMatters from "./CoolingMatters";
-import Safe from "./Safe";
-import ProjectHighlight from "./ProjectHighlight";
-import GetInvolved from "./GetInvolved";
-import CommunityVoice from "./CommunityVoice";
-import Partners from "./Partners";
-import MeerResources from "./MeerResources";
-import RegionImpacts from "./RegionImpacts";
+"use client";
+import { useState } from "react";
+import TabRow from "../../molecules/TabRow";
+import ResourceCard from "../../molecules/ResourceCard";
+import Image from "next/image";
 
-const HomePage = () => {
+const ResourceList = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
   return (
-    <>
-      <HeroSection />
-      <ExtremeHeats />
-      <MissingPiece />
-      <WhoWeAre />
-      <WhatWeDo />
-      <SolutionDesigned />
-      <GlobalImpact />
-      <CoolingMatters />
-      <Safe />
-      <ProjectHighlight />
-      <RegionImpacts />
-      <GetInvolved />
-      <MeerResources data={meerResourceData} />
-      <CommunityVoice />
-      <Partners />
-    </>
+    <section className="resourceList">
+      <div className="container">
+        <TabRow
+          className="full"
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          data={data}
+        />
+
+        <div className="filter">
+          <h4>{data?.length} Results Found</h4>
+          <div className="right">
+            <label className="search">
+              <Image
+                className="icon"
+                src="/icon/search.svg"
+                width={18}
+                height={18}
+              />
+              <input type="text" placeholder="Search" />
+            </label>
+
+            <div className="sort">
+                <p>Sort By</p>
+                <Image 
+                    className="icon"
+                    src="/icon/down.svg"
+                    width={20}
+                    height={8.75}
+                />
+            </div>
+          </div>
+        </div>
+
+        {data.map(({ category, list }, idx) => {
+          const isActive = activeTab === idx;
+          return (
+            <div key={idx} className={`content ${isActive ? "active" : ""}`}>
+              {list.map((item, i) => {
+                return (
+                  <ResourceCard
+                    className="border"
+                    key={i}
+                    {...item}
+                    category={category}
+                  />
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 
-export default HomePage;
+export default ResourceList;
 
-const meerResourceData = [
+const data = [
   {
     category: "All",
     list: [

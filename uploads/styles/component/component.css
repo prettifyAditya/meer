@@ -116,6 +116,9 @@
   margin-bottom: 8px;
 }
 
+.resource-card.border {
+  border: 1px solid rgb(218, 218, 218);
+}
 .resource-card figure {
   height: 196px;
 }
@@ -168,6 +171,9 @@
   opacity: 0;
   transition: 0.3s ease;
 }
+.resource-card:hover {
+  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.1);
+}
 .resource-card:hover figcaption .tag {
   opacity: 0;
 }
@@ -175,43 +181,11 @@
   opacity: 1;
 }
 
-.tab-container .row {
-  margin: 30px 0 40px 0;
-  border-bottom: 1px solid rgba(0, 77, 153, 0.22);
-  position: relative;
-}
 .tab-container .row .swiper-nav {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-}
-.tab-container .row .tabs {
-  display: flex;
-}
-.tab-container .row .tabs .tab {
-  cursor: pointer;
-  font-weight: 500;
-  padding: 16px 40px;
-  position: relative;
-  transition: 0.5s ease-in-out;
-}
-.tab-container .row .tabs .tab::before {
-  content: "";
-  height: 3px;
-  background: rgb(51, 153, 255);
-  width: 0%;
-  left: 0;
-  position: absolute;
-  bottom: 0;
-  transition: width 0.5s ease-in-out;
-}
-.tab-container .row .tabs .tab.active {
-  color: rgb(51, 153, 255);
-}
-.tab-container .row .tabs .tab.active::before {
-  transform: scale(1);
-  width: 100%;
 }
 .tab-container .content {
   height: 0;
@@ -327,4 +301,46 @@
 
 .gm-style-iw.gm-style-iw-c {
   max-width: 320px !important;
+}
+
+.tab-row {
+  border-bottom: 1px solid rgba(0, 77, 153, 0.22);
+  position: relative;
+}
+.tab-row.full .tabs {
+  max-width: 100%;
+}
+.tab-row .swiper-nav {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tab-row .tabs {
+  display: flex;
+  max-width: 75%;
+}
+.tab-row .tabs .tab {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 16px 40px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+.tab-row .tabs .tab::before {
+  content: "";
+  height: 3px;
+  background: var(--primary);
+  width: 0%;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  transition: width 0.5s ease-in-out;
+}
+.tab-row .tabs .tab.active {
+  color: var(--primary);
+}
+.tab-row .tabs .tab.active::before {
+  transform: scale(1);
+  width: 100%;
 }/*# sourceMappingURL=component.css.map */

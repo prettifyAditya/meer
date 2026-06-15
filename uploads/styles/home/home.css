@@ -502,7 +502,13 @@
 .meerResource {
   background: var(--bgpink);
 }
-.meerResource .view-all {
+.meerResource .container .heading {
+  margin-bottom: 40px;
+}
+.meerResource .container .tab-container .tab-row {
+  margin-bottom: 40px;
+}
+.meerResource .container .view-all {
   margin: 50px auto 0;
   display: block;
   width: -moz-fit-content;

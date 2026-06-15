@@ -5,43 +5,22 @@ import { useState } from "react";
 import SlideBtn from "../atoms/SlideBtn";
 import ResourceCard from "../molecules/ResourceCard";
 import "@/uploads/styles/component/component.css";
+import TabRow from "../molecules/TabRow";
 
 const TabContainer = ({ data, card }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="container tab-container">
-      <div className="row">
-        <ul className="tabs">
-          {[{ category: "All" }, ...data]?.map(({ category }, i) => {
-            const isActive = activeTab === i;
-            return (
-              <li
-                onClick={() => setActiveTab(i)}
-                key={i}
-                className={`tab ${isActive ? "active" : ""}`}
-              >
-                {category}
-              </li>
-            );
-          })}
-        </ul>
-
+    <div className="tab-container">
+      
+      <TabRow data={data} activeTab={activeTab} setActiveTab={setActiveTab}>
         <div className="swiper-nav group primary-border square">
           <SlideBtn className={`resource-button-prev-${activeTab}`} />
           <SlideBtn className={`resource-button-next-${activeTab}`} />
         </div>
-      </div>
+      </TabRow>
 
-      {[
-        {
-          category: "All",
-          list: data.flatMap(({ list }) => {
-            return list;
-          }),
-        },
-        ...data,
-      ]?.map(({ category, list }, idx) => {
+      {data?.map(({ category, list }, idx) => {
         const isActive = activeTab === idx;
         return (
           <div key={idx} className={`content ${isActive ? "active" : ""}`}>
