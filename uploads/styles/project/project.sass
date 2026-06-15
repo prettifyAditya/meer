@@ -43,6 +43,7 @@
     &.blue_arrow
         .main_wrapper
             align-items: start
+            --gap: 70px
             figcaption
                 .desc
                     ul
@@ -134,3 +135,55 @@
     .main_wrapper 
         --gap: 70px
 
+.results_impact_sec
+    .main_wrapper
+        figure
+            height: 390px
+
+.banner.data-monitoring, .banner.help-us
+    .bg
+        height: 680px
+        .banner-wrapper
+            .icon
+                width: 55px
+                height: 51px
+                img
+                    object-fit: contain
+            .heading
+                max-width: 455px
+                h2
+                    font-size: 36px
+                p
+                    margin-top: 20px
+                .btn
+                    margin-top: 20px
+
+.project_nav
+    position: sticky
+    top: var(--headerheight)
+    background: #F2F9FF
+    z-index: 2
+    ul
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        gap: 40px
+        li
+            padding: 10px 5px
+            font-weight: 500
+            cursor: pointer
+            position: relative
+            transition: .5s ease
+            &.active
+                color: $primary
+                &::before
+                    width: 100%
+            &::before
+                content: ""
+                position: absolute
+                left: 0
+                bottom: 0
+                height: 2px
+                background: $primary
+                width: 0
+                transition: .5s ease

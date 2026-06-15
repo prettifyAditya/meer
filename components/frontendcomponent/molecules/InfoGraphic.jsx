@@ -8,9 +8,10 @@ export default function InfoGraphic({
   playBtn = "",
   desc = "",
   cta,
+  id,
 }) {
   return (
-    <section>
+    <section id={id}>
       <div className={`info_grahphic sec-pad-all ${classname}`}>
         <div className="container">
           <div className="main_wrapper flex">

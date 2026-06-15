@@ -1,9 +1,12 @@
 import Button from "../../atoms/Button";
 import HeroSection from "../../molecules/HeroSection";
 import InfoGraphic from "../../molecules/InfoGraphic";
+import DataMonitoring from "./DataMonitoring";
+import HelpUsExpand from "./HelpUsExpand";
 import MeerApproach from "./MeerApproach";
 import Overview from "./Overview";
 import "@/uploads/styles/project/project.css";
+import ProjectNav from "./ProjectNav";
 
 export default function ProjectDetailsPage() {
   return (
@@ -14,8 +17,9 @@ export default function ProjectDetailsPage() {
         tagline="Freetown, Sierra Leone"
         heading="Community cooling in one of West Africa’s hottest and most vulnerable neighborhoods."
       />
-      <Overview />
-      <section>
+      <ProjectNav />
+      <Overview id="overview" />
+      <section id="challenges">
         <div className="challenges_sec sec-pad-all">
           <div className="container">
             <div className="heading">
@@ -31,8 +35,9 @@ For families living in informal settlements built from tin, tarpaulin, and scrap
           </div>
         </div>
       </section>
-      <MeerApproach />
+      <MeerApproach id="meer-approach" />
       <InfoGraphic
+        id="success-stories"
         classname="community_sec blue_arrow"
         heading="Community-Led Implementation"
         desc="<p>Kroo Bay was MEER’s first Freetown project site. Homes are arranged so tightly that almost all sunlight hits the roofs directly — meaning rooftop interventions can dramatically influence indoor temperatures.</p><p>
@@ -42,12 +47,22 @@ MEER’s team began by engaging residents, youth leaders, and vulnerable groups 
         playBtn="/video/about-banner.mp4"
       />
       <InfoGraphic
+        id="results-impact"
         classname="results_impact_sec blue_arrow"
         heading="Results & Impact"
-        desc="<p>Kroo Bay was MEER’s first Freetown project site. Homes are arranged so tightly that almost all sunlight hits the roofs directly — meaning rooftop interventions can dramatically influence indoor temperatures.</p><p>
-MEER’s team began by engaging residents, youth leaders, and vulnerable groups to understand the severity of heat stress in their daily lives. Children, elders, and people with medical conditions were often unable to remain indoors during the day. Many families described “sleeping outside” or feeling “cooked alive” in overheated rooms.</p><p>From the start, the Freetown project has been guided by a <strong>community-first model.</strong> Local residents are directly involved in:</p><ul><li><strong>Fabrication:</strong> Cutting, sealing, and clamping reflective panels</li><li><strong>Installation:</strong> Mounting and securing systems over homes and community structures.</li><li><strong>Maintenance:</strong> Training households to care for and repair their reflective roofs.</li><li><strong>Documentation:</strong> Gathering feedback and performance data.</li></ul><p>This inclusive approach has created <strong>employment opportunities</strong> for residents, including several <strong>disabled workers</strong> who now hold permanent roles in fabrication, outreach, and data collection.</p>"
+        desc="<ul><li>55+ households have received reflective roofing to date.</li><li>Indoor temperatures lowered by 5–7 °C (9-12.6 °C) on average.</li><li>Residents report improved comfort, sleep, and productivity.</li><li>Zero electricity required for ongoing cooling.</li><li>Women and disabled residents employed and trained in fabrication and project management.</li></ul><p><strong>These outcomes prove that heat adaptation doesn’t require high-cost technology — it requires local ingenuity and collaboration.</strong></p>"
         mediaSrc="/image/project/result-media.mp4"
       />
+      <DataMonitoring id="data-monitoring" />
+      <InfoGraphic
+        id="materials-design"
+        classname="material_sec blue_arrow"
+        heading="Materials & Design"
+        desc="<ul><li><strong>Aluminium and PET sheeting</strong> for maximum reflectivity (+-0.85 albedo)</li><li><strong>Upcycled PET cordage and fasteners</strong> (pulled from local waste streams)</li><li><strong>Bamboo structural supports</strong>, locally harvested, lightweight, and renewable.</li><li><strong>Non-penetrative clamps</strong> to prevent leaks and extend roof lifespan.</li></ul><p>Future iterations will integrate fully locally manufactured PET alternatives and improved modular canopy designs for open markets and schools.</p>"
+        mediaSrc="/image/project/material-design.jpg"
+        playBtn="/video/about-banner.mp4"
+      />
+      <HelpUsExpand />
     </main>
   );
 }

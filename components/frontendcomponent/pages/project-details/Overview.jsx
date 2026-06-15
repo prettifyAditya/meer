@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export default function Overview() {
+export default function Overview({ id }) {
   return (
-    <section>
+    <section id={id}>
       <div className="overview_sec sec-pad-all">
         <div className="container">
           <div className="main_wrapper flex">

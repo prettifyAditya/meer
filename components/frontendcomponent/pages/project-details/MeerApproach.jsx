@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export default function MeerApproach() {
+export default function MeerApproach({ id }) {
   return (
-    <section>
+    <section id={id}>
       <div className="meer_approach sec-pad-all">
         <div className="container">
           <div className="heading">

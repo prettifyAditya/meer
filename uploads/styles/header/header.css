@@ -193,10 +193,11 @@
   pointer-events: none;
   height: calc(var(--inputsize) - var(--borderwidth));
   position: relative;
-  --filename: 'Attach Resume*';
+  --filename: 'Attach your CV*';
   --filenameinitial: var(--filename);
   --color: var(--text);
   --background: none;
+  --image: url(/icon/clip.svg) no-repeat;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -216,6 +217,7 @@
   font-size: inherit;
   line-height: calc(var(--inputsize) - var(--borderwidth));
   padding-left: var(--paddingleftright);
+  font-weight: 400;
   color: var(--color);
   width: 80%;
   overflow: hidden;
@@ -231,9 +233,37 @@
   background-position: calc(100% - var(--paddingleftright, 0)) 50%;
   background-size: auto 50%;
 }
+.form .form-group.file-input .file_type {
+  position: absolute;
+  font-size: 12px;
+  line-height: normal;
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 0;
+  color: var(--text);
+  font-weight: 400;
+}
+.form .form-group.file-input .error {
+  left: unset;
+  text-align: right;
+}
 .form .submit-grp:not(.text-left) {
   text-align: center;
   margin-top: 23px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  line-height: normal;
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 0;
+  right: 0;
+}
+.error.static {
+  position: static;
+  margin: 10px 0;
 }
 
 .custom-select {

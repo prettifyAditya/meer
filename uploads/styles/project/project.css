@@ -56,6 +56,7 @@
 
 .info_grahphic.blue_arrow .main_wrapper {
   align-items: start;
+  --gap: 70px;
 }
 .info_grahphic.blue_arrow .main_wrapper figcaption .desc ul {
   border-left: none;
@@ -163,4 +164,68 @@
 }
 .community_sec .main_wrapper {
   --gap: 70px;
+}
+
+.results_impact_sec .main_wrapper figure {
+  height: 390px;
+}
+
+.banner.data-monitoring .bg, .banner.help-us .bg {
+  height: 680px;
+}
+.banner.data-monitoring .bg .banner-wrapper .icon, .banner.help-us .bg .banner-wrapper .icon {
+  width: 55px;
+  height: 51px;
+}
+.banner.data-monitoring .bg .banner-wrapper .icon img, .banner.help-us .bg .banner-wrapper .icon img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.banner.data-monitoring .bg .banner-wrapper .heading, .banner.help-us .bg .banner-wrapper .heading {
+  max-width: 455px;
+}
+.banner.data-monitoring .bg .banner-wrapper .heading h2, .banner.help-us .bg .banner-wrapper .heading h2 {
+  font-size: 36px;
+}
+.banner.data-monitoring .bg .banner-wrapper .heading p, .banner.help-us .bg .banner-wrapper .heading p {
+  margin-top: 20px;
+}
+.banner.data-monitoring .bg .banner-wrapper .heading .btn, .banner.help-us .bg .banner-wrapper .heading .btn {
+  margin-top: 20px;
+}
+
+.project_nav {
+  position: sticky;
+  top: var(--headerheight);
+  background: #F2F9FF;
+  z-index: 2;
+}
+.project_nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+.project_nav ul li {
+  padding: 10px 5px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s ease;
+}
+.project_nav ul li.active {
+  color: var(--primary);
+}
+.project_nav ul li.active::before {
+  width: 100%;
+}
+.project_nav ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--primary);
+  width: 0;
+  transition: 0.5s ease;
 }/*# sourceMappingURL=project.css.map */
