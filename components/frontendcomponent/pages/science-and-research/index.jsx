@@ -3,6 +3,7 @@ import HeroSection from '../../molecules/HeroSection'
 import InfoGraphic from '../../molecules/InfoGraphic'
 import "@/uploads/styles/science-research/science-research.css"
 import OurResearchFocus from './OurResearchFocus'
+import Faq from './Faq'
 
 const ScienceAndResearch = () => {
     return (
@@ -71,6 +72,23 @@ const ScienceAndResearch = () => {
                     "
                 mediaSrc="/image/scrience-and-reasearch/science-secF.jpg"
             />
+            <InfoGraphic
+                classname="science-research-secG"
+                heading="Understanding Surface Radiative Thermal Management"
+                desc="
+                    <p>Surface Radiative Thermal Management (SRTM) is the simple physics behind MEER’s work: reflective, high-emissivity surfaces that cool homes and communities while reducing the amount of heat entering the atmosphere. By cooling the ground, we cool the air and help stabilize the climate system.</p>
+                    "
+                mediaSrc="/image/scrience-and-reasearch/science-secG.jpg"
+            />
+            <InfoGraphic
+                classname="science-research-secH"
+                heading="Can We Build Enough to Matter?"
+                desc="
+                    <p>GPTO (Global Production Thermal Offset) is a framework designed to assess whether a climate solution can realistically scale to match the magnitude of global warming. Rather than focusing on performance or cost, it evaluates whether enough of the required materials can be produced annually to make a meaningful impact at a planetary level. By linking climate solutions to real-world industrial production limits, GPTO highlights a critical but often overlooked constraint: even highly effective technologies cannot address climate change if they cannot be manufactured at sufficient scale. In this way, GPTO shifts the conversation from “does it work?” to the more fundamental question, “can we build enough of it to matter?”</p>
+                    "
+                mediaSrc="/image/scrience-and-reasearch/science-secH.jpg"
+            />
+            <Faq />
         </>
     )
 }
