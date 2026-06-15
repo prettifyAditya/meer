@@ -17,4 +17,150 @@
 .project_hero.hero_banner .bg .banner-wrapper .heading h1 {
   margin-top: 25px;
   font-size: 36px;
+}
+
+.overview_sec .main_wrapper {
+  align-items: center;
+  --gap: 100px;
+  gap: var(--gap);
+}
+.overview_sec .main_wrapper figcaption, .overview_sec .main_wrapper figure {
+  flex: 1;
+  max-width: 50%;
+  width: 100%;
+}
+.overview_sec .main_wrapper figcaption h2 {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.overview_sec .main_wrapper figcaption .info_wrap {
+  margin-top: 30px;
+  display: flex;
+  gap: 60px;
+}
+.overview_sec .main_wrapper figcaption .info_wrap .info_col {
+  flex: 0 1 auto;
+}
+.overview_sec .main_wrapper figcaption .info_wrap .info_col p {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--primary);
+}
+.overview_sec .main_wrapper figcaption .info_wrap .info_col h6 {
+  font-weight: 600;
+  font-size: 25px;
+  color: var(--primary);
+}
+
+.info_grahphic.blue_arrow .main_wrapper {
+  align-items: start;
+}
+.info_grahphic.blue_arrow .main_wrapper figcaption .desc ul {
+  border-left: none;
+  margin: 0 0 20px 10px;
+}
+.info_grahphic.blue_arrow .main_wrapper figcaption .desc ul li {
+  position: relative;
+  padding-left: 25px;
+}
+.info_grahphic.blue_arrow .main_wrapper figcaption .desc ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.info_grahphic.blue_arrow .main_wrapper figcaption .desc ul li::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: url(/icon/arrow-right.svg) no-repeat;
+  background-size: cover;
+  top: 0;
+  left: -5px;
+}
+
+.challenges_sec {
+  background: var(--primary);
+}
+.challenges_sec .container > .heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.challenges_sec .container > .heading h2 {
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6980392157);
+}
+.challenges_sec .info_grahphic.challenge_sec {
+  padding: 0;
+}
+.challenges_sec .info_grahphic.challenge_sec .main_wrapper {
+  align-items: start;
+  --gap: 45px;
+}
+.challenges_sec .info_grahphic.challenge_sec .main_wrapper figcaption * {
+  color: var(--white);
+}
+.challenges_sec .info_grahphic.challenge_sec .main_wrapper figcaption .desc p {
+  font-weight: 400;
+}
+.challenges_sec .info_grahphic.challenge_sec .main_wrapper figcaption .desc h6 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.challenges_sec .info_grahphic.challenge_sec .main_wrapper figcaption .desc ul {
+  border-left: none;
+  margin: 0 0 20px 10px;
+}
+.challenges_sec .info_grahphic.challenge_sec .main_wrapper figcaption .desc ul li {
+  position: relative;
+  padding-left: 25px;
+}
+.challenges_sec .info_grahphic.challenge_sec .main_wrapper figcaption .desc ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.challenges_sec .info_grahphic.challenge_sec .main_wrapper figcaption .desc ul li::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: url(/icon/arrow-right-white.svg) no-repeat;
+  background-size: cover;
+  top: 0;
+  left: -5px;
+}
+
+.meer_approach .heading {
+  max-width: 530px;
+  text-align: center;
+  margin: 0 auto 30px;
+}
+.meer_approach .heading .icon {
+  width: 55px;
+  height: 51px;
+  margin: 0 auto 10px;
+}
+.meer_approach .heading .icon img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.meer_approach .desc {
+  max-width: 740px;
+  margin: 0 auto;
+}
+.meer_approach .desc p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.community_sec {
+  background: var(--lightbg);
+}
+.community_sec .main_wrapper {
+  --gap: 70px;
 }/*# sourceMappingURL=project.css.map */

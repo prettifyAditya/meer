@@ -7,6 +7,7 @@ export default function InfoGraphic({
   heading = "",
   playBtn = "",
   desc = "",
+  cta,
 }) {
   return (
     <section>
@@ -47,6 +48,7 @@ export default function InfoGraphic({
                 className="desc"
                 dangerouslySetInnerHTML={{ __html: desc }}
               ></div>
+              {cta}
             </figcaption>
           </div>
         </div>
