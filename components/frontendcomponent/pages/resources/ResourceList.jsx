@@ -24,6 +24,7 @@ const ResourceList = () => {
               <Image
                 className="icon"
                 src="/icon/search.svg"
+                alt="icon"
                 width={18}
                 height={18}
               />
@@ -35,6 +36,7 @@ const ResourceList = () => {
                 <Image 
                     className="icon"
                     src="/icon/down.svg"
+                    alt="icon"
                     width={20}
                     height={8.75}
                 />

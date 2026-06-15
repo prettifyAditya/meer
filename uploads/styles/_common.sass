@@ -516,8 +516,8 @@ img, video
 		display: flex
 		align-items: center
 		justify-content: space-between
-		width: 100%
-		max-width: 100%
+		width: 103%
+		max-width: 103%
 		margin: 0 auto
 		pointer-events: none
 		user-select: none
@@ -526,9 +526,7 @@ img, video
 			user-select: auto
 		@include media(768)
 			display: none
-	&.white
-		button
-			background: $white
+	
 
 	&.primary
 		button
@@ -549,6 +547,10 @@ img, video
 				svg
 					path
 						stroke: var(--white)
+	&.white
+		button
+			background: $white
+			
 	button
 		width: 40px
 		height: 40px
@@ -673,7 +675,7 @@ img, video
 		@include media(675)
 			font-size: 22px
 	h4
-		font-size: 22px
+		font-size: 20px
 		@include media(675)
 			font-size: 20px
 	h5

@@ -1,7 +1,6 @@
 @import '../_var'
 
 // Hero Section
-
 .banner
     &.hero_banner
         .bg
@@ -11,6 +10,8 @@
                 transform: translate(0, 20%)
                 .heading
                     max-width: 570px
+                    p, h1
+                        color: var(--white)
 
 .info_grahphic
     &.who_we_are
@@ -283,3 +284,46 @@
                 &::before
                     transform: scale(1)
                     width: 100%
+
+
+.latest-article
+    box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2)
+    padding: 20px 28px
+    h3
+        font-size: 20px
+        @include font(600)
+        margin-bottom: 8px
+    ul
+        li
+            a
+                padding: 16px 0
+                display: flex
+                align-items: center
+                gap: 16px
+                figure
+                    width: 106px
+                    height: 74px
+                figcaption
+                    flex: 1
+                    h4
+                        font-size: 14px
+                        @include font(500)
+            &:first-child
+                a
+                    align-items: start
+                    flex-direction: column
+                    figure
+                        width: 100%
+                        height: 228px
+            &:not(:last-child)
+                border-bottom: 1px solid rgba(212, 212, 212, 1)
+
+.moreSection
+    padding: 0px 0 60px
+    .container
+        .heading
+            h2
+                text-align: center
+        .content
+            position: relative
+            margin-top: 50px

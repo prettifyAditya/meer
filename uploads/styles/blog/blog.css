@@ -1985,99 +1985,35 @@ em {
   height: 21px;
 }
 
-.resourceHero {
-  height: 271px;
-  margin-top: var(--headerheight);
+.banner.blogDetailHero .bg .banner-wrapper {
+  top: unset;
+  bottom: 8%;
 }
-.resourceHero .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.banner.blogDetailHero .bg .banner-wrapper .heading h1 {
+  font-size: 32px;
+  line-height: 38px;
 }
-.resourceHero .container h2, .resourceHero .container p {
-  text-align: center;
+.banner.blogDetailHero .bg .banner-wrapper .heading p {
+  font-size: 15px;
 }
-.resourceHero .container h2 {
-  font-size: 48px;
-}
-.resourceHero .container h2 {
-  color: var(--primary);
-  margin-bottom: 14px;
-}
-.resourceHero .container p {
-  max-width: 476px;
-  margin: 0 auto;
+.banner.blogDetailHero .bg .banner-wrapper .heading p {
+  margin-bottom: 15px;
 }
 
-.resourceList {
-  padding: 0 0 50px;
+.blogArticle {
+  padding: 50px 0;
 }
-.resourceList .container .filter {
-  padding: 24px 0;
-  border-bottom: 1px solid rgb(235, 235, 235);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 32px;
-}
-.resourceList .container .filter h4 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
-}
-.resourceList .container .filter .right {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-.resourceList .container .filter .right .search {
-  width: 318px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  border: 1px solid rgb(228, 228, 228);
-  padding: 6px 16px;
-}
-.resourceList .container .filter .right .search .icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-}
-.resourceList .container .filter .right .search input {
-  flex: 1;
-  border: 0;
-  outline: 0;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--text);
-}
-.resourceList .container .filter .right .sort {
-  border: 1px solid rgb(228, 228, 228);
-  padding: 6px 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.resourceList .container .filter .right .sort p {
-  color: #000;
-}
-.resourceList .container .filter .right .sort .icon {
-  width: 20px;
-}
-.resourceList .container .content {
+.blogArticle .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  grid-template-columns: 1fr 380px;
+  gap: 50px;
 }
-.resourceList .container .content.active {
-  opacity: 1;
-  height: auto;
-  transform: translateY(0);
-}/*# sourceMappingURL=resource.css.map */
+.blogArticle .container .left.website-content img {
+  margin: 32px 0;
+  max-height: 364px;
+  display: block;
+}
+.blogArticle .container .right {
+  height: -moz-fit-content;
+  height: fit-content;
+}/*# sourceMappingURL=blog.css.map */

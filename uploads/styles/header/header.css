@@ -1382,8 +1382,8 @@ img, video {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  max-width: 100%;
+  width: 103%;
+  max-width: 103%;
   margin: 0 auto;
   pointer-events: none;
   -webkit-user-select: none;
@@ -1400,9 +1400,6 @@ img, video {
   .swiper-nav.center-full {
     display: none;
   }
-}
-.swiper-nav.white button {
-  background: var(--white);
 }
 .swiper-nav.primary button {
   background: var(--primary);
@@ -1423,6 +1420,9 @@ img, video {
 }
 .swiper-nav.primary-border button:hover svg path {
   stroke: var(--white);
+}
+.swiper-nav.white button {
+  background: var(--white);
 }
 .swiper-nav button {
   width: 40px;
@@ -1587,7 +1587,7 @@ img, video {
   }
 }
 .website-content h4 {
-  font-size: 22px;
+  font-size: 20px;
 }
 @media only screen and (max-width: 675px) {
   .website-content h4 {

@@ -1,24 +1,17 @@
-import HeroSection from "@/components/frontendcomponent/molecules/HeroSection";
-import "@/uploads/styles/blog/blog.css";
-import BlogArticle from "./BlogArticle";
+import "@/uploads/styles/podcast/podcast.css";
+import PodcastBrief from "./PodcastBrief";
 import MoreSection from "@/components/frontendcomponent/organisms/MoreSection";
 
-const BlogDetail = () => {
+const PodcastDetail = () => {
   return (
     <>
-      <HeroSection
-        classname="blogDetailHero"
-        mediaSrc="/image/blog/banner.png"
-        tagline="09 Feb 2025"
-        heading="Groundbreaking Seminar Paves the Way for Global Climate Solutions"
-      />
-      <BlogArticle />
-      <MoreSection data={data} heading="More Blogs" />
+      <PodcastBrief />
+      <MoreSection data={data} heading="More Podcasts" />
     </>
   );
 };
 
-export default BlogDetail;
+export default PodcastDetail;
 
 const data = [
   {

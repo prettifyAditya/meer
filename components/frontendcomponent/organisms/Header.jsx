@@ -25,7 +25,7 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    pathName === "/resources" || pathName === "/why-support-meer"
+    pathName === "/resources" || pathName.startsWith("/resources/podcast/")
       ? setIsHeaderBlue(true)
       : setIsHeaderBlue(false);
   }, [pathName]);

@@ -19,6 +19,9 @@
 .banner.hero_banner .bg .banner-wrapper .heading {
   max-width: 570px;
 }
+.banner.hero_banner .bg .banner-wrapper .heading p, .banner.hero_banner .bg .banner-wrapper .heading h1 {
+  color: var(--white);
+}
 
 .info_grahphic.who_we_are .main_wrapper {
   --gap: 65px;
@@ -343,4 +346,53 @@
 .tab-row .tabs .tab.active::before {
   transform: scale(1);
   width: 100%;
+}
+
+.latest-article {
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+  padding: 20px 28px;
+}
+.latest-article h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.latest-article ul li a {
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.latest-article ul li a figure {
+  width: 106px;
+  height: 74px;
+}
+.latest-article ul li a figcaption {
+  flex: 1;
+}
+.latest-article ul li a figcaption h4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.latest-article ul li:first-child a {
+  align-items: start;
+  flex-direction: column;
+}
+.latest-article ul li:first-child a figure {
+  width: 100%;
+  height: 228px;
+}
+.latest-article ul li:not(:last-child) {
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.moreSection {
+  padding: 0px 0 60px;
+}
+.moreSection .container .heading h2 {
+  text-align: center;
+}
+.moreSection .container .content {
+  position: relative;
+  margin-top: 50px;
 }/*# sourceMappingURL=component.css.map */
