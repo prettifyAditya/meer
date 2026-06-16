@@ -15,12 +15,16 @@ export default function InfoGraphic({
                 <div className="container">
                     <div className="main_wrapper flex">
                         <figure>
-                            <Image
-                                src={mediaSrc}
-                                width={571}
-                                height={416}
-                                alt="section image"
-                            ></Image>
+                            {mediaSrc.includes("mp4") ? (
+                                <video src={mediaSrc} autoPlay muted loop playsInline></video>
+                            ) : (
+                                <Image
+                                    src={mediaSrc}
+                                    width={571}
+                                    height={416}
+                                    alt="section image"
+                                ></Image>
+                            )}
                             {playBtn && (
                                 <button className="play-btn" data-video={playBtn}></button>
                             )}
