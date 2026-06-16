@@ -1,7 +1,5 @@
 "use client";
 import React from 'react'
-import Image from 'next/image'
-import Button from '../../atoms/Button'
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SlideBtn from '../../atoms/SlideBtn';

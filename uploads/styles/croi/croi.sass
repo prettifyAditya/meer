@@ -1,0 +1,234 @@
+@import '../_var'
+
+.banner
+    &::before
+        background: none
+    &.croi-banner
+        .bg
+            .banner-wrapper
+                bottom: 8%
+                .heading
+                    max-width: 570px
+                    h1
+                        margin-top: 40px
+
+.info_grahphic.croi-secB
+    background: #FFFBE6
+    .main_wrapper
+        flex-direction: row-reverse
+
+.info_grahphic.croi-secC
+    .main_wrapper
+        align-items: flex-start
+        figure
+            position: sticky
+            top: calc( var(--headerheight) + 20px  )
+            max-width: 579px
+
+.croi-secD
+    background: #FFFBE6
+    .heading
+        text-align: center
+        h2
+            font-weight: 600
+            color: #004D99
+            font-size: 36px
+            max-width: 455px
+            line-height: 1.1
+            margin: 0 auto 10px
+        p
+            max-width: 580px
+            margin: auto
+
+    .support-slider
+        position: relative
+        margin: 40px 0 30px 0 
+        .swiper-nav
+            button
+                border: 1px solid #ffffff
+                background: white
+                transition: 0.5s ease
+                svg
+                    path
+                        fill: #004D99
+        .swiper-prev.swiper-button-disabled, .swiper-next.swiper-button-disabled
+            cursor: no-drop
+            opacity: 1
+            filter: grayscale(1)
+        .swiper
+            max-width: 97%
+            margin: auto
+            .swiper-wrapper
+                .swiper-slide
+                    background: white
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    figure
+                        width: 50%
+                        line-height: 0
+                        p
+                            color: white
+                            font-weight: 700
+                            font-size: 24px
+                    figcaption
+                        width: 50%
+                        padding: 40px
+                        .ico-ico
+                            width: 53px
+                            height: 36px
+                            line-height: 0
+                            img
+                                height: 100%
+                                width: 100%
+                                object-fit: contain
+                        h4
+                            font-weight: 600
+                            color: #004D99
+                            font-size: 24px
+                            margin-bottom: 10px
+                            max-width: 90%
+                        p
+                            font-weight: 400
+                            font-size: 16px
+                            color: $text
+
+.info_grahphic.croi-secE
+    .main_wrapper
+        align-items: flex-start
+        flex-direction: row-reverse
+        figure
+            position: sticky
+            top: calc( var(--headerheight) + 20px  )
+            max-width: 579px
+            
+.croi-secE
+    .main_wrapper
+        align-items: center
+        --gap: 50px
+        gap: var(--gap)
+        align-items: flex-start
+        flex-direction: row-reverse
+        figure
+            flex: 1
+            width: 100%
+            max-width: 50%
+            line-height: 0
+            position: sticky
+            top: calc( var(--headerheight) + 20px  )
+            max-width: 579px
+            .img-wrapper
+                width: 100%
+                height: 100%
+                object-fit: contain
+            h4
+                font-weight: 600
+                font-size: 16px
+                color: black    
+                text-align: center
+                margin-top: 20px    
+        figcaption
+            flex: 1
+            width: 100%
+            max-width: calc( 100% - var(--gap) )
+            .heading
+                h2
+                    font-size: 36px
+                    color: $primary
+                    font-weight: 700
+            .desc
+                margin-top: 20px
+                p
+                    font-weight: 400
+                    line-height: 1.5
+                    &:not(:last-child)
+                        margin-bottom: 20px
+
+.croi-secF
+    background: #FFFBE6
+    .heading
+        max-width: 680px
+        margin: auto
+        h2
+            text-align: center
+            margin-bottom: 20px
+    .support-slider
+        position: relative
+        margin: 40px 0 30px 0 
+        .swiper-nav
+            button
+                border: 1px solid #004D99
+                background: white
+                transition: 0.5s ease
+                svg
+                    path
+                        fill: #004D99
+        .swiper-prev.swiper-button-disabled, .swiper-next.swiper-button-disabled
+            cursor: no-drop
+            opacity: 1
+            filter: grayscale(1)
+        .swiper
+            max-width: 97%
+            margin: auto
+            .swiper-wrapper
+                .swiper-slide
+                    background: white
+                    padding: 20px 25px
+                    figure
+                        width: 78px
+                        height: 78px
+                        line-height: 0
+                        margin-bottom: 25px
+                        margin: 0 auto 30px
+                    p
+                        font-weight: 400
+                        font-size: 16px
+                        color: $text
+                        text-align: center
+                        max-width: 90%
+                        margin: auto
+    .get-in-touch
+        background: #ffffff
+        border-radius: 5px 
+        padding: 15px 13px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        max-width: 97%
+        margin: auto
+        figure
+            width: 112px
+            height: 32px
+            line-height: 0
+            img
+                height: 100%
+                width: 100%
+                object-fit: contain
+        p
+            max-width: 679px
+
+.info_grahphic.croi-secG
+    .main_wrapper
+        align-items: flex-start
+        flex-direction: row-reverse
+        figure
+            position: sticky
+            top: calc( var(--headerheight) + 20px  )
+            max-width: 579px
+
+.info_grahphic figcaption
+    ul
+        li
+            position: relative
+            margin-bottom: 20px      
+            padding-left: 30px
+            color: var(--para)
+            &::before
+                position: absolute
+                left: 0
+                top: 0
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%231a56db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat
+                background-size: contain
+                width: 24px
+                height: 24px
+                content: ""
