@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { useModalStore } from "@/store/modalStore";
 import "@/uploads/styles/component/component.css";
 
 export default function InfoGraphic({
@@ -7,9 +9,11 @@ export default function InfoGraphic({
   heading = "",
   playBtn = "",
   desc = "",
+  location = "",
   cta,
   id,
 }) {
+  const openVideo = useModalStore((state) => state.openVideo);
   return (
     <section id={id}>
       <div className={`info_grahphic sec-pad-all ${classname}`}>
@@ -27,7 +31,11 @@ export default function InfoGraphic({
                 ></Image>
               )}
               {playBtn && (
-                <button className="play-btn" data-video={playBtn}></button>
+                <button
+                  className="play-btn"
+                  data-video={playBtn}
+                  onClick={openVideo}
+                ></button>
               )}
               {classname.includes("logo_icon") && (
                 <Image
@@ -46,6 +54,7 @@ export default function InfoGraphic({
               )}
             </figure>
             <figcaption>
+              {location && <span className="location">{location}</span>}
               <div className="heading">
                 <h2>{heading}</h2>
               </div>

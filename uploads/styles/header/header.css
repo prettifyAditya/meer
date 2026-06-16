@@ -679,6 +679,20 @@
   }
 }
 
+.sec-pad-bottom {
+  padding: 0 0 60px;
+}
+@media only screen and (max-width: 991px) {
+  .sec-pad-bottom {
+    padding: 0 0 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sec-pad-bottom {
+    padding: 0 0 40px;
+  }
+}
+
 .sec-pad-all {
   padding: 60px 0;
 }
