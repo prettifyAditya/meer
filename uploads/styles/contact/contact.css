@@ -1,0 +1,112 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.contact_hero .bg .banner-wrapper .heading h1 {
+  margin-top: 40px;
+}
+
+.contact_sec .main_wrapper {
+  --gap: 100px;
+  gap: var(--gap);
+  justify-content: space-between;
+}
+.contact_sec .main_wrapper .colA {
+  flex: 0 1 auto;
+  max-width: 320px;
+  width: 100%;
+}
+.contact_sec .main_wrapper .colA .logo {
+  width: 150px;
+  height: 42px;
+}
+.contact_sec .main_wrapper .colA p {
+  margin: 30px 0;
+}
+.contact_sec .main_wrapper .colA ul:not(.social_icons) li {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+.contact_sec .main_wrapper .colA ul:not(.social_icons) li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contact_sec .main_wrapper .colA ul:not(.social_icons) li:hover .details p, .contact_sec .main_wrapper .colA ul:not(.social_icons) li:hover .details a {
+  color: var(--primary);
+  transform: translateX(5px);
+}
+.contact_sec .main_wrapper .colA ul:not(.social_icons) li .icon {
+  flex: 0 1 auto;
+  width: 40px;
+  height: 40px;
+}
+.contact_sec .main_wrapper .colA ul:not(.social_icons) li .details {
+  flex: 1;
+}
+.contact_sec .main_wrapper .colA ul:not(.social_icons) li .details h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.contact_sec .main_wrapper .colA ul:not(.social_icons) li .details p, .contact_sec .main_wrapper .colA ul:not(.social_icons) li .details a {
+  display: block;
+  font-size: 14px;
+  color: var(--text);
+  transition: 0.5s ease;
+}
+.contact_sec .main_wrapper .colA .social_icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 991px) {
+  .contact_sec .main_wrapper .colA .social_icons {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .contact_sec .main_wrapper .colA .social_icons {
+    justify-content: center;
+  }
+}
+.contact_sec .main_wrapper .colA .social_icons li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 41px;
+  height: 41px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 50%;
+}
+.contact_sec .main_wrapper .colA .social_icons li a:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+.contact_sec .main_wrapper .colB {
+  flex: 1;
+  max-width: 700px;
+  padding: 0 40px 40px;
+}
+.contact_sec .main_wrapper .colB .heading {
+  max-width: 335px;
+  margin-bottom: 45px;
+}
+.contact_sec .main_wrapper .colB .heading h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+.contact_sec .main_wrapper .colB .form .form-grid {
+  --item: 2;
+  --gaplr: 55px;
+}/*# sourceMappingURL=contact.css.map */

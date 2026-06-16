@@ -19,6 +19,7 @@ $scrollwidth: 8px
     --secondary: #003c77
     --bglight: rgba(242, 249, 255, 1)
     --bgpink: rgba(255, 251, 230, 1)
+    --lightbg: #FFFBE6
     --text: #666666
     --white: #FFFFFF
     --black: #000000
@@ -50,6 +51,13 @@ $scrollwidth: 8px
         padding: 50px 0 0
     @include media(768)
         padding: 40px 0 0
+
+.sec-pad-bottom
+    padding: 0 0 60px
+    @include media(991)
+        padding: 0 0 50px
+    @include media(768)
+        padding: 0 0 40px
 
 
 .sec-pad-all
@@ -361,10 +369,18 @@ img, video
     border: 1px solid transparent
     position: relative
     z-index: 1
+    transition: .5s ease
     @include media(540)
         font-size: 12px
         --padding: 12px
         --height: 33px
+    &.btn-white
+        border-color: $white
+        background: $white
+        color: $primary
+        &:hover
+            background: $primary
+            color: $white
 
     &.btn-primary
         background: $primary
@@ -383,6 +399,28 @@ img, video
             z-index: -1
         &:hover
             color: $primary
+            border-color: $primary
+            box-shadow: 0 6px 20px rgba($primary, .35)
+            &::before
+                transform: scaleX(1)
+                transform-origin: left
+    &.btn-primary-outline
+        background: transparent
+        color: $primary
+        border-color: $primary
+        transition: color .3s ease, border-color .3s ease, box-shadow .3s ease
+        &::before
+            content: ''
+            position: absolute
+            inset: 0
+            background: $primary
+            border-radius: inherit
+            transform: scaleX(0)
+            transform-origin: right
+            transition: transform .4s cubic-bezier(.77,0,.18,1)
+            z-index: -1
+        &:hover
+            color: $white
             border-color: $primary
             box-shadow: 0 6px 20px rgba($primary, .35)
             &::before
