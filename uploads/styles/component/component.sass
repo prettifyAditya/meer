@@ -128,7 +128,7 @@
                 transition: .3s ease
             .btn
                 font-size: 14px
-                padding: 6px 16px 
+                padding: 6px 16px
                 --height: 30px
                 transition: .3s ease
                 position: absolute
@@ -137,14 +137,13 @@
                 transform: translateY(-50%)
                 opacity: 0
                 transition: .3s ease
-    &:hover      
+    &:hover
         box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.10)
         figcaption
             .tag
                 opacity: 0
             .btn
                 opacity: 1
-                
 
 .tab-container
     .row
@@ -175,7 +174,6 @@
                     img
                         object-fit: contain
 
-
 .map-select
     background: var(--white)
     display: flex
@@ -183,6 +181,7 @@
     gap: 10px
     padding: 7px 10px
     position: relative
+    cursor: pointer
     .type-icon
         width: 16px
         height: 16px
@@ -224,7 +223,7 @@
                     border-bottom: 1px solid rgba(0, 0, 0, 0.08)
                 &.selected
                     background: var(--bglight)
-                
+
 .map-pointer
     background: var(--white)
     box-shadow: 0px 7.53px 27.11px 0px rgba(0, 0, 0, 0.16)
@@ -244,11 +243,9 @@
         --height: 28px
         @include font(500)
 
-
 .gm-style-iw
     &.gm-style-iw-c
         max-width: 320px !important
-
 
 .tab-row
     border-bottom: 1px solid rgba(0, 77, 153, 0.22)
@@ -284,7 +281,6 @@
                 &::before
                     transform: scale(1)
                     width: 100%
-
 
 .latest-article
     box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2)
@@ -327,3 +323,105 @@
         .content
             position: relative
             margin-top: 50px
+
+.InsightContainer
+    &.invert
+        .grid
+            .media
+                order: 2
+            .item-content
+                order: 1
+    &.light
+        .grid
+            .item-content
+                h2,
+                p,
+                li,
+                span
+                    color: var(--white)
+                ul
+                    li
+                        &::before
+                            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat
+    .grid
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        align-items: start
+        gap: 50px
+        @include media(991)
+            grid-template-columns: 100%
+            gap: 30px
+        .media
+            position: relative
+            width: 571px
+            height: 416px
+            img,
+            video
+                width: 100%
+                height: 100%
+                object-fit: cover
+                display: block
+            .play-btn
+                --btnsize: 73px
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+        .item-content
+            width: 100%
+            max-width: 520px
+            h2
+                font-size: 36px
+                color: var(--primary)
+                margin-bottom: 20px
+                @include media(675)
+                    font-size: 20px
+            p
+                color: var(--para)
+                &:not(:last-child)
+                    margin-bottom: 20px
+            ul
+                margin: 20px 0
+                display: flex
+                flex-direction: column
+                gap: 15px
+                p
+                    margin: 5px 0
+                li
+                    position: relative
+                    padding-left: 30px
+                    color: var(--para)
+                    &::before
+                        position: absolute
+                        left: 0
+                        top: 0
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%231a56db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat
+                        background-size: contain
+                        width: 24px
+                        height: 24px
+                        content: ""
+            .btn
+                margin-top: 26px
+
+
+.otherBanner
+    height: 271px
+    margin-top: var(--headerheight)
+    .container
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        h2, p
+            text-align: center
+        h2
+            font-size: 48px
+            @include media(600)
+            color: $primary
+            margin-bottom: 14px
+        p
+            max-width: 476px
+            margin: 0 auto
+        .btn
+            margin-top: 24px

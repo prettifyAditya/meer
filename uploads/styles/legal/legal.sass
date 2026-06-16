@@ -1,0 +1,56 @@
+@import "../_common"
+
+.legalSection
+    margin-top: var(--headerheight)
+    padding: 60px 0
+    .container
+        .heading
+            margin-bottom: 40px
+        h1
+            font-size: 36px
+            @include font(600)
+        h2
+            font-size: 24px
+            font-weight: 700
+            margin-bottom: 16px
+        h3
+            font-size: 24px
+            @include font(600)
+            margin-bottom: 16px
+        h6
+            font-size: 16px
+            @include font(700)
+            margin-bottom: 10px
+        p
+            margin-bottom: 24px
+            b
+                @include font(600)
+        ul
+            margin: 16px 0 24px
+            padding-left: 24px
+            li
+                padding-left: 24px
+                position: relative
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 8px
+                    width: 10px
+                    height: 10px
+                    border-radius: 50%
+                    background-color: $primary
+                &:not(:last-child)
+                    margin-bottom: 8px
+                    
+
+        
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        strong
+            color: $primary

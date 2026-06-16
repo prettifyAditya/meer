@@ -6,13 +6,16 @@ import "@/uploads/styles/header/header.css";
 import { useState, useEffect } from "react";
 import { useModal } from "@/hooks/useModal";
 import { usePathname } from "next/navigation";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsHeaderBlue } from "@/store/slice/uiSlice";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isHeaderBlue, setIsHeaderBlue] = useState(false);
+  const { isHeaderBlue } = useSelector((state) => state.ui);
   const { openModal } = useModal();
   const pathName = usePathname();
-
+  const dispatch = useDispatch();
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
@@ -25,9 +28,12 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    pathName === "/resources" || pathName.startsWith("/resources/podcast/")
-      ? setIsHeaderBlue(true)
-      : setIsHeaderBlue(false);
+    pathName === "/resources" ||
+    pathName === "/thank-you" ||
+    pathName === "/privacy-policy" ||
+    pathName.startsWith("/resources/podcast/")
+      ? dispatch(setIsHeaderBlue(true))
+      : dispatch(setIsHeaderBlue(false));
   }, [pathName]);
 
   return (

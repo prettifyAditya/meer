@@ -6,6 +6,8 @@ import Image from "next/image";
 
 const ResourceList = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState("Newest");
 
   return (
     <section className="resourceList">
@@ -31,15 +33,34 @@ const ResourceList = () => {
               <input type="text" placeholder="Search" />
             </label>
 
-            <div className="sort">
-                <p>Sort By</p>
-                <Image 
-                    className="icon"
-                    src="/icon/down.svg"
-                    alt="icon"
-                    width={20}
-                    height={8.75}
-                />
+            <div onClick={() => setIsOpen(!isOpen)} className="sort">
+              <p> {selected || "Sort By"}</p>
+              <Image
+                className="icon"
+                src="/icon/down.svg"
+                alt="icon"
+                width={20}
+                height={8.75}
+              />
+              <div className={`option-container ${isOpen ? "open" : ""}`}>
+                <ul className="options">
+                  {["Newest", "Oldest"]?.map((val, i) => {
+                    const isSelected = selected == val;
+                    return (
+                      <li
+                        onClick={() => {
+                          setIsOpen(false);
+                          setSelected(val);
+                        }}
+                        className={isSelected ? "selected" : ""}
+                        key={i}
+                      >
+                        {val}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </div>
           </div>
         </div>

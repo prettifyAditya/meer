@@ -1899,142 +1899,65 @@ em {
   height: 21px;
 }
 
-.resourceHero {
-  height: 271px;
+.legalSection {
   margin-top: var(--headerheight);
+  padding: 60px 0;
 }
-.resourceHero .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.legalSection .container .heading {
+  margin-bottom: 40px;
 }
-.resourceHero .container h2, .resourceHero .container p {
-  text-align: center;
-}
-.resourceHero .container h2 {
-  font-size: 48px;
-}
-.resourceHero .container h2 {
-  color: var(--primary);
-  margin-bottom: 14px;
-}
-.resourceHero .container p {
-  max-width: 476px;
-  margin: 0 auto;
-}
-
-.resourceList {
-  padding: 0 0 50px;
-}
-.resourceList .container .filter {
-  padding: 24px 0;
-  border-bottom: 1px solid rgb(235, 235, 235);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 32px;
-}
-.resourceList .container .filter h4 {
-  font-size: 18px;
+.legalSection .container h1 {
+  font-size: 36px;
   font-weight: 600;
-  line-height: 24px;
 }
-.resourceList .container .filter .right {
-  display: flex;
-  align-items: center;
-  gap: 24px;
+.legalSection .container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
-.resourceList .container .filter .right .search {
-  width: 318px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  border: 1px solid rgb(228, 228, 228);
-  padding: 6px 16px;
+.legalSection .container h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
 }
-.resourceList .container .filter .right .search .icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
+.legalSection .container h6 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
-.resourceList .container .filter .right .search input {
-  flex: 1;
-  border: 0;
-  outline: 0;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--text);
+.legalSection .container p {
+  margin-bottom: 24px;
 }
-.resourceList .container .filter .right .sort {
-  border: 1px solid rgb(228, 228, 228);
-  padding: 6px 12px;
-  display: flex;
-  align-items: center;
+.legalSection .container p b {
+  font-weight: 600;
+}
+.legalSection .container ul {
+  margin: 16px 0 24px;
+  padding-left: 24px;
+}
+.legalSection .container ul li {
+  padding-left: 24px;
   position: relative;
-  cursor: pointer;
-  gap: 10px;
 }
-.resourceList .container .filter .right .sort p {
-  color: #000;
-}
-.resourceList .container .filter .right .sort .icon {
-  width: 20px;
-}
-.resourceList .container .filter .right .sort .option-container {
+.legalSection .container ul li::before {
+  content: "";
   position: absolute;
-  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.1);
-  top: 100%;
   left: 0;
-  right: 0;
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: all 0.5s ease;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary);
 }
-.resourceList .container .filter .right .sort .option-container.open {
-  grid-template-rows: 1fr;
+.legalSection .container ul li:not(:last-child) {
+  margin-bottom: 8px;
 }
-.resourceList .container .filter .right .sort .option-container .options {
-  background: var(--white);
-  z-index: 1;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
-  max-height: 150px;
-  overflow-y: auto;
-}
-.resourceList .container .filter .right .sort .option-container .options::-webkit-scrollbar {
-  width: 4px;
-}
-.resourceList .container .filter .right .sort .option-container .options::-webkit-scrollbar-track {
-  background: transparent;
-}
-.resourceList .container .filter .right .sort .option-container .options::-webkit-scrollbar-thumb {
-  background: var(--primary);
-}
-.resourceList .container .filter .right .sort .option-container .options li {
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  font-size: 14px;
-}
-.resourceList .container .filter .right .sort .option-container .options li:not(:last-child) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-.resourceList .container .filter .right .sort .option-container .options li.selected {
-  background: var(--bglight);
-}
-.resourceList .container .content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-.resourceList .container .content.active {
-  opacity: 1;
-  height: auto;
-  transform: translateY(0);
-}/*# sourceMappingURL=resource.css.map */
+.legalSection .container h1,
+.legalSection .container h2,
+.legalSection .container h3,
+.legalSection .container h4,
+.legalSection .container h5,
+.legalSection .container h6,
+.legalSection .container strong {
+  color: var(--primary);
+}/*# sourceMappingURL=legal.css.map */

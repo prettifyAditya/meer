@@ -61,11 +61,46 @@
                     padding: 6px 12px
                     display: flex
                     align-items: center
+                    position: relative
+                    cursor: pointer
                     gap: 10px
                     p
                         color: #000
                     .icon
                         width: 20px
+                    .option-container
+                        position: absolute
+                        box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.10)
+                        top: 100%
+                        left: 0
+                        right: 0
+                        display: grid
+                        grid-template-rows: 0fr
+                        transition: all .5s ease
+                        &.open
+                            grid-template-rows: 1fr
+                        .options
+                            background: var(--white)
+                            z-index: 1
+                            border-top: 1px solid rgba(0, 0, 0, 0.15)
+                            max-height: 150px
+                            overflow-y: auto
+                            &::-webkit-scrollbar
+                                width: 4px
+                            &::-webkit-scrollbar-track
+                                background: transparent
+                            &::-webkit-scrollbar-thumb
+                                background: var(--primary)
+                            li
+                                padding: 8px 12px
+                                cursor: pointer
+                                transition: .3s ease
+                                font-size: 14px
+                                &:not(:last-child)
+                                    border-bottom: 1px solid rgba(0, 0, 0, 0.08)
+                                &.selected
+                                    background: var(--bglight)
+                    
 
 
         .content

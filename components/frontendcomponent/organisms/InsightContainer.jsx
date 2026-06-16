@@ -1,9 +1,16 @@
 import Image from "next/image";
 import Button from "../atoms/Button";
+import "@/uploads/styles/component/component.css";
 
-const InsightContainer = ({ isPopUpVideo, isBtn, detail, imgSrc,
-  videoSrc, heading, className }) => {
-
+const InsightContainer = ({
+  isPopUpVideo,
+  isBtn,
+  detail,
+  imgSrc,
+  videoSrc,
+  heading,
+  className,
+}) => {
   return (
     <div className={`InsightContainer  ${className} `}>
       <div className="grid">
@@ -19,7 +26,11 @@ const InsightContainer = ({ isPopUpVideo, isBtn, detail, imgSrc,
         <div className="item-content">
           <h2>{heading}</h2>
           {detail && <div dangerouslySetInnerHTML={{ __html: detail }} />}
-          {isBtn && <Button href={isBtn.href} variant="btn btn-primary">{isBtn.text}</Button>}
+          {isBtn && (
+            <Button href={isBtn.href} variant="btn btn-primary">
+              {isBtn.text}
+            </Button>
+          )}
         </div>
       </div>
     </div>
