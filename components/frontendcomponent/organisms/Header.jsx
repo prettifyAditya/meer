@@ -1,14 +1,21 @@
-"use client"
-
+"use client";
 import Link from "next/link";
 import Button from "../atoms/Button";
 import Image from "next/image";
 import "@/uploads/styles/header/header.css";
 import { useState, useEffect } from "react";
+import { useModal } from "@/hooks/useModal";
+import { usePathname } from "next/navigation";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsHeaderBlue } from "@/store/slice/uiSlice";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const { isHeaderBlue } = useSelector((state) => state.ui);
+  const { openModal } = useModal();
+  const pathName = usePathname();
+  const dispatch = useDispatch();
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
@@ -20,18 +27,22 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    pathName === "/resources" ||
+    pathName === "/thank-you" ||
+    pathName === "/privacy-policy" ||
+    pathName.startsWith("/resources/podcast/")
+      ? dispatch(setIsHeaderBlue(true))
+      : dispatch(setIsHeaderBlue(false));
+  }, [pathName]);
+
   return (
-    <header className={isScrolled ? "header-fixed" : ""}>
+    <header className={isScrolled || isHeaderBlue ? "header-fixed" : ""}>
       <div className="container-fluid">
         <div className="header-container">
           <div className="colA">
             <Link href="/" className="logo">
-              <Image
-                src="/image/logo.svg"
-                width={100}
-                height={40}
-                alt="Meer"
-              />
+              <Image src="/image/logo.svg" width={100} height={40} alt="Meer" />
             </Link>
           </div>
 
@@ -57,7 +68,7 @@ const Header = () => {
               </li>
             </ul>
             <div>
-              <Button variant="btn-primary" href="/donate">
+              <Button onClick={() => openModal("menu")} variant="btn-primary">
                 Donate
               </Button>
             </div>

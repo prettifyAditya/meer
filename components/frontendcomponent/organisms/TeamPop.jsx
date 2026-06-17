@@ -1,15 +1,15 @@
 "use client";
 import Image from "next/image";
-import { useModalStore } from "@/store/modalStore";
+import { useSelector } from "react-redux";
 import "@/uploads/styles/component/component.css";
+import CloseModal from "../atoms/CloseModal";
 
 export default function TeamPop() {
-  const isTeamPopOpen = useModalStore((state) => state.isTeamPopOpen);
-  const closeTeamPop = useModalStore((state) => state.closeTeamPop);
+  const { isModal } = useSelector((state) => state.modal);
 
   return (
-    <div className={`model team-pop ${isTeamPopOpen ? "is-open" : ""}`}>
-      <button className="close" onClick={closeTeamPop}>
+    <div className={`model team-pop ${isModal === "team" ? "is-open" : ""}`}>
+      {/* <button className="close" onClick={closeTeamPop}>
         Close
         <svg
           width={24}
@@ -25,7 +25,8 @@ export default function TeamPop() {
             strokeLinejoin="round"
           />
         </svg>
-      </button>
+      </button> */}
+      <CloseModal />
       <div className="model-body">
         <div className="team_wrapper">
           <figure>

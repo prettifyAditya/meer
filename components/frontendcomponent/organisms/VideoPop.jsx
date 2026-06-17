@@ -1,11 +1,13 @@
 "use client";
-import { useModalStore } from "@/store/modalStore";
+import { useModal } from "@/hooks/useModal";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export default function VideoPop() {
-  const isOpen = useModalStore((state) => state.isVideoOpen);
-  const closeVideo = useModalStore((state) => state.closeVideo);
   const [videoSrc, setVideoSrc] = useState("");
+
+  const { isModal, modalData } = useSelector((state) => state.modal);
+  const { closeModal } = useModal();
 
   const handleCloseVideo = () => {
     setVideoSrc("");
@@ -15,7 +17,6 @@ export default function VideoPop() {
   useEffect(() => {
     const handleClick = (event) => {
       const videoTarget = event.target.closest("[data-video]");
-      console.log(videoTarget);
 
       if (videoTarget) {
         let src = videoTarget.getAttribute("data-video");
@@ -36,9 +37,9 @@ export default function VideoPop() {
   }, []);
 
   return (
-    <div className={`model video-pop ${isOpen ? "is-open" : ""}`}>
+    <div className={`model video-pop ${isModal === "video" ? "is-open" : ""}`}>
       <div className="model-body">
-        <button className="close-video" onClick={handleCloseVideo}>
+        <button className="close-video" onClick={closeModal}>
           <svg
             width={24}
             height={24}
@@ -54,12 +55,12 @@ export default function VideoPop() {
             />
           </svg>
         </button>
-        {videoSrc && (
+        {modalData && (
           <iframe
             id="iframe1"
             allow="autoplay;fullscreen"
             allowFullScreen
-            src={videoSrc}
+            src={modalData}
           />
         )}
       </div>

@@ -1,6 +1,11 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
+import Image from "next/image";
+import SlideBtn from "../../atoms/SlideBtn";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const WhatWeDo = () => {
   return (
@@ -57,11 +62,50 @@ const WhatWeDo = () => {
         </div>
 
         <div className="right">
-          <Swiper>
-            <SwiperSlide>
-              
-            </SwiperSlide>
+          <Swiper
+            loop={true}
+            spaceBetween={0}
+            navigation={{
+              prevEl: ".whatWeDo-button-prev",
+              nextEl: ".whatWeDo-button-next",
+            }}
+            pagination={{
+              el: ".whatWeDo-progressbar",
+              type: "progressbar",
+            }}
+            breakpoints={{
+              0: { slidesPerView: 1.2, spaceBetween: 20 },
+              768: { slidesPerView: 1.9 },
+            }}
+            modules={[Pagination, Navigation]}
+          >
+            {slideData?.map(({ image, title }, i) => {
+              return (
+                <SwiperSlide key={i}>
+                  <div className="whatWeCard">
+                    <figure>
+                      <Image
+                        src={image}
+                        alt={title}
+                        width={1920}
+                        height={1080}
+                      />
+                    </figure>
+                    <figcaption>
+                      <h4>{title}</h4>
+                    </figcaption>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
+          <div className="whatWeDo-pagination">
+            <div className="whatWeDo-progressbar"></div>
+            <div className="swiper-nav group primary-border square">
+              <SlideBtn className="whatWeDo-button-prev" />
+              <SlideBtn className="whatWeDo-button-next " />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -69,3 +113,23 @@ const WhatWeDo = () => {
 };
 
 export default WhatWeDo;
+
+const slideData = [
+  {
+    image: "/image/home/what-we-do/2.png",
+    title: "Reduce indoor and outdoor heat exposure",
+  },
+  {
+    image: "/image/home/what-we-do/4.png",
+    title: "Lower dependence on mechanical cooling",
+  },
+  {
+    image: "/image/home/what-we-do/3.jpg",
+    title: "Protect people, crops, livestock, and water supplies",
+  },
+  {
+    image: "/image/home/what-we-do/1.png",
+    title: "Scale from individual homes to neighbourhoods and regions",
+  }
+  
+];

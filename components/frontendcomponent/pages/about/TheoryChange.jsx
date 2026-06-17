@@ -3,17 +3,17 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import { useModalStore } from "@/store/modalStore";
 import SwiperButton from "../../atoms/SwiperButton";
 import Button from "../../atoms/Button";
 import "swiper/css";
 import "swiper/css/navigation";
+import { useModal } from "@/hooks/useModal";
 
 export default function TheoryChange({ data }) {
   if (!data) return null;
   const swiperRef = useRef(null);
   const [activeTab, setActiveTab] = useState(1);
-  const openTheoryPop = useModalStore((state) => state.openTheoryPop);
+  const { openModal } = useModal();
   return (
     <section>
       <div className="theory_sec sec-pad-all">
@@ -91,7 +91,7 @@ export default function TheoryChange({ data }) {
                           <button
                             type="button"
                             className="read_more"
-                            onClick={openTheoryPop}
+                            onClick={() => openModal("theory")}
                           >
                             Read More{" "}
                             <svg

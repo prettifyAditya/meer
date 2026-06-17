@@ -1,8 +1,11 @@
+"use client";
+import { useModal } from "@/hooks/useModal";
 import InsightContainer from "../../organisms/InsightContainer";
 
 const WhoWeAre = () => {
   if (!data) return null;
   const { heading, videoSrc, btnText, detail } = data;
+  const { openModal } = useModal();
   return (
     <section className="who-we-are">
       <InsightContainer
@@ -10,7 +13,7 @@ const WhoWeAre = () => {
         videoSrc={videoSrc}
         heading={heading}
         isBtn={{ text: "Learn More About Us", href: "#" }}
-        isPopUpVideo={true}
+        isPopUpVideo={() => openModal("video", "/video/about-banner.mp4")}
         detail={detail}
       />
     </section>

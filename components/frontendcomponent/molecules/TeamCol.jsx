@@ -1,12 +1,15 @@
 import Image from "next/image";
 import "@/uploads/styles/component/component.css";
+import { useModal } from "@/hooks/useModal";
 
 export default function TeamCol({ data, onClick }) {
+  const { openModal } = useModal();
+
   if (!data) return null;
 
   const { imgSrc, name, role } = data;
   return (
-    <div className="team_col item-md" onClick={onClick}>
+    <div className="team_col item-md" onClick={() => openModal("team")}>
       <figure>
         <Image
           src={imgSrc}

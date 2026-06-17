@@ -1,43 +1,27 @@
 "use client";
-import React from "react";
 import { Grid, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState } from "react";
-import { useModalStore } from "@/store/modalStore";
 import SlideBtn from "../atoms/SlideBtn";
 import ResourceCard from "../molecules/ResourceCard";
+import TabRow from "../molecules/TabRow";
 import TeamCol from "../molecules/TeamCol";
-import "@/uploads/styles/component/component.css";
 import "swiper/css/grid";
+import "@/uploads/styles/component/component.css";
 
 const TabContainer = ({ data, card, swiperType }) => {
-  const openTeamPop = useModalStore((state) => state.openTeamPop);
   const gridProps =
     swiperType === "grid" ? { grid: { rows: 2, fill: "row" } } : {};
   const [activeTab, setActiveTab] = useState(0);
-  return (
-    <div className="container tab-container">
-      <div className="row">
-        <ul className="tabs">
-          {data?.map(({ category }, i) => {
-            const isActive = activeTab === i;
-            return (
-              <li
-                onClick={() => setActiveTab(i)}
-                key={i}
-                className={`tab ${isActive ? "active" : ""}`}
-              >
-                {category}
-              </li>
-            );
-          })}
-        </ul>
 
+  return (
+    <div className="tab-container">
+      <TabRow data={data} activeTab={activeTab} setActiveTab={setActiveTab}>
         <div className="swiper-nav group primary-border square">
           <SlideBtn className={`resource-button-prev-${activeTab}`} />
           <SlideBtn className={`resource-button-next-${activeTab}`} />
         </div>
-      </div>
+      </TabRow>
 
       {data?.map(({ category, list }, idx) => {
         const isActive = activeTab === idx;
@@ -45,8 +29,8 @@ const TabContainer = ({ data, card, swiperType }) => {
           <div key={idx} className={`content ${isActive ? "active" : ""}`}>
             <Swiper
               navigation={{
-                prevEl: `.resource-button-prev-${idx}`,
                 nextEl: `.resource-button-next-${idx}`,
+                prevEl: `.resource-button-prev-${idx}`,
               }}
               modules={[Navigation, Grid]}
               slidesPerView={4}
@@ -59,7 +43,7 @@ const TabContainer = ({ data, card, swiperType }) => {
                     {card === "resource" ? (
                       <ResourceCard category={category} {...item} />
                     ) : card === "team" ? (
-                      <TeamCol data={item} onClick={openTeamPop} />
+                      <TeamCol data={item} />
                     ) : (
                       ""
                     )}
