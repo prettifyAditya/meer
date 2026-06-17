@@ -1,4 +1,4 @@
-import GlobalCoolingPage from "@/components/frontendcomponent/pages/globalCooling/Index";
+import GlobalCoolingPage from "@/components/frontendcomponent/pages/global-cooling/Index";
 
 export const metadata = {
   title: "Global Cooling | Meer",

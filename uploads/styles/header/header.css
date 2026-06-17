@@ -1826,7 +1826,8 @@ em {
   }
 }
 .InsightContainer .grid .media {
-  position: relative;
+  position: sticky;
+  top: calc(var(--headerheight) + 45px);
   width: 571px;
   height: 416px;
 }
@@ -1852,7 +1853,7 @@ em {
 .InsightContainer .grid .item-content h2 {
   font-size: 36px;
   color: var(--primary);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 @media only screen and (max-width: 675px) {
   .InsightContainer .grid .item-content h2 {
@@ -1866,10 +1867,10 @@ em {
   margin-bottom: 20px;
 }
 .InsightContainer .grid .item-content ul {
-  margin: 20px 0;
+  margin: 30px 0;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 24px;
 }
 .InsightContainer .grid .item-content ul p {
   margin: 5px 0;
@@ -1878,6 +1879,11 @@ em {
   position: relative;
   padding-left: 30px;
   color: var(--para);
+}
+.InsightContainer .grid .item-content ul li h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
 }
 .InsightContainer .grid .item-content ul li::before {
   position: absolute;
@@ -1891,6 +1897,23 @@ em {
 }
 .InsightContainer .grid .item-content .btn {
   margin-top: 26px;
+}
+.InsightContainer .grid .item-content.white h2 {
+  color: var(--white);
+}
+.InsightContainer .grid .item-content.white p {
+  color: rgb(255, 255, 255);
+}
+.InsightContainer .grid .item-content.white li {
+  color: rgb(255, 255, 255);
+}
+.InsightContainer .grid .item-content.white li h6 {
+  color: var(--white);
+}
+.InsightContainer .grid .item-content.white li::before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat;
+  width: 24px;
+  height: 24px;
 }
 
 header {

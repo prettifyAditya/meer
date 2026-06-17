@@ -16,7 +16,7 @@ const InsightContainer = ({ isPopUpVideo, isBtn, detail, imgSrc,
             <video src={videoSrc} autoPlay muted loop playsInline></video>
           )}
         </div>
-        <div className="item-content">
+        <div className={`item-content ${className}`}>
           <h2>{heading}</h2>
           {detail && <div dangerouslySetInnerHTML={{ __html: detail }} />}
           {isBtn && <Button href={isBtn.href} variant="btn btn-primary">{isBtn.text}</Button>}
