@@ -38,7 +38,6 @@
                 position: absolute
                 top: 30px
                 left: 30px
-                // transform: translate(-30px, -30px)
             .ceo_details
                 position: absolute
                 bottom: 40px
@@ -56,6 +55,15 @@
             flex: 1
             width: 100%
             max-width: calc( 100% - var(--gap) )
+            .location
+                display: inline-block
+                margin-bottom: 20px
+                color: $text
+                font-size: 14px
+                padding: 7px 35px
+                border-radius: 25px
+                background: #EDEDED
+                font-weight: 500
             .heading
                 h2
                     font-size: 36px
@@ -68,10 +76,36 @@
                     line-height: 1.5
                     &:not(:last-child)
                         margin-bottom: 20px
-
-.strategy_col
+                ul
+                    border-left: 1px solid $primary
+                    margin: 0 0 20px 10px
+                    padding-top: 10px
+                    li
+                        position: relative
+                        padding-left: 20px
+                        &:not(:last-child)
+                            margin-bottom: 15px
+                        font-weight: 400
+                        &::before
+                            content: ""
+                            position: absolute
+                            left: -9px
+                            top: 7px
+                            width: 16px
+                            height: 16px
+                            background: $white
+                            border: 1px solid $primary
+                            border-radius: 50%
+            .btn
+                margin-top: 40px
+                                  
+.strategy_col.item-md
     width: 100%
     height: 100%
+    &:hover
+        figure
+            img
+                transform: scale(1.2)
     &::before
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(102, 102, 102, 0.00) 100%),
     .logoIcon
@@ -86,11 +120,200 @@
             @include media-min(1440)
                 max-width: 80%
             *
-                color: $white
+                &:not(.btn)
+                    color: $white
             h5
                 font-size: 24px
                 font-weight: 700
                 margin-bottom: 8px
+            .btn
+                z-index: 1
+                margin-top: 20px
+
+.tab-container
+    .row
+        margin: 30px 0 40px 0 
+        border-bottom: 1px solid rgba(0, 77, 153, 0.22)
+        position: relative
+        .swiper-nav
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+        .tabs
+            display: flex
+            .tab
+                cursor: pointer
+                @include font(500)
+                padding: 16px 40px
+                position: relative
+                transition: .5s ease-in-out
+                &::before
+                    content: ""
+                    height: 3px
+                    background: $primary
+                    width: 0%
+                    left: 0
+                    position: absolute
+                    bottom: 0
+                    transition: width .5s ease-in-out
+                &.active
+                    color: $primary
+                    &::before
+                        transform: scale(1)
+                        width: 100%
+    .content
+        height: 0
+        opacity: 0
+        overflow: hidden
+        transform: translateY(20px)
+        transition: opacity .5s ease-in-out, transform .5s ease-in-out
+        &.active
+            opacity: 1
+            height: 100%
+            transform: translateY(0)
+
+.logo-slider
+    .swiper
+        .swiper-wrapper
+            transition-timing-function: linear
+            .swiper-slide
+                figure
+                    padding: 5px
+                    height: 72px
+                    img
+                        object-fit: contain
+
+.team_col.item-md
+    cursor: pointer
+    &::before
+        background: linear-gradient(0deg, #000, #0000 50%)
+    &:hover
+        figure
+            img
+                transform: scale(1.2)
+    figcaption
+        padding: 0 25px 25px
+        * 
+            color: $white
+        h6
+            font-size: 18px
+            font-weight: 700
+        p
+            font-size: 14px
+            font-weight: 500
+
+.team-pop.model
+    max-width: 1000px
+    height: fit-content
+    left: 50%
+    top: 50%
+    transform: translate(-50%, 100vh)
+    transition: 0.6s ease
+    @include media(768)
+        height: 100%
+        border-radius: 0
+        overflow-y: auto
+    &.is-open
+        transform: translate(-50%, -50%)
+        transition: 0.6s ease
+    .close:not(.btn)
+        display: flex
+        align-items: center
+        gap: 12px
+        font-size: 14px
+        top: 20px
+        right: 20px
+        z-index: 1
+        svg
+            width: 20px
+            height: 20px
+            path
+                stroke: $primary
+                stroke-width: 2px
+    .model-body
+        padding: 0 50px 80px
+        margin-top: 80px
+        background: $white
+        @include media(991)  
+            padding: 0 30px 80px
+        @include media(768)
+            padding: 0 20px 20px  
+            margin-top: 50px
+        @include media(540)
+            overflow-y: auto    
+        .team_wrapper
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            gap: 60px
+            @include media(768)
+                flex-direction: column
+            @include media(540) 
+                gap: 20px
+            figure
+                flex: 0 1 auto
+                width: 100%
+                max-width: 280px
+                position: relative
+                line-height: 0
+                display: flex
+                align-items: center
+                justify-content: center
+                @include media(768) 
+                    flex: 0 1 50%
+                    width: 50%
+                @include media(540) 
+                    flex: 0 1 100%
+                    width: 70%
+                .social_icon
+                    padding: 15px 12px
+                    background: $primary
+                    position: absolute
+                    top: 0%
+                    right: 0%
+                    z-index: 0
+                    display: flex
+                    flex-direction: column
+                    gap: 15px
+                    .socialLinks
+                        color: $white
+                        display: block
+                        width: 22px
+                        height: 22px
+            figcaption
+                flex: 1
+                .heading
+                    padding-bottom: 15px
+                    border-bottom: 1px solid $primary
+                    @include media(768) 
+                        text-align: center
+                    h6
+                        font-weight: 700
+                        font-size: 28px
+                        color: $primary
+                        @include media(991)  
+                            font-size: 22px
+                        @include media(540) 
+                            font-size: 20px
+                    p
+                        font-size: 16px
+                        font-weight: 500
+                        color: $text
+                        margin-top: 0
+                .team_details
+                    margin-top: 20px
+                    padding: 0px 15px 15px 0
+                    max-height: 240px
+                    overflow-y: auto
+                    @include scrollbar($width: 4px,$background: #D9D9D9,$color: $primary,)
+                    @include media(768) 
+                        max-height: 100%
+                        overflow-y: visible
+                    p
+                        font-size: 14px
+                        &:not(:last-child)
+                            margin-bottom: 10px
 
 .resource-card
     &.border

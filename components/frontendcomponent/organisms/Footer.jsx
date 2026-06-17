@@ -5,6 +5,9 @@ import { useState } from "react";
 import Button from "../atoms/Button";
 import Link from "next/link";
 import Image from "next/image";
+import TeamPop from "./TeamPop";
+import Overlay from "./Overlay";
+import VideoPop from "./VideoPop";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -79,81 +82,89 @@ const Footer = () => {
   };
 
   return (
-    <footer>
-      <div className="upper">
-        <div className="container">
-          <div className="flex">
-            <h5>Stay Connected to the Change</h5>
-            <form className="form">
-              <Input
-                label="Email"
-                type="email"
-                name="email"
-                id="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-              <Button variant="btn-primary">Subscribe</Button>
-            </form>
+    <>
+      <footer>
+        <div className="upper">
+          <div className="container">
+            <div className="flex">
+              <h5>Stay Connected to the Change</h5>
+              <form className="form">
+                <Input
+                  label="Email"
+                  type="email"
+                  name="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <Button variant="btn-primary">Subscribe</Button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="lower">
-        <div className="container">
-          <div className="logo">
-            <Image src="/image/logo.svg" width={100} height={40} alt="Meer" />
-          </div>
-          <ul className="menu">
+        <div className="lower">
+          <div className="container">
+            <div className="logo">
+              <Image src="/image/logo.svg" width={100} height={40} alt="Meer" />
+            </div>
             <ul className="menu">
-              {allLinks.menu.map((link, index) => (
+              <li>
+                <Link href="/our-work">Our Work</Link>
+              </li>
+              <ul className="menu">
+                {allLinks.menu.map((link, index) => (
+                  <li key={index}>
+                    <Link href={link.href}>{link.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </ul>
+            <ul className="links">
+              <p>Quick Links</p>
+
+              {allLinks.quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link href={link.href}>{link.title}</Link>
                 </li>
               ))}
             </ul>
-          </ul>
-          <ul className="links">
-            <p>Quick Links</p>
+            <ul className="links">
+              <p>Contact Us</p>
 
-            {allLinks.quickLinks.map((link, index) => (
-              <li key={index}>
-                <Link href={link.href}>{link.title}</Link>
-              </li>
-            ))}
-          </ul>
-          <ul className="links">
-            <p>Contact Us</p>
-
-            {allLinks.contact.map((link, index) => (
-              <li key={index}>
-                <Link href={link.href}>{link.title}</Link>
-              </li>
-            ))}
-          </ul>
-          <div className="social_media">
-            <ul>
-              {allLinks.social.map((social, index) => (
+              {allLinks.contact.map((link, index) => (
                 <li key={index}>
-                  <Link href={social.href}>
-                    <Image
-                      src={social.icon}
-                      alt={social.alt}
-                      width={50}
-                      height={50}
-                    />
-                  </Link>
+                  <Link href={link.href}>{link.title}</Link>
                 </li>
               ))}
             </ul>
-            <Button variant="btn-primary">Donate</Button>
+            <div className="social_media">
+              <ul>
+                {allLinks.social.map((social, index) => (
+                  <li key={index}>
+                    <Link href={social.href}>
+                      <Image
+                        src={social.icon}
+                        alt={social.alt}
+                        width={50}
+                        height={50}
+                      />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <Button variant="btn-primary">Donate</Button>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="madeBy">
-        <p>©  MEER.org. All Rights Reserved.</p>
-      </div>
-    </footer>
+        <div className="madeBy">
+          <p>©  MEER.org. All Rights Reserved.</p>
+        </div>
+      </footer>
+      <Overlay />
+      <TeamPop />
+      <VideoPop />
+    </>
   );
 };
 

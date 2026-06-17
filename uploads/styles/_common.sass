@@ -11,23 +11,24 @@
 $scrollwidth: 8px
 
 :root
-	--headerpadding: 12px
-	--headerheight: 76px
-	--headerfixed: 76px
-	--footerstrip: 60px
-	--primary: #004d99
-	--secondary: #003c77
-	--bglight: rgba(242, 249, 255, 1)
-	--bgpink: rgba(255, 251, 230, 1)
-	--text: #666666
-	--white: #FFFFFF
-	--black: #000000
-	--gray: #F1F1F1
-	--para: rgba(102, 102, 102, 1)
-	--container: 1280px
-	--containerfluid: 2rem
-	--gradient-a: linear-gradient(180deg, #C0D6F6 0%, #FFFFFF 50%, #C0D6F6 100%)
-	--gradient-b: radial-gradient(66.9% 66.9% at 37.11% 37.56%, #ACCEEB 0%, #5F96D1 35.54%, #325BA4 78.81%, #345795 100%)
+    --headerpadding: 12px
+    --headerheight: 76px
+    --headerfixed: 76px
+    --footerstrip: 60px
+    --primary: rgba(0, 77, 153, 1)
+    --secondary: #003c77
+    --bglight: rgba(242, 249, 255, 1)
+    --bgpink: rgba(255, 251, 230, 1)
+    --lightbg: #FFFBE6
+    --text: #666666
+    --white: #FFFFFF
+    --black: #000000
+    --gray: #F1F1F1
+    --para: rgba(102, 102, 102, 1)
+    --container: 1280px
+    --containerfluid: 2rem
+    --gradient-a: linear-gradient(180deg, #C0D6F6 0%, #FFFFFF 50%, #C0D6F6 100%)
+    --gradient-b: radial-gradient(66.9% 66.9% at 37.11% 37.56%, #ACCEEB 0%, #5F96D1 35.54%, #325BA4 78.81%, #345795 100%)
 
 	@include media(1152)
 		--containerfluid: 1rem
@@ -50,6 +51,14 @@ $scrollwidth: 8px
 		padding: 50px 0 0
 	@include media(768)
 		padding: 40px 0 0
+
+.sec-pad-bottom
+    padding: 0 0 60px
+    @include media(991)
+        padding: 0 0 50px
+    @include media(768)
+        padding: 0 0 40px
+
 
 .sec-pad-all
 	padding: 60px 0
@@ -359,10 +368,18 @@ img, video
 	border: 1px solid transparent
 	position: relative
 	z-index: 1
+    transition: .5s ease
 	@include media(540)
 		font-size: 12px
 		--padding: 12px
 		--height: 33px
+    &.btn-white
+        border-color: $white
+        background: $white
+        color: $primary
+        &:hover
+            background: $primary
+            color: $white
 	&.square
 		border-radius: 0px
 	&.btn-white

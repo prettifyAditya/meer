@@ -30,7 +30,7 @@ export default function HeroSection({
             />
           )}
           <div className="banner-wrapper">
-            <div className="container">
+            <div className="container-fluid">
               <div className="heading">
                 <p>{tagline}</p>
                 <h1>{heading}</h1>

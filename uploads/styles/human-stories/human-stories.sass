@@ -1,0 +1,115 @@
+@import '../_var'
+
+.human_stories_hero
+    .bg
+        .banner-wrapper
+            .heading
+                h1
+                    margin-top: 40px
+
+.filter_nav
+    border-bottom: 1px solid #EAEAEA
+    .container
+        padding: 20px 0 
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+        h6
+            flex: 0 1 auto
+            font-size: 20px
+            font-weight: 600
+        .filter_wrapper
+            display: flex
+            align-items: center
+            gap: 16px
+            .form-group
+                &::before, &::after
+                    display: none
+                --labelfontbefore: 14px
+                input
+                    font-size: 14px
+            .search_wrapper
+                display: flex
+                align-items: center
+                gap: 12px
+                padding: 0 24px
+                color: $text
+                border: 1px solid #E4E4E4
+                svg
+                    flex: 0 1 auto
+                .search_input
+                    flex: 1
+                    width: 310px
+            .country_dropdown
+                width: 155px
+                border: 1px solid #E4E4E4
+                select
+                    &.valid
+                        ~ label
+                            opacity: 0 
+                .custom-select
+                    --paddingleftright: 20px
+
+.story_wrap
+    .main_wrapper
+        figcaption
+            .heading
+                h2
+                    font-size: 24px
+                    font-weight: 600
+            .desc
+                margin-top: 12px
+
+.stories_wrapper
+    .container
+        section
+            &:nth-child(even)
+                .story_wrap
+                    .main_wrapper
+                        flex-direction: row-reverse
+            &:not(:last-child)
+                .story_wrap
+                    padding-bottom: 0
+        .pagination_wrapper
+            margin-top: 50px
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 20px
+            .pagination-button
+                width: 45px
+                height: 45px
+                display: flex
+                align-items: center
+                justify-content: center
+                color: $primary
+                background: $white
+                border-radius: 50%
+                transition: .5s ease
+                &:hover
+                    background: var(--bglight)
+                &.page-right
+                    transform: rotate(180deg)
+                svg, img
+                    width: 60%
+                    height: 60%
+            ul
+                display: flex
+                align-items: center
+                gap: 5px    
+                li
+                    width: 35px
+                    height: 35px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 50%
+                    color: $text
+                    transition: .5s ease
+                    background: $white
+                    cursor: pointer
+                    &.active
+                        background: $primary
+                        color: $white
+

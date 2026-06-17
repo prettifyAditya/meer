@@ -1,5 +1,110 @@
 {
     "AboutUs": {
+        "Section3": [
+            {
+                "id": 1,
+                "iconSrc": "/icon/about/theory1.svg",
+                "tabname": "Overall",
+                "theoryData": [
+                    {
+                        "id": 1,
+                        "title": "Early Deployments and System Evolution",
+                        "desc": "<p>MEER’s early work focused primarily on reflective rooftop systems installed on homes and community buildings in high-heat environments. These deployments demonstrated that highly reflective surfaces could reduce heat absorption and lower indoor temperatures beneath treated roofs.</p>"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Reducing Heat Absorption",
+                        "desc": "<p>Reflective and radiative cooling surfaces work by changing how heat energy interacts with buildings and the ground. In simple terms, they:</p><ul><li>Reflect more sunlight back away from surfaces</li></ul>"
+                    },
+                    {
+                        "id": 3,
+                        "title": "Measured Local Effects",
+                        "desc": "<p>Observed and measurable effects may include:</p><ul><li>Lower roof and surface temperatures</li><li>Reduced indoor heat exposure</li><li>Cooler shaded spaces beneath canopy systems</li></ul>"
+                    },
+                    {
+                        "id": 4,
+                        "title": "Early Deployments and System Evolution",
+                        "desc": "<p>MEER’s early work focused primarily on reflective rooftop systems installed on homes and community buildings in high-heat environments. These deployments demonstrated that highly reflective surfaces could reduce heat absorption and lower indoor temperatures beneath treated roofs.</p>"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "iconSrc": "/icon/about/theory2.svg",
+                "tabname": "Agriculture",
+                "theoryData": [
+                    {
+                        "id": 1,
+                        "title": "Early Deployments and System Evolution",
+                        "desc": "<p>MEER’s early work focused primarily on reflective rooftop systems installed on homes and community buildings in high-heat environments. These deployments demonstrated that highly reflective surfaces could reduce heat absorption and lower indoor temperatures beneath treated roofs.</p>"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Reducing Heat Absorption",
+                        "desc": "<p>Reflective and radiative cooling surfaces work by changing how heat energy interacts with buildings and the ground. In simple terms, they:</p><ul><li>Reflect more sunlight back away from surfaces</li></ul>"
+                    },
+                    {
+                        "id": 3,
+                        "title": "Measured Local Effects",
+                        "desc": "<p>Observed and measurable effects may include:</p><ul><li>Lower roof and surface temperatures</li><li>Reduced indoor heat exposure</li><li>Cooler shaded spaces beneath canopy systems</li></ul>"
+                    },
+                    {
+                        "id": 4,
+                        "title": "Early Deployments and System Evolution",
+                        "desc": "<p>MEER’s early work focused primarily on reflective rooftop systems installed on homes and community buildings in high-heat environments. These deployments demonstrated that highly reflective surfaces could reduce heat absorption and lower indoor temperatures beneath treated roofs.</p>"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "iconSrc": "/icon/about/theory3.svg",
+                "tabname": "Water Resources",
+                "theoryData": [
+                    {
+                        "id": 1,
+                        "title": "Early Deployments and System Evolution",
+                        "desc": "<p>MEER’s early work focused primarily on reflective rooftop systems installed on homes and community buildings in high-heat environments. These deployments demonstrated that highly reflective surfaces could reduce heat absorption and lower indoor temperatures beneath treated roofs.</p>"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Reducing Heat Absorption",
+                        "desc": "<p>Reflective and radiative cooling surfaces work by changing how heat energy interacts with buildings and the ground. In simple terms, they:</p><ul><li>Reflect more sunlight back away from surfaces</li></ul>"
+                    },
+                    {
+                        "id": 3,
+                        "title": "Measured Local Effects",
+                        "desc": "<p>Observed and measurable effects may include:</p><ul><li>Lower roof and surface temperatures</li><li>Reduced indoor heat exposure</li><li>Cooler shaded spaces beneath canopy systems</li></ul>"
+                    },
+                    {
+                        "id": 4,
+                        "title": "Early Deployments and System Evolution",
+                        "desc": "<p>MEER’s early work focused primarily on reflective rooftop systems installed on homes and community buildings in high-heat environments. These deployments demonstrated that highly reflective surfaces could reduce heat absorption and lower indoor temperatures beneath treated roofs.</p>"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "iconSrc": "/icon/about/theory4.svg",
+                "tabname": "Urban Heat",
+                "theoryData": [
+                    {
+                        "id": 1,
+                        "title": "Early Deployments and System Evolution",
+                        "desc": "<p>MEER’s early work focused primarily on reflective rooftop systems installed on homes and community buildings in high-heat environments. These deployments demonstrated that highly reflective surfaces could reduce heat absorption and lower indoor temperatures beneath treated roofs.</p>"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Reducing Heat Absorption",
+                        "desc": "<p>Reflective and radiative cooling surfaces work by changing how heat energy interacts with buildings and the ground. In simple terms, they:</p><ul><li>Reflect more sunlight back away from surfaces</li></ul>"
+                    },
+                    {
+                        "id": 3,
+                        "title": "Measured Local Effects",
+                        "desc": "<p>Observed and measurable effects may include:</p><ul><li>Lower roof and surface temperatures</li><li>Reduced indoor heat exposure</li><li>Cooler shaded spaces beneath canopy systems</li></ul>"
+                    }
+                ]
+            }
+        ],
         "Section6": [
             {
                 "id": 1,
@@ -30,6 +135,38 @@
                 "title": "Technology",
                 "imgSrc": "/icon/about/mission5.svg",
                 "desc": "Ultimately, MEER seeks to demonstrate that global cooling and local equity are achievable together-that technology, science, and collaboration can unite to rebalance the Earth’s climate system and build a more livable, just, and sustainable planet for all."
+            }
+        ],
+        "Section7": [
+            {
+                "id": "1",
+                "year": "2019",
+                "yeartitle": "",
+                "desc": "Dr. Ye Tao begins climate research"
+            },
+            {
+                "id": "2",
+                "year": "2021",
+                "yeartitle": "",
+                "desc": "MEER founded Pivot to climate solutions"
+            },
+            {
+                "id": "3",
+                "year": "2022",
+                "yeartitle": "",
+                "desc": "First SRTM prototypes built and tested"
+            },
+            {
+                "id": "4",
+                "year": "2023",
+                "yeartitle": "",
+                "desc": "Freetown & Pune community pilots launched"
+            },
+            {
+                "id": "5",
+                "year": "2024-25",
+                "yeartitle": "",
+                "desc": "55+ homes cooledScaling underway"
             }
         ],
         "Section8": {

@@ -193,10 +193,11 @@
   pointer-events: none;
   height: calc(var(--inputsize) - var(--borderwidth));
   position: relative;
-  --filename: 'Attach Resume*';
+  --filename: 'Attach your CV*';
   --filenameinitial: var(--filename);
   --color: var(--text);
   --background: none;
+  --image: url(/icon/clip.svg) no-repeat;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -216,6 +217,7 @@
   font-size: inherit;
   line-height: calc(var(--inputsize) - var(--borderwidth));
   padding-left: var(--paddingleftright);
+  font-weight: 400;
   color: var(--color);
   width: 80%;
   overflow: hidden;
@@ -231,9 +233,37 @@
   background-position: calc(100% - var(--paddingleftright, 0)) 50%;
   background-size: auto 50%;
 }
+.form .form-group.file-input .file_type {
+  position: absolute;
+  font-size: 12px;
+  line-height: normal;
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 0;
+  color: var(--text);
+  font-weight: 400;
+}
+.form .form-group.file-input .error {
+  left: unset;
+  text-align: right;
+}
 .form .submit-grp:not(.text-left) {
   text-align: center;
   margin-top: 23px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  line-height: normal;
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 0;
+  right: 0;
+}
+.error.static {
+  position: static;
+  margin: 10px 0;
 }
 
 .custom-select {
@@ -596,6 +626,7 @@
   --secondary: #003c77;
   --bglight: rgba(242, 249, 255, 1);
   --bgpink: rgba(255, 251, 230, 1);
+  --lightbg: #FFFBE6;
   --text: #666666;
   --white: #FFFFFF;
   --black: #000000;
@@ -645,6 +676,20 @@
 @media only screen and (max-width: 768px) {
   .sec-pad {
     padding: 40px 0 0;
+  }
+}
+
+.sec-pad-bottom {
+  padding: 0 0 60px;
+}
+@media only screen and (max-width: 991px) {
+  .sec-pad-bottom {
+    padding: 0 0 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sec-pad-bottom {
+    padding: 0 0 40px;
   }
 }
 
@@ -1173,6 +1218,7 @@ img, video {
   border: 1px solid transparent;
   position: relative;
   z-index: 1;
+  transition: 0.5s ease;
 }
 @media only screen and (max-width: 540px) {
   .btn {
@@ -1180,6 +1226,15 @@ img, video {
     --padding: 12px;
     --height: 33px;
   }
+}
+.btn.btn-white {
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--primary);
+}
+.btn.btn-white:hover {
+  background: var(--primary);
+  color: var(--white);
 }
 .btn.square {
   border-radius: 0px;
@@ -1312,7 +1367,7 @@ img, video {
 }
 .banner::before {
   z-index: 1;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(102, 102, 102, 0) 59.13%), linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(1, 1, 1, 0) 100%);
+  background: linear-gradient(90deg, #000000 0%, rgba(102, 102, 102, 0) 55%), linear-gradient(rgba(0, 0, 0, 0.4509803922) 0%, rgba(1, 1, 1, 0) 100%);
 }
 .banner .bg {
   height: 100vh;
@@ -1332,42 +1387,37 @@ img, video {
   translate: 0 -50%;
   z-index: 2;
 }
-.banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
+.banner .banner-wrapper .heading h1, .banner .banner-wrapper .heading h2, .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
+  margin-top: 70px;
   font-size: 48px;
   line-height: 1.2;
   font-weight: 600;
   color: var(--white);
 }
 @media only screen and (max-width: 991px) {
-  .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
+  .banner .banner-wrapper .heading h1, .banner .banner-wrapper .heading h2, .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
     font-size: 32px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
+  .banner .banner-wrapper .heading h1, .banner .banner-wrapper .heading h2, .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
     font-size: 30px;
   }
 }
 @media only screen and (max-width: 540px) {
-  .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
+  .banner .banner-wrapper .heading h1, .banner .banner-wrapper .heading h2, .banner .banner-wrapper .content h1, .banner .banner-wrapper .content h2 {
     font-size: 28px;
   }
 }
-.banner .banner-wrapper .content p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-top: 4px;
+.banner .banner-wrapper .heading p, .banner .banner-wrapper .content p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
   color: var(--white);
-  opacity: 0.8;
-}
-@media only screen and (max-width: 768px) {
-  .banner .banner-wrapper .content p {
-    line-height: 1.2;
-  }
 }
 
 .swiper-slide {
-  height: auto;
+  height: auto !important;
 }
 
 .swiper-nav {
@@ -1423,6 +1473,20 @@ img, video {
 }
 .swiper-nav.white button {
   background: var(--white);
+}
+.swiper-nav.white-border button {
+  background: none;
+  border: 1px solid var(--white);
+  transition: 0.5s ease;
+}
+.swiper-nav.white-border button svg path {
+  fill: var(--white);
+}
+.swiper-nav.white-border button:hover {
+  background: var(--white);
+}
+.swiper-nav.white-border button:hover svg path {
+  fill: var(--black);
 }
 .swiper-nav button {
   width: 40px;

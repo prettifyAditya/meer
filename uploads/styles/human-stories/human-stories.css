@@ -1,0 +1,135 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.human_stories_hero .bg .banner-wrapper .heading h1 {
+  margin-top: 40px;
+}
+
+.filter_nav {
+  border-bottom: 1px solid #EAEAEA;
+}
+.filter_nav .container {
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.filter_nav .container h6 {
+  flex: 0 1 auto;
+  font-size: 20px;
+  font-weight: 600;
+}
+.filter_nav .container .filter_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.filter_nav .container .filter_wrapper .form-group::before, .filter_nav .container .filter_wrapper .form-group::after {
+  display: none;
+}
+.filter_nav .container .filter_wrapper .form-group {
+  --labelfontbefore: 14px;
+}
+.filter_nav .container .filter_wrapper .form-group input {
+  font-size: 14px;
+}
+.filter_nav .container .filter_wrapper .search_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px;
+  color: var(--text);
+  border: 1px solid #E4E4E4;
+}
+.filter_nav .container .filter_wrapper .search_wrapper svg {
+  flex: 0 1 auto;
+}
+.filter_nav .container .filter_wrapper .search_wrapper .search_input {
+  flex: 1;
+  width: 310px;
+}
+.filter_nav .container .filter_wrapper .country_dropdown {
+  width: 155px;
+  border: 1px solid #E4E4E4;
+}
+.filter_nav .container .filter_wrapper .country_dropdown select.valid ~ label {
+  opacity: 0;
+}
+.filter_nav .container .filter_wrapper .country_dropdown .custom-select {
+  --paddingleftright: 20px;
+}
+
+.story_wrap .main_wrapper figcaption .heading h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.story_wrap .main_wrapper figcaption .desc {
+  margin-top: 12px;
+}
+
+.stories_wrapper .container section:nth-child(even) .story_wrap .main_wrapper {
+  flex-direction: row-reverse;
+}
+.stories_wrapper .container section:not(:last-child) .story_wrap {
+  padding-bottom: 0;
+}
+.stories_wrapper .container .pagination_wrapper {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.stories_wrapper .container .pagination_wrapper .pagination-button {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  background: var(--white);
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+.stories_wrapper .container .pagination_wrapper .pagination-button:hover {
+  background: var(--bglight);
+}
+.stories_wrapper .container .pagination_wrapper .pagination-button.page-right {
+  transform: rotate(180deg);
+}
+.stories_wrapper .container .pagination_wrapper .pagination-button svg, .stories_wrapper .container .pagination_wrapper .pagination-button img {
+  width: 60%;
+  height: 60%;
+}
+.stories_wrapper .container .pagination_wrapper ul {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.stories_wrapper .container .pagination_wrapper ul li {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--text);
+  transition: 0.5s ease;
+  background: var(--white);
+  cursor: pointer;
+}
+.stories_wrapper .container .pagination_wrapper ul li.active {
+  background: var(--primary);
+  color: var(--white);
+}/*# sourceMappingURL=human-stories.css.map */

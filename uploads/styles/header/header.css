@@ -193,10 +193,11 @@
   pointer-events: none;
   height: calc(var(--inputsize) - var(--borderwidth));
   position: relative;
-  --filename: 'Attach Resume*';
+  --filename: 'Attach your CV*';
   --filenameinitial: var(--filename);
   --color: var(--text);
   --background: none;
+  --image: url(/icon/clip.svg) no-repeat;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -216,6 +217,7 @@
   font-size: inherit;
   line-height: calc(var(--inputsize) - var(--borderwidth));
   padding-left: var(--paddingleftright);
+  font-weight: 400;
   color: var(--color);
   width: 80%;
   overflow: hidden;
@@ -231,9 +233,37 @@
   background-position: calc(100% - var(--paddingleftright, 0)) 50%;
   background-size: auto 50%;
 }
+.form .form-group.file-input .file_type {
+  position: absolute;
+  font-size: 12px;
+  line-height: normal;
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 0;
+  color: var(--text);
+  font-weight: 400;
+}
+.form .form-group.file-input .error {
+  left: unset;
+  text-align: right;
+}
 .form .submit-grp:not(.text-left) {
   text-align: center;
   margin-top: 23px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  line-height: normal;
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 0;
+  right: 0;
+}
+.error.static {
+  position: static;
+  margin: 10px 0;
 }
 
 .custom-select {
@@ -596,6 +626,7 @@
   --secondary: #003c77;
   --bglight: rgba(242, 249, 255, 1);
   --bgpink: rgba(255, 251, 230, 1);
+  --lightbg: #FFFBE6;
   --text: #666666;
   --white: #FFFFFF;
   --black: #000000;
@@ -645,6 +676,20 @@
 @media only screen and (max-width: 768px) {
   .sec-pad {
     padding: 40px 0 0;
+  }
+}
+
+.sec-pad-bottom {
+  padding: 0 0 60px;
+}
+@media only screen and (max-width: 991px) {
+  .sec-pad-bottom {
+    padding: 0 0 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sec-pad-bottom {
+    padding: 0 0 40px;
   }
 }
 
@@ -1173,6 +1218,7 @@ img, video {
   border: 1px solid transparent;
   position: relative;
   z-index: 1;
+  transition: 0.5s ease;
 }
 @media only screen and (max-width: 540px) {
   .btn {
@@ -1185,6 +1231,15 @@ img, video {
   border-radius: 0px;
 }
 .btn.btn-white {
+  background: var(--white);
+  color: var(--primary);
+}
+.btn.btn-white:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+.btn.btn-white {
+  border-color: var(--white);
   background: var(--white);
   color: var(--primary);
 }
@@ -1242,6 +1297,32 @@ img, video {
   box-shadow: 0 6px 20px rgba(var(--primary), 0.35);
 }
 .btn.btn-outline-primary:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.btn.btn-primary-outline {
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+  transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.btn.btn-primary-outline::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--primary);
+  border-radius: inherit;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.18, 1);
+  z-index: -1;
+}
+.btn.btn-primary-outline:hover {
+  color: var(--white);
+  border-color: var(--primary);
+  box-shadow: 0 6px 20px rgba(var(--primary), 0.35);
+}
+.btn.btn-primary-outline:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 }
