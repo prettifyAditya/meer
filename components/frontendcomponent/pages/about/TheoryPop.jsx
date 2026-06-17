@@ -1,13 +1,16 @@
 "use client";
 import Image from "next/image";
-import { useModalStore } from "@/store/modalStore";
+import { useSelector } from "react-redux";
+import CloseModal from "../../atoms/CloseModal";
 
 export default function TheoryPop() {
-  const isTheoryPopOpen = useModalStore((state) => state.isTheoryPopOpen);
-  const closeTheoryPop = useModalStore((state) => state.closeTheoryPop);
+  const { isModal } = useSelector((state) => state.modal);
+
   return (
-    <div className={`model theory-pop ${isTheoryPopOpen ? "is-open" : ""}`}>
-      <button className="close" onClick={closeTheoryPop}>
+    <div
+      className={`model theory-pop ${isModal === "theory" ? "is-open" : ""}`}
+    >
+      {/* <button className="close" onClick={closeTheoryPop}>
         Close
         <svg
           width={24}
@@ -23,7 +26,8 @@ export default function TheoryPop() {
             strokeLinejoin="round"
           />
         </svg>
-      </button>
+      </button> */}
+      <CloseModal />
       <div className="model-body">
         <div className="theory_wrapper">
           <div className="icon">

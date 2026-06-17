@@ -1,6 +1,6 @@
 "use client";
 import { setIsModal, setModalData } from "@/store/slice/modalSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export const useModal = () => {
   const dispatch = useDispatch();
@@ -8,12 +8,13 @@ export const useModal = () => {
   const openModal = (type, data = null) => {
     dispatch(setIsModal(type));
     dispatch(setModalData(data));
-    document.body.classList.add("no-scroll");
+    document.body.classList.add("overflow-hidden");
   };
 
   const closeModal = () => {
     dispatch(setIsModal(null));
-    document.body.classList.remove("no-scroll");
+    dispatch(setModalData(null));
+    document.body.classList.remove("overflow-hidden");
   };
 
   return { openModal, closeModal };

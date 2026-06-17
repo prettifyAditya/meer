@@ -1,3 +1,4 @@
+// "use client";
 import staticData from "@/uploads/data/StaticData.json";
 import HeroSection from "../../molecules/HeroSection";
 import InfoGraphic from "../../molecules/InfoGraphic";

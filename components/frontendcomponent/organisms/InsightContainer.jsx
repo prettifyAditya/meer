@@ -18,7 +18,9 @@ const InsightContainer = ({
           {imgSrc && (
             <Image src={imgSrc} alt={imgSrc} width={400} height={400} />
           )}
-          {isPopUpVideo && <button className="play-btn"></button>}
+          {isPopUpVideo && (
+            <button className="play-btn" onClick={isPopUpVideo}></button>
+          )}
           {videoSrc && (
             <video src={videoSrc} autoPlay muted loop playsInline></video>
           )}

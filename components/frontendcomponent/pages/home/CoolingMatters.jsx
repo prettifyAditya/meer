@@ -1,4 +1,9 @@
+"use client";
+
+import { useModal } from "@/hooks/useModal";
+
 const CoolingMatters = () => {
+  const { openModal } = useModal();
   return (
     <section className="coolingMatters">
       <div className="left">
@@ -38,7 +43,10 @@ const CoolingMatters = () => {
           muted
           playsInline
         ></video>
-        <button className="play-btn"></button>
+        <button
+          onClick={() => openModal("video", "/video/about-banner.mp4")}
+          className="play-btn"
+        ></button>
       </div>
     </section>
   );

@@ -707,6 +707,9 @@
   position: relative;
   margin-top: 50px;
 }
+.moreSection .container .content .swiper {
+  max-width: 97%;
+}
 
 .InsightContainer.invert .grid .media {
   order: 2;

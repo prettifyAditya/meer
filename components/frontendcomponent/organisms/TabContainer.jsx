@@ -1,18 +1,21 @@
 "use client";
-import { Navigation } from "swiper/modules";
+import { Grid, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState } from "react";
 import SlideBtn from "../atoms/SlideBtn";
 import ResourceCard from "../molecules/ResourceCard";
-import "@/uploads/styles/component/component.css";
 import TabRow from "../molecules/TabRow";
+import TeamCol from "../molecules/TeamCol";
+import "swiper/css/grid";
+import "@/uploads/styles/component/component.css";
 
-const TabContainer = ({ data, card }) => {
+const TabContainer = ({ data, card, swiperType }) => {
+  const gridProps =
+    swiperType === "grid" ? { grid: { rows: 2, fill: "row" } } : {};
   const [activeTab, setActiveTab] = useState(0);
 
   return (
     <div className="tab-container">
-      
       <TabRow data={data} activeTab={activeTab} setActiveTab={setActiveTab}>
         <div className="swiper-nav group primary-border square">
           <SlideBtn className={`resource-button-prev-${activeTab}`} />
@@ -29,15 +32,18 @@ const TabContainer = ({ data, card }) => {
                 nextEl: `.resource-button-next-${idx}`,
                 prevEl: `.resource-button-prev-${idx}`,
               }}
-              modules={[Navigation]}
+              modules={[Navigation, Grid]}
               slidesPerView={4}
               spaceBetween={20}
+              {...gridProps}
             >
               {list.map((item, i) => {
                 return (
                   <SwiperSlide key={i}>
                     {card === "resource" ? (
                       <ResourceCard category={category} {...item} />
+                    ) : card === "team" ? (
+                      <TeamCol data={item} />
                     ) : (
                       ""
                     )}
