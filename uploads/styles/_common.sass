@@ -523,80 +523,87 @@ img, video
 	height: auto
 
 .swiper-nav
-	line-height: 0
-	&.center-full
-		position: absolute
-		top: 50%
-		left: 50%
-		translate: -50% -50%
-		z-index: 2
-		display: flex
-		align-items: center
-		justify-content: space-between
-		width: 103%
-		max-width: 103%
-		margin: 0 auto
-		pointer-events: none
-		user-select: none
-		.swiper-prev,.swiper-next
-			pointer-events: all
-			user-select: auto
-		@include media(768)
-			display: none
-	
-
-	&.primary
-		button
-			background: $primary
-			svg
-				path
-					stroke: var(--white)
-	&.primary-border
-		button
-			background: none
-			border: 1px solid $primary
-			transition: .5s ease
-			svg
-				path
-					stroke: $primary
-			&:hover
-				background: $primary
-				svg
-					path
-						stroke: var(--white)
-	&.white
-		button
-			background: $white
-			
-	button
-		width: 40px
-		height: 40px
-		border-radius: 50%
-		display: flex
-		align-items: center
-		justify-content: center
-		box-shadow: 0px 1.64px 6.55px 0px #63636333
-		@include media(540)
-			width: 30px
-			height: 30px
-		img, svg
-			width: 80%
-			height: 80%
-	&.square
-		button
-			border-radius: 0px
-	&.group
-		display: flex
-		flex-wrap: wrap
-		align-items: center
-		gap: 0 10px
-		@include media(1152)
-			gap: 0 8px
-	&.icon-width-auto
-		.swiper-next,.swiper-prev
-			svg
-				width: auto
-				height: auto
+    line-height: 0
+    &.center-full
+        position: absolute
+        top: 50%
+        left: 50%
+        translate: -50% -50%
+        z-index: 2
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        max-width: 100%
+        margin: 0 auto
+        pointer-events: none
+        user-select: none
+        .swiper-prev,.swiper-next
+            pointer-events: all
+            user-select: auto
+        @include media(768)
+            display: none
+    &.white
+        button
+            background: $white
+    &.primary
+        button
+            background: $primary
+            svg
+                path
+                    fill: var(--white)
+    &.primary-border
+        button
+            background: none
+            border: 1px solid $primary
+            transition: .5s ease
+            svg
+                path
+                    fill: $primary
+            &:hover
+                background: $primary
+                svg
+                    path
+                        fill: $white
+    &.white-border
+        button
+            background: none
+            border: 1px solid $white
+            transition: .5s ease
+            svg
+                path
+                    fill: $white
+            &:hover
+                background: $white
+                svg
+                    path 
+                        fill: $black
+    button
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        box-shadow: 0px 1.64px 6.55px 0px #63636333
+        @include media(540)
+            width: 30px
+            height: 30px
+        img, svg
+            width: 80%
+            height: 80%
+    &.group
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        gap: 0 10px
+        @include media(1152)
+            gap: 0 8px
+    &.icon-width-auto
+        .swiper-next,.swiper-prev
+            svg
+                width: auto
+                height: auto
 .swiper-prev
 	svg,img
 		transform: scaleX(-1)
@@ -916,3 +923,60 @@ em
 	img
 		width: 21px
 		height: 21px
+.accordian-wrapper
+    border: 1px solid #D2D2D2
+    margin-bottom: 20px
+    cursor: pointer
+    &.open
+        .title
+            .ico
+                &::after
+                    transform: translate(-50%,-50%) rotate(0deg)
+                    background: #004D99
+            h4
+                color: #004D99
+                  
+    .title
+        padding: 20px
+        position: relative
+        h4
+            font-weight: 700
+            color: #0000004D
+            font-size: 18px
+            transition: 0.5s ease
+        .ico
+            width: 16px
+            height: 16px
+            position: absolute
+            top: 27px
+            right: 30px
+            transition: 0.5s ease
+            &::before
+                content: ""
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                width: 16px
+                height: 2px
+                background: #0000004D
+            &::after
+                content: ""
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%) rotate(90deg)
+                width: 16px
+                height: 2px
+                background: #0000004D
+                transition: 0.5s ease
+            img
+                height: 100%
+                width: 100%
+                object-fit: contain
+    p
+        color: #626060
+        padding: 1px 20px 20px 20px
+        width: 93%
+        font-weight: 400
+        font-size: 16px

@@ -1961,4 +1961,69 @@ em {
 .close-modal img {
   width: 21px;
   height: 21px;
+}
+
+.accordian-wrapper {
+  border: 1px solid #D2D2D2;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.accordian-wrapper.open .title .ico::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+  background: #004D99;
+}
+.accordian-wrapper.open .title h4 {
+  color: #004D99;
+}
+.accordian-wrapper .title {
+  padding: 20px;
+  position: relative;
+}
+.accordian-wrapper .title h4 {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.3019607843);
+  font-size: 18px;
+  transition: 0.5s ease;
+}
+.accordian-wrapper .title .ico {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 27px;
+  right: 30px;
+  transition: 0.5s ease;
+}
+.accordian-wrapper .title .ico::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.3019607843);
+}
+.accordian-wrapper .title .ico::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 16px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.3019607843);
+  transition: 0.5s ease;
+}
+.accordian-wrapper .title .ico img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.accordian-wrapper p {
+  color: #626060;
+  padding: 1px 20px 20px 20px;
+  width: 93%;
+  font-weight: 400;
+  font-size: 16px;
 }/*# sourceMappingURL=globals.css.map */

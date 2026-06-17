@@ -1,0 +1,241 @@
+@import '../_var'
+
+.banner
+    &::before
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 9.5%, rgba(102, 102, 102, 0) 35.21%), linear-gradient(90deg, rgba(0, 0, 0, 0.7) 15.2%, rgba(102, 102, 102, 0) 79.3%)
+    &.wsm-banner
+        .bg
+            .banner-wrapper 
+                bottom: 8%
+                .heading
+                    max-width: 570px
+                    h1
+                        margin-top: 40px
+
+.info_grahphic.wsm-secA
+    .main_wrapper
+        align-items: flex-start
+        figure
+            height: 388px
+
+.info_grahphic.wsm-secB
+    background: #FFFBE6
+    .main_wrapper
+        flex-direction: row-reverse
+        align-items: flex-start
+        figure
+            position: sticky
+            top: calc( var(--headerheight) + 20px  )
+        figcaption
+            ul
+                li
+                    position: relative
+                    margin-bottom: 20px      
+                    padding-left: 30px
+                    color: var(--para)
+                    &::before
+                        position: absolute
+                        left: 0
+                        top: 0
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%231a56db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat
+                        background-size: contain
+                        width: 24px
+                        height: 24px
+                        content: ""
+
+.wsm-secC
+    h2
+        text-align: center
+        color: #004D99
+    .support-slider
+        position: relative
+        margin: 40px 0 30px 0 
+        .swiper-nav
+            button
+                border: 1px solid #004D99
+                background: white
+                transition: 0.5s ease
+                svg
+                    path
+                        fill: #004D99
+        .swiper-prev.swiper-button-disabled, .swiper-next.swiper-button-disabled
+            cursor: no-drop
+            opacity: 1
+            filter: grayscale(1)
+        .swiper
+            max-width: 97%
+            margin: auto
+            .swiper-wrapper
+                .swiper-slide
+                    border: 1px solid #A1A1A1
+                    padding: 40px 40px
+                    figure
+                        height: 80px
+                        width: 80px
+                        line-height: 0
+                        margin: 0 auto 20px
+                        img
+                            height: 100%
+                            width: 100%
+                            object-fit: contain
+                    h4
+                        font-weight: 400
+                        font-size: 18px
+                        text-align: center
+
+
+    .get-in-touch
+        background: #F2F9FF
+        border-radius: 5px 
+        padding: 15px 13px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        figure
+            width: 112px
+            height: 32px
+            line-height: 0
+            img
+                height: 100%
+                width: 100%
+                object-fit: contain
+        p
+            max-width: 679px
+
+.wsm-secD
+    background: #004D99
+    .flex-box
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 50px
+        .col:first-child
+            width: fit-content
+            h2
+                color: white
+                margin-bottom: 10px
+            p
+                max-width: 378px
+                font-weight: 400
+                color: white
+                margin-bottom: 15px
+            .btn-primary
+                background: #fff
+                color: var(--primary)
+                border: none
+                cursor: pointer
+                transition: .3s ease
+                padding: 10px 50px
+                margin-top: 20px
+                &:hover
+                    background: #ffffffcc
+        .col:last-child
+            display: flex
+            gap: 20px
+            align-items: center
+            figure
+                width: 362px
+                height: 296px
+                line-height: 0
+                img
+                    height: 100%
+                    width: 100%
+                    object-fit: cover
+            figcaption
+                width: 362px
+                height: 296px
+                background: white
+                padding: 20px 30px
+                display: flex
+                justify-content: space-between
+                flex-direction: column
+                figure
+                    width: 56px
+                    height: 52px
+                    line-height: 0
+                    img
+                        height: 100%
+                        width: 100%
+                        object-fit: contain
+                .bottom
+                    p
+                        color: #004D99
+                        max-width: 282px
+                        margin: 0 0 12px 0 
+                    a
+                        font-weight: 700
+                        color: #004D99
+                        font-size: 16px
+
+.info_grahphic.wsm-secE
+    .main_wrapper
+        figure
+            border: 1px solid #D0D0D0
+            width: 579px
+            height: 388px
+            line-height: 0
+            padding: 30px 60px
+            img
+                height: 100%
+                width: 100%
+                object-fit: contain
+        figcaption
+            h2
+                max-width: 438px
+            ul
+                li
+                    position: relative
+                    margin-bottom: 20px      
+                    padding-left: 30px
+                    color: var(--para)
+                    &::before
+                        position: absolute
+                        left: 0
+                        top: 0
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%231a56db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat
+                        background-size: contain
+                        width: 24px
+                        height: 24px
+                        content: ""
+
+.hero_banner.wsm-secF
+    &::before
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 18.91%, rgba(102, 102, 102, 0) 87.93%)
+    .bg
+        .banner-wrapper 
+            bottom: 10%
+            .heading 
+                figure
+                    width: 56px
+                    height: 52px
+                    line-height: 0
+                    img
+                        height: 100%
+                        width: 100%
+                        object-fit: contain
+                        filter: brightness(0) invert(1)
+                h2
+                    font-weight: 600
+                    max-width: 377px
+                    font-size: 36px
+                    margin-bottom: 10px
+                p
+                    max-width: 415px
+                    margin-bottom: 30px
+
+.wsm-secG
+    .flex-box
+        display: flex
+        justify-content: space-between
+        gap: 60px
+        .col:first-child
+            max-width: 337px
+            width: fit-content
+            position: sticky
+            top: calc( var(--headerheight) + 22px)
+            height: fit-content
+            h2
+                color: #004D99
+                margin-bottom: 35px
+        .col:last-child
+            flex: 1
