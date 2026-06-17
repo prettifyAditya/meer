@@ -6,10 +6,10 @@ header
     right: 0
     bottom: 0
     left: 0
-    z-index: 99
+    z-index: 5
     transition: .5s ease
     height: var(--headerheight)
-    @include after(#000)
+    @include after(var(--primary))
     &::after
         backdrop-filter: blur(15px)
         bottom: auto
@@ -167,6 +167,14 @@ header
         height: var(--headerfixed)
         &::after
             height: 100%
+        .header-container
+            .colB
+                .btn
+                    color: $primary
+                    background: $white
+                    &:hover
+                        background: transparent
+                        border-color: $white
     &.header-fit
         transition: .5s ease
         border-bottom: 1px solid #00000033

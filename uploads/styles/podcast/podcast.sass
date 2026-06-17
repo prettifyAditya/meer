@@ -1,0 +1,66 @@
+@import "../_common"
+
+.podcastDetail
+    margin-top: var(--headerheight)
+    padding: 50px 0
+    .container
+        display: grid
+        grid-template-columns: 1fr 380px
+        gap: 50px
+        .left
+            .top
+                display: flex
+                align-items: end
+                justify-content: space-between
+                .title
+                    p
+                        font-size: 15px
+                        color: $primary
+                        margin-bottom: 12px
+                    h1
+                        font-size: 24px
+                        @include media(600)
+                        color: $primary
+                .share
+                    display: flex
+                    align-items: center
+                    gap: 16px
+                    a
+                        width: 43px
+                        height: 43px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        border: 1px solid var(--primary)
+                        border-radius: 50%
+                        transition: all 0.4s ease-in-out
+                        img
+                            width: 20
+                            height: 20
+                        &:hover
+                            background-color: $primary
+                            img
+                                filter: brightness(0) invert(1)
+
+            .website-content
+                margin-top: 30px
+                iframe
+                    width: 100%
+                    height: 461px
+                    margin: 40px 0
+                    display: block
+                    border: 0
+                    box-shadow: none
+                a
+                    color: $primary
+                    @include font(500)
+        .right
+            .newsLetter
+                margin-top: 40px
+                padding: 30px
+                border-radius: 5px
+                box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2)
+
+
+                
+        
