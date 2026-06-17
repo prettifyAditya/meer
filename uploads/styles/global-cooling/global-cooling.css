@@ -1,0 +1,74 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.commanSec {
+  padding: 70px 0;
+}
+
+.global-secA {
+  background: var(--bgpink);
+}
+
+.global-secB {
+  background: var(--primary);
+}
+.global-secB h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.global-secC .heading {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+.global-secC .heading h2 {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.global-secC .grid {
+  position: relative;
+}
+.global-secC .grid::after {
+  content: "";
+  width: 2px;
+  height: calc(100% - 148px);
+  background: var(--primary);
+  position: absolute;
+  top: 50%;
+  left: 27px;
+  right: 0;
+  transform: translateY(-50%);
+}
+.global-secC .grid .item-content ul {
+  gap: 30px;
+}
+.global-secC .grid .item-content ul li::before {
+  width: 20px;
+  height: 20px;
+  background: var(--primary);
+  border-radius: 50%;
+  left: -30px;
+}
+.global-secC .grid .item-content ul li h6 {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 20px;
+}/*# sourceMappingURL=global-cooling.css.map */

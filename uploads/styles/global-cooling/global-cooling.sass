@@ -1,0 +1,53 @@
+@import '../_var'
+
+.commanSec
+    padding: 70px 0
+.global-secA
+    background: var(--bgpink)
+.global-secB
+    background: var(--primary)
+    h3
+        font-size: 20px
+        text-align: center
+        margin-bottom: 4rem
+        color: rgba(255, 255, 255, 0.7)
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 1px
+
+.global-secC
+    .heading
+        width: 100%
+        max-width: 450px
+        margin: 0 auto 4rem
+        text-align: center
+        h2
+            width: 100%
+            max-width: 350px
+            margin: 0 auto
+    .grid
+        position: relative
+        &::after
+            content: ''
+            width: 2px
+            height: calc(100% - 148px)
+            background: var(--primary)
+            position: absolute
+            top: 50%
+            left: 27px
+            right: 0
+            transform: translateY(-50%)
+        .item-content
+            ul
+                gap: 30px
+                li
+                    &::before
+                        width: 20px
+                        height: 20px
+                        background: var(--primary)
+                        border-radius: 50%
+                        left: -30px
+                    h6
+                        color: var(--primary)
+                        font-weight: 600
+                        font-size: 20px
