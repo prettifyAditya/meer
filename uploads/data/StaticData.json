@@ -216,5 +216,38 @@
                 }
             ]
         }
+    },
+    "globalCoolingPage": {
+        "heroSection":{
+            "tagline": "Global Cooling & Climate Relevance",
+            "heading": "Climate legitimacy without hype",
+            "mediaSrc": "/image/globalCooling/banner.png"
+        },
+         "section1": {
+            "heading":"Why Cooling Matters Now",
+            "detail":"<p>Extreme heat is already among the most lethal climate-related hazards globally, and its intensity is rising faster than many mitigation pathways can counteract. Even under optimistic emissions reductions, global temperatures will continue to increase for decades. This is due to thermal inertia in the oceans and the long atmospheric lifetime of existing greenhouse gases.</p><p>That means one hard truth: <strong>heat risk is already locked in.</strong></p><p>Cooling interventions address this immediate and unavoidable danger. They reduce exposure, protect vulnerable populations, and stabilise essential systems while longer-term decarbonisation efforts scale.</p><p>Cooling is not a shortcut around emissions reductions. It is a protective measure that reduces harm, buys time, and preserves human habitability during a period of unavoidable warming.</p><p>Cooling is not a shortcut around emissions reductions.It is a protective measure that reduces harm, buys time, and preserves human habitability during a period of unavoidable warming.</p>",
+            "imgSrc": "/image/globalCooling/whyMatter.png"
+        },
+         "section2": {
+            "heading":"Ground-Based Cooling Pathways",
+            "detail":"<p>Cooling can occur through physical processes that operate directly at the Earth’s surface and within the built environment. These approaches do not rely on atmospheric manipulation or speculative technologies. They work through established principles of heat transfer, reflectivity, and material science.</p><ul><li>Increasing surface reflectivity to prevent solar absorption</li><li>Reducing heat storage in roofs, walls, pavements, and urban materials</li><li>Enhancing passive cooling through design and material selection</li><li>Limiting indoor heat exposure without dependence on energy-intensive air conditioning</li></ul> <p>These interventions modify how heat interacts with surfaces before it becomes trapped within buildings or urban systems.</p> <p>Because they operate at ground level, they are:</p><ul><li>Local and measurable</li><li>Local and measurable</li><li>Reversible if needed</li><li>Immediately protective</li></ul><p>They reduce heat where people actually experience it.</p>",
+            "imgSrc": "/image/globalCooling/coolingPath.png"
+        },
+        "section3": {
+            "heading":"Local Benefits, Global Co-Benefits",
+            "detail":"<p>The most immediate effects of cooling interventions are human-centred and practical:</p><ul><li>Lower indoor temperatures</li><li>Reduced heat stress and mortality risk</li><li>Improved productivity and comfort</li><li>Greater resilience in homes, schools, and workplaces</li><li>Reduced reliance on mechanical cooling</li></ul><p>These are direct benefits that can be measured in degrees, health outcomes, and energy demand.</p><p>At larger scales, these local reductions generate broader systemic effects. Lower absorbed heat reduces peak electricity loads, decreases strain on energy infrastructure, and limits additional emissions from expanded air conditioning use. Over time and across large surface areas, reduced solar absorption contributes incrementally to lowering net heat accumulation in the Earth system.</p><p>These global effects are cumulative and complementary. They do not replace emissions reduction. They strengthen it by reducing parallel energy demand and heat amplification.</p>",
+            "imgSrc": "/image/globalCooling/localBenefits.png"
+        },
+        "section4": {
+            "heading":"Adaptive Mitigation",
+            "detail":"<p>Conventional climate policy separates adaptation from mitigation. Adaptation helps people cope with rising temperatures. Mitigation reduces greenhouse gas emissions to limit future warming.</p><p>MEER integrates both through what we call adaptive mitigation.This approach recognises that surface-based passive cooling can protect people today while also contributing to reductions in net heat absorption.</p><ul><li><h6>Adaptation dimension:</h6>Cooling homes, schools, agricultural systems, and water infrastructure without electricity or refrigerants</li><li><h6>Mitigation dimension:</h6>Increasing surface reflectivity, lowering net solar heat absorbed, and reducing pressure on energy systems.</li></ul><p>By combining immediate protection with systemic energy balance improvement, adaptive mitigation bridges the gap between short-term survival and long-term climate stability.</p><p>Cooling is therefore not a secondary intervention. It is a stabilising layer within the broader climate response.</p>",
+            "imgSrc": "/image/globalCooling/ourApproach.png"
+        },
+        "section5": {
+            "heading":"Can We Build Enough to Matter?",
+            "subheading":"Introducing GPTO — A Climate-Scale Capability Framework",
+            "detail":"<ul><li><h6>The Missing Question</h6>When climate cooling solutions are evaluated, the focus is usually on performance — how well they work, how much heat they reduce, and what they cost. But there is another critical question: can we produce enough of these solutions, every year, to make a difference at planetary scale? GPTO is designed to answer that.</li><li><h6>What Is GPTO?</h6>GPTO (Global Production Thermal Offset) measures whether global material production is sufficient to scale a cooling system to match the magnitude of the climate challenge. In simple terms, it asks whether the world’s annual supply of a material is enough to build a system capable of offsetting global warming impacts in a single year. If not, material supply becomes the limiting factor — regardless of performance.</li><li><h6>Why It Matters?</h6>Climate solutions must operate at industrial scale. Each year, humanity emits tens of gigatons of CO₂e, and all cooling systems depend on materials already in demand across global industries. If those materials are not produced in sufficient quantities, the system cannot scale. GPTO makes this constraint visible, distinguishing between ideas that are effective and those that are truly scalable.</li><li><h6>Interpreting GPTO</h6>GPTO produces a value that indicates scalability. Lower values suggest local or regional impact, while values near or above one indicate that annual production could support climate-scale deployment. For systems using multiple materials, the most constrained component determines overall scalability.</li><li><h6>Designing for Climate Scale</h6>GPTO shifts how we think about climate solutions. It moves the focus beyond performance and cost toward material availability and real-world scalability. The climate crisis is measured in gigatons — and any serious solution must operate at that scale. GPTO ensures we ask the essential question early: can we build enough of this to matter?</li></ul>",
+            "imgSrc": "/image/globalCooling/canWeBuild.png"
+        }  
     }
 }
