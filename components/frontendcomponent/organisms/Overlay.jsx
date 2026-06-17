@@ -1,37 +1,18 @@
 "use client";
-import { useEffect } from "react";
-import { useModalStore } from "@/store/modalStore";
+import { useModal } from "@/hooks/useModal";
+import React from "react";
+import { useSelector } from "react-redux";
 
-export default function Overlay() {
-  const isHamOpen = useModalStore((state) => state.isHamOpen);
-  const isEnquireOpen = useModalStore((state) => state.isEnquireOpen);
-  const isVideoOpen = useModalStore((state) => state.isVideoOpen);
-  const isThankyouOpen = useModalStore((state) => state.isThankyouOpen);
-  const isTeamPopOpen = useModalStore((state) => state.isTeamPopOpen);
-  const isTheoryPopOpen = useModalStore((state) => state.isTheoryPopOpen);
-  const closeAll = useModalStore((state) => state.closeAll);
-
-  const isAnyOpen =
-    isHamOpen ||
-    isEnquireOpen ||
-    isVideoOpen ||
-    isThankyouOpen ||
-    isTeamPopOpen ||
-    isTheoryPopOpen;
-  useEffect(() => {
-    if (isAnyOpen) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-
-    return () => document.body.classList.remove("overflow-hidden");
-  }, [isAnyOpen]);
+const Overlay = () => {
+  const { closeModal } = useModal();
+  const { isModal } = useSelector((state) => state.modal);
 
   return (
     <div
-      className={`overlay ${isAnyOpen ? "is-open" : ""}`}
-      onClick={closeAll}
-    />
+      className={`overlay ${isModal !== null ? "is-open" : ""}`}
+      onClick={closeModal}
+    ></div>
   );
-}
+};
+
+export default Overlay;
