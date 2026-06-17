@@ -12,7 +12,7 @@
   }
 }
 .impact_sec {
-  background: #FFFBE6;
+  background: var(--lightbg);
 }
 .impact_sec .heading {
   text-align: center;
@@ -266,7 +266,7 @@
 }
 
 .our_strategy {
-  background: #FFFBE6;
+  background: var(--lightbg);
 }
 .our_strategy .heading {
   text-align: center;
@@ -648,6 +648,7 @@
     color: var(--primary);
   }
 }
+
 .theory-pop.model {
   max-width: 840px;
   height: -moz-fit-content;

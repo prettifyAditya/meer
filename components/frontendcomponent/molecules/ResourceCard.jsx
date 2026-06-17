@@ -1,9 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const ResourceCard = ({ category, image, title, description, date }) => {
+const ResourceCard = ({
+  className,
+  category,
+  image,
+  title,
+  description,
+  date,
+}) => {
   return (
-    <div className="resource-card">
+    <div className={`resource-card ${className}`}>
       <figure>
         <Link href="">
           <Image src={image} alt={title} width={1920} height={1080} />

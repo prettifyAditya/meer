@@ -1,8 +1,10 @@
 import Image from "next/image";
 import "@/uploads/styles/component/component.css";
+import Button from "../atoms/Button";
 
-export default function StrategyCard({ data, classname = "" }) {
+export default function StrategyCard({ data, classname = "", btnSrc = "" }) {
   if (!data) return null;
+
   return (
     <div className={`strategy_col item-md ${classname}`}>
       <figure>
@@ -17,6 +19,7 @@ export default function StrategyCard({ data, classname = "" }) {
         <div className="content">
           <h5>{data.title}</h5>
           <p>{data.desc}</p>
+          {btnSrc && <Button href={btnSrc}>View Details</Button>}
         </div>
       </figcaption>
       {classname.includes("logo_icon") && (

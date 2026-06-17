@@ -1,0 +1,118 @@
+@import  '../_common'
+
+.resourceHero
+    height: 271px
+    margin-top: var(--headerheight)
+    .container
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        h2, p
+            text-align: center
+        h2
+            font-size: 48px
+            @include media(600)
+            color: $primary
+            margin-bottom: 14px
+        p
+            max-width: 476px
+            margin: 0 auto
+
+.resourceList
+    padding: 0 0 50px
+    .container
+        .filter
+            padding: 24px 0
+            border-bottom: 1px solid  rgba(235,235,235,1)
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-bottom: 32px
+            h4
+                font-size: 18px
+                @include font(600)
+                line-height: 24px
+            .right
+                display: flex
+                align-items: center
+                gap: 24px
+                .search
+                    width: 318px
+                    display: flex
+                    align-items: center
+                    gap: 16px
+                    border: 1px solid rgba(228, 228, 228, 1)
+                    padding: 6px 16px
+                    .icon
+                        width: 18px
+                        height: 18px
+                        flex-shrink: 0
+                    input
+                        flex: 1
+                        border: 0
+                        outline: 0
+                        font-size: 14px
+                        @include font(400)
+                        color: $text
+                .sort
+                    border: 1px solid rgba(228, 228, 228, 1)
+                    padding: 6px 12px
+                    display: flex
+                    align-items: center
+                    position: relative
+                    cursor: pointer
+                    gap: 10px
+                    p
+                        color: #000
+                    .icon
+                        width: 20px
+                    .option-container
+                        position: absolute
+                        box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.10)
+                        top: 100%
+                        left: 0
+                        right: 0
+                        display: grid
+                        grid-template-rows: 0fr
+                        transition: all .5s ease
+                        &.open
+                            grid-template-rows: 1fr
+                        .options
+                            background: var(--white)
+                            z-index: 1
+                            border-top: 1px solid rgba(0, 0, 0, 0.15)
+                            max-height: 150px
+                            overflow-y: auto
+                            &::-webkit-scrollbar
+                                width: 4px
+                            &::-webkit-scrollbar-track
+                                background: transparent
+                            &::-webkit-scrollbar-thumb
+                                background: var(--primary)
+                            li
+                                padding: 8px 12px
+                                cursor: pointer
+                                transition: .3s ease
+                                font-size: 14px
+                                &:not(:last-child)
+                                    border-bottom: 1px solid rgba(0, 0, 0, 0.08)
+                                &.selected
+                                    background: var(--bglight)
+                    
+
+
+        .content
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            gap: 20px
+            height: 0
+            opacity: 0
+            overflow: hidden
+            transform: translateY(20px)
+            transition: opacity .5s ease-in-out, transform .5s ease-in-out
+            &.active
+                opacity: 1
+                height: auto
+                transform: translateY(0)

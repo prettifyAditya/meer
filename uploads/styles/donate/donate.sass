@@ -1,0 +1,289 @@
+@import '../_var'
+
+.banner.donate_hero
+    .bg
+        height: 700px
+        .banner-wrapper
+            .main_wrapper
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+                justify-content: space-between
+                gap: 100px
+                .heading
+                    flex: 0 1 auto
+                    max-width: 471px
+                    p, h1
+                        color: $white
+                    h1
+                        margin-top: 35px 
+                .payment_wrapper
+                    flex: 0 1 auto
+                    max-width: 480px
+                    background: $white
+                    .payment-nav
+                        padding: 0 30px
+                        border-bottom: 1px solid #E5E5E5
+                        ul
+                            display: flex
+                            flex-wrap: wrap
+                            align-items: center
+                            gap: 40px
+                            li
+                                padding: 15px 0
+                                text-align: center
+                                cursor: pointer
+                                &.active
+                                    .icon
+                                        img, svg
+                                            opacity: 1
+                                    p
+                                        color: $primary
+                                .icon
+                                    flex: 0 1 auto
+                                    width: 30px
+                                    height: 30px
+                                    margin: 0 auto 5px
+                                    img, svg
+                                        opacity: .3
+                                        transition: .5s ease
+                                p
+                                    font-size: 14px
+                                    font-weight: 600
+                                    color: #004D994D
+                                    transition: .5s ease
+                    .tab-nav-content
+                        padding: 35px 50px
+                        min-height: 396px
+                        .card-tenure-tab
+                            .tenure-nav
+                                display: flex
+                                align-items: center
+                                border: 1px solid #DADADA
+                                border-radius: 70px
+                                position: relative
+                                z-index: 0
+                                &::before
+                                    content: ""
+                                    position: absolute
+                                    width: 50%
+                                    height: 100%
+                                    border-radius: inherit
+                                    top: 0
+                                    left: 0
+                                    background: $primary
+                                    z-index: -1
+                                    transition: .5s ease
+                                &:has(li:last-child.active)::before
+                                    left: 50%
+                                li
+                                    flex: 1
+                                    cursor: pointer
+                                    padding: 12px 30px
+                                    border-radius: inherit
+                                    text-align: center
+                                    font-weight: 500
+                                    color: $text
+                                    transition: .5s ease
+                                    &.active
+                                        color: $white
+                            .popular_wrap
+                                text-align: center
+                                margin: 35px 0 35px
+                                p
+                                    font-size: 14px
+                                    font-weight: 600
+                                    color: $primary
+                                    margin-bottom: 12px
+                                    text-transform: uppercase
+                                    letter-spacing: 2px
+                                .payment-quant
+                                    display: flex
+                                    flex-wrap: wrap
+                                    align-items: center
+                                    gap: 15px
+                                    .pay_val
+                                        flex: 1
+                                        cursor: pointer
+                                        font-weight: 400
+                                        text-align: center
+                                        padding: 12px 15px
+                                        border: 1px solid #DBDBDB
+                                        background: $white
+                                        border-radius: 5px
+                                        line-height: 1.3
+                                        color: $text
+                                        transition: .5s ease
+                                        &.active
+                                            background: #EBF2FA
+                                            color: $primary
+                                            border-color: $primary
+                            .enter_amount
+                                display: flex
+                                align-items: center
+                                border: 1px solid #DBDBDB
+                                border-radius: 5px
+                                --inputsize: 50px
+                                .form-group
+                                    &::before, &::after
+                                        display: none
+                                .amount
+                                    --paddingleftright: 20px
+                                    font-size: 18px
+                                .select_currency
+                                    flex: 0 1 auto
+                                    width: 70px
+                                    border-right: 1px solid #DBDBDB
+                                    label 
+                                        display: none
+                                    .custom-select
+                                        &::before
+                                            right: 5px
+                                    .current
+                                        padding-left: var(--arrow)
+                                        color: $black
+                                        font-size: 24px
+                            .btn
+                                --height: 48px
+                                margin-top: 30px
+                                width: 100%
+                        .paypal_wrap
+                            position: relative
+                            figure
+                                line-height: 0
+                                width: 348px
+                                height: 326px
+                            .btn
+                                position: absolute
+                                top: 50%
+                                left: 50%
+                                transform: translate(-50%, -50%)
+                        .bank_wrap, .cheque_wrap
+                            text-align: center
+                            figure
+                                width: 141px
+                                margin: 0 auto 25px
+                            p
+                                margin: 0 auto 25px
+                                max-width: 316px
+                            a
+                                font-size: 18px
+                                font-weight: 600
+                                color: $primary
+                        .cheque_wrap
+                            figure
+                                width: 52px
+                                margin: 0 auto 40px
+
+.heat_relief
+    background: #F2F9FF
+    .heading
+        text-align: center
+        margin-bottom: 60px
+        h2
+            color: $primary
+            font-weight: 600
+    figure 
+        max-width: 870px
+        margin: 0 auto
+        width: 100%
+
+.our_progress
+    .main_wrapper
+        justify-content: center
+        align-items: center
+        --gap: 160px
+        gap: var(--gap)
+        figure
+            flex: 0 1 auto
+            max-width: 310px
+            width: 100%
+        figcaption
+            flex: 0 1 auto
+            max-width: 40%
+            width: 100%
+            h2
+                color: $primary
+                font-weight: 600
+                font-size: 36px
+                margin-bottom: 20px
+            .info_wrap
+                margin-top: 30px
+                display: flex
+                gap: 60px
+                .info_col
+                    flex: 0 1 auto
+                    p
+                        font-weight: 400
+                        font-size: 14px
+                        color: $primary
+                    h6
+                        font-weight: 600
+                        font-size: 25px
+                        color: $primary
+
+.typical_costs
+    background: var(--lightbg)
+    .heading
+        text-align: center
+        margin-bottom: 70px
+        h2
+            font-weight: 600
+    .main_wrapper
+        --gap: 60px
+        gap: var(--gap)
+        justify-content: space-around
+        figure
+            flex: 0 1 auto
+            max-width: 590px
+            width: 100%
+        figcaption
+            flex: 0 1 auto
+            max-width: 400px
+            ul
+                padding: 30px 0
+                border-left: 1px solid $primary
+                margin: 0 0 20px 
+                li
+                    position: relative
+                    padding-left: 32px
+                    &:not(:last-child)
+                        margin-bottom: 30px
+                    font-weight: 400
+                    &::before
+                        content: ""
+                        position: absolute
+                        left: -9px
+                        top: 7px
+                        width: 16px
+                        height: 16px
+                        background: $primary
+                        border: 1px solid $primary
+                        border-radius: 50%
+                    h6
+                        font-size: 20px
+                        font-weight: 500
+                        margin-bottom: 3px
+
+.example_research
+    .heading
+        text-align: center
+        margin-bottom: 60px
+        h2
+            font-weight: 600
+    .main_wrapper
+        position: relative
+        .example-slider
+            max-width: 97%
+            .example_col
+                text-align: center
+                width: 100%
+                height: 100%
+                padding: 45px 65px 35px
+                border: 1px solid #A1A1A1
+                .icon
+                    width: 80px
+                    height: 80px
+                    margin: 0 auto 30px
+                p
+                    color: $black

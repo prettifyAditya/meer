@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import TeamPop from "./TeamPop";
 import Overlay from "./Overlay";
+import VideoPop from "./VideoPop";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -162,6 +163,7 @@ const Footer = () => {
       </footer>
       <Overlay />
       <TeamPop />
+      <VideoPop />
     </>
   );
 };

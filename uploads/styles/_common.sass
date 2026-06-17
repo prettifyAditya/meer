@@ -3,11 +3,11 @@
 *,
 *::before,
 *::after
-    padding: 0
-    margin: 0
-    list-style: none
-    box-sizing: border-box
-    -webkit-tap-highlight-color: transparent
+	padding: 0
+	margin: 0
+	list-style: none
+	box-sizing: border-box
+	-webkit-tap-highlight-color: transparent
 $scrollwidth: 8px
 
 :root
@@ -19,6 +19,7 @@ $scrollwidth: 8px
     --secondary: #003c77
     --bglight: rgba(242, 249, 255, 1)
     --bgpink: rgba(255, 251, 230, 1)
+    --lightbg: #FFFBE6
     --text: #666666
     --white: #FFFFFF
     --black: #000000
@@ -29,343 +30,349 @@ $scrollwidth: 8px
     --gradient-a: linear-gradient(180deg, #C0D6F6 0%, #FFFFFF 50%, #C0D6F6 100%)
     --gradient-b: radial-gradient(66.9% 66.9% at 37.11% 37.56%, #ACCEEB 0%, #5F96D1 35.54%, #325BA4 78.81%, #345795 100%)
 
-    @include media(1152)
-        --containerfluid: 1rem
-    @include media(991)
-        --containerfluid: 15px
-    @include media(540)
-        --headerheight: 80px
-        --headerfixed: 60px
-    @include media(320)
-        --containerfluid: 10px
+	@include media(1152)
+		--containerfluid: 1rem
+	@include media(991)
+		--containerfluid: 15px
+	@include media(540)
+		--headerheight: 80px
+		--headerfixed: 60px
+	@include media(320)
+		--containerfluid: 10px
 
 .sec-heading
-    max-width: 600px
-    margin: 0 auto
-    text-align: center
+	max-width: 600px
+	margin: 0 auto
+	text-align: center
 
 .sec-pad
-    padding: 60px 0 0
+	padding: 60px 0 0
+	@include media(991)
+		padding: 50px 0 0
+	@include media(768)
+		padding: 40px 0 0
+
+.sec-pad-bottom
+    padding: 0 0 60px
     @include media(991)
-        padding: 50px 0 0
+        padding: 0 0 50px
     @include media(768)
-        padding: 40px 0 0
+        padding: 0 0 40px
 
 
 .sec-pad-all
-    padding: 60px 0
-    @include media(991)
-        padding: 50px 0
-    @include media(768)
-        padding: 40px 0
-    @include media(540)
-        padding: 40px 0
+	padding: 60px 0
+	@include media(991)
+		padding: 50px 0
+	@include media(768)
+		padding: 40px 0
+	@include media(540)
+		padding: 40px 0
 
 body
-    &::-webkit-scrollbar
-        width: $scrollwidth
-        background: $white
-    &::-webkit-scrollbar-track
-        box-shadow: none
-    &::-webkit-scrollbar-thumb
-        background-color: var(--primary)
-        border-radius: 0px
-    &.overflow-hidden
-        overflow: hidden
-        margin-right: $scrollwidth
-        @include media(768)
-            margin-right: 0
-        header
-            width: calc(100% - $scrollwidth)
+	&::-webkit-scrollbar
+		width: $scrollwidth
+		background: $white
+	&::-webkit-scrollbar-track
+		box-shadow: none
+	&::-webkit-scrollbar-thumb
+		background-color: var(--primary)
+		border-radius: 0px
+	&.overflow-hidden
+		overflow: hidden
+		margin-right: $scrollwidth
+		@include media(768)
+			margin-right: 0
+		header
+			width: calc(100% - $scrollwidth)
 body,html
-    font-size: 16px
-    line-height: 1.5
-    font-optical-sizing: auto
-    font-style: normal
-    font-family: $notoSans
-    font-weight: 500
+	font-size: 16px
+	line-height: 1.5
+	font-optical-sizing: auto
+	font-style: normal
+	font-family: $notoSans
+	font-weight: 500
 
 select
-    display: none
+	display: none
 
 p, li , a , span
-    color: var(--text)
-    font-weight: 400
-    font-size: 16px
-    line-height: 1.4
+	color: var(--text)
+	font-weight: 400
+	font-size: 16px
+	line-height: 1.4
 
 a[href]
-    text-decoration: none
-    cursor: pointer
-    transition: .5s ease
-    &.logo
-        display: block
-        line-height: 0
-    &:not(.btn, .btn2)
-        color: $black
+	text-decoration: none
+	cursor: pointer
+	transition: .5s ease
+	&.logo
+		display: block
+		line-height: 0
+	&:not(.btn, .btn2)
+		color: $black
 svg
-    path
-        transition: .5s ease
+	path
+		transition: .5s ease
 .container
-    @include container
+	@include container
 .container-fluid
-    padding: 0 var(--containerfluid)
-    display: block
-    margin: 0 auto
+	padding: 0 var(--containerfluid)
+	display: block
+	margin: 0 auto
 h1,h2,h3,h4,h5,h6
-    font-weight: 500
-    color: $black
+	font-weight: 500
+	color: $black
 h1
-    font-size: 48px
-    line-height: 1.2
-    font-weight: 600
-    @include media(1024)
-        font-size: 40px
-    @include media(769)
-        font-size: 34px
-    @include media(540)
-        font-size: 26px
+	font-size: 48px
+	line-height: 1.2
+	font-weight: 600
+	@include media(1024)
+		font-size: 40px
+	@include media(769)
+		font-size: 34px
+	@include media(540)
+		font-size: 26px
 h2
-    font-size: 36px
-    line-height: 1.2
-    font-weight: bold
-    @include media(1024)
-        font-size: 38px
-    @include media(769)
-        font-size: 32px
-    @include media(540)
-        font-size: 24px
+	font-size: 36px
+	line-height: 1.2
+	font-weight: bold
+	@include media(1024)
+		font-size: 38px
+	@include media(769)
+		font-size: 32px
+	@include media(540)
+		font-size: 24px
 h3
-    font-size: 32px
-    line-height: 1.2
-    @include media(1024)
-        font-size: 36px
-    @include media(769)
-        font-size: 30px
-    @include media(540)
-        font-size: 22px
+	font-size: 32px
+	line-height: 1.2
+	@include media(1024)
+		font-size: 36px
+	@include media(769)
+		font-size: 30px
+	@include media(540)
+		font-size: 22px
 
 .heading
-    h3, h2
-        font-size: 36px
-        font-weight: 700
-        line-height: 1.2
-        color: var(--primary)
-        @include media(1280)
-            font-size: 58px
-        @include media(1024)
-            font-size: 46px
-        @include media(991)
-            font-size: 28px
-        @include media(768)
-            font-size: 26px
-        @include media(540)
-            font-size: 24px
+	h3, h2
+		font-size: 36px
+		font-weight: 700
+		line-height: 1.2
+		color: var(--primary)
 
-    >p
-        margin-top: 10px
-    &.normal
-        h2, h3
+	h6
+		font-size: 16px
+		text-transform: uppercase
+		color: var(--primary)
+		text-align: center
+		@include font(500)
+		letter-spacing: 2px
+		margin-bottom: 10px
 
-            font-size: 48px
-            color: $primary
-            text-transform: capitalize
-            @include media(991)
-                font-size: 40px
-            @include media(768)
-                font-size: 36px
-            @include media(540)
-                font-size: 32px
+	>p
+		margin-top: 10px
+	&.normal
+		h2, h3
+
+			font-size: 48px
+			color: $primary
+			text-transform: capitalize
+			@include media(991)
+				font-size: 40px
+			@include media(768)
+				font-size: 36px
+			@include media(540)
+				font-size: 32px
 
 h4
-    font-size: 28px
-    line-height: 1.28
+	font-size: 28px
+	line-height: 1.28
 h5
-    font-size: 24px
-    line-height: 1.25
-    @include media(1152)
-        font-size: 22px
-    @include media(675)
-        font-size: 20px
+	font-size: 24px
+	line-height: 1.25
+	@include media(1152)
+		font-size: 22px
+	@include media(675)
+		font-size: 20px
 h6
-    font-size: 20px
+	font-size: 20px
 .text-center
-    text-align: center
+	text-align: center
 .text-left
-    text-align: left
+	text-align: left
 .text-right
-    text-align: right
+	text-align: right
 .text-uppercase
-    text-transform: uppercase
+	text-transform: uppercase
 .flex
-    @include flex
+	@include flex
 .grid
-    display: grid
+	display: grid
 
 .span-2
-    grid-column: span(2)
+	grid-column: span(2)
 .inline-flex
-    --gap: 12px
-    display: inline-flex
-    align-items: center
-    gap: 0 var(--gap)
+	--gap: 12px
+	display: inline-flex
+	align-items: center
+	gap: 0 var(--gap)
 
 input,button,select
-    font-family: inherit
-    font-size: inherit
-    cursor: pointer
+	font-family: inherit
+	font-size: inherit
+	cursor: pointer
 input
-    border-radius: 0
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button
-        -webkit-appearance: none
-        margin: 0
-    &:-webkit-autofill
-        -webkit-box-shadow: 0 0 0px 1000px transparent inset !important
-        box-shadow: 0 0 0px 1000px transparent inset !important
-        transition: background-color 9999s ease-in-out 0s !important
-    &[type=number]
-        -moz-appearance: textfield
+	border-radius: 0
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button
+		-webkit-appearance: none
+		margin: 0
+	&:-webkit-autofill
+		-webkit-box-shadow: 0 0 0px 1000px transparent inset !important
+		box-shadow: 0 0 0px 1000px transparent inset !important
+		transition: background-color 9999s ease-in-out 0s !important
+	&[type=number]
+		-moz-appearance: textfield
 video
-    pointer-events: none
-    user-select: none
+	pointer-events: none
+	user-select: none
 button
-    border: none
-    background: none
-    appearance: none
-    cursor: pointer
+	border: none
+	background: none
+	appearance: none
+	cursor: pointer
 .tab-nav
-    cursor: default
-    [data-tab]
-        cursor: pointer
-        caret-color: transparent
+	cursor: default
+	[data-tab]
+		cursor: pointer
+		caret-color: transparent
 .tab-nav-content
-    position: relative
-    .tabs
-        transition: .6s ease
-        &:not(.active)
-            position: absolute
-            top: 0
-            left: 0
-            right: 0
-            bottom: 0
-            pointer-events: none
-            user-select: none
-            opacity: 0
-            height: 0
-            overflow: hidden
+	position: relative
+	.tabs
+		transition: .6s ease
+		&:not(.active)
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			pointer-events: none
+			user-select: none
+			opacity: 0
+			height: 0
+			overflow: hidden
 .item-md
-    position: relative
-    @include before
-    @include after
-    &::before,&::after
-        z-index: 1
-    &::after
-        content: none
-    figure,.figure
-        display: block
-        overflow: hidden
-        line-height: 0
-        height: 100%
-        img,video
-            height: 100%
-            width: 100%
-            object-fit: cover
-            transition: .5s ease
-    figcaption
-        position: absolute
-        bottom: 0
-        left: 0
-        right: 0
-        z-index: 2
-    .link-md
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0
-        z-index: 3
-    &.center-item
-        figcaption
-            bottom: auto
-            top: 50%
-            translate: 0 -50%
+	position: relative
+	@include before
+	@include after
+	&::before,&::after
+		z-index: 1
+	&::after
+		content: none
+	figure,.figure
+		display: block
+		overflow: hidden
+		line-height: 0
+		height: 100%
+		img,video
+			height: 100%
+			width: 100%
+			object-fit: cover
+			transition: .5s ease
+	figcaption
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 2
+	.link-md
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 3
+	&.center-item
+		figcaption
+			bottom: auto
+			top: 50%
+			translate: 0 -50%
 
 .overlay
-    position: fixed
-    left: 0
-    right: 0
-    bottom: 0
-    top: 0
-    z-index: 5
-    opacity: 0
-    background: rgb(0 0 0 /.7)
-    transform: translateY(100%)
-    transition: 0s ease .5s,opacity .5s ease
-    cursor: pointer
-    @include media(540)
-        display: none
-    &.is-open
-        transition: opacity 1s ease
-        opacity: 1
-        transform: translateY(0%)
+	position: fixed
+	left: 0
+	right: 0
+	bottom: 0
+	top: 0
+	z-index: 5
+	opacity: 0
+	background: rgb(0 0 0 /.7)
+	transform: translateY(100%)
+	transition: 0s ease .5s,opacity .5s ease
+	cursor: pointer
+	@include media(540)
+		display: none
+	&.is-open
+		transition: opacity 1s ease
+		opacity: 1
+		transform: translateY(0%)
 
 .model
-    position: fixed
-    top: 0
-    bottom: 0
-    z-index: 7
-    background: $white
-    background-position: 0% 80%
-    background-size: 75%
-    max-width: 435px
-    width: 100%
-    .close
-        &:not(.btn)
-            position: absolute
-            top: 0
-            right: 0
-            top: 40px
-            right: 40px
-            @include media(520)
-                top: 20px
-                right: 20px
-            path
-                stroke: $black
+	position: fixed
+	top: 0
+	bottom: 0
+	z-index: 7
+	background: $white
+	background-position: 0% 80%
+	background-size: 75%
+	max-width: 435px
+	width: 100%
+	.close
+		&:not(.btn)
+			position: absolute
+			top: 0
+			right: 0
+			top: 40px
+			right: 40px
+			@include media(520)
+				top: 20px
+				right: 20px
+			path
+				stroke: $black
 
 img, video
-    width: 100%
-    height: 100%
-    object-fit: cover
-    transition: .5s ease
+	width: 100%
+	height: 100%
+	object-fit: cover
+	transition: .5s ease
 
 .btn
-    --height: 38px
-    --padding: 18px
-    display: inline-flex
-    align-items: center
-    justify-content: center
-    gap: 10px
-    vertical-align: middle
-    height: var(--height)
-    line-height: var(--height)
-    padding: 0 var(--padding)
-    @include font(500)
-    border-radius: 25px
-    overflow: hidden
-    text-transform: capitalize
-    appearance: none
-    caret-color: transparent
-    user-select: none
-    cursor: pointer
-    border: 1px solid transparent
-    position: relative
-    z-index: 1
+	--height: 38px
+	--padding: 18px
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	gap: 10px
+	vertical-align: middle
+	height: var(--height)
+	line-height: var(--height)
+	padding: 0 var(--padding)
+	@include font(500)
+	border-radius: 25px
+	text-transform: capitalize
+	overflow: hidden
+	appearance: none
+	caret-color: transparent
+	user-select: none
+	cursor: pointer
+	border: 1px solid transparent
+	position: relative
+	z-index: 1
     transition: .5s ease
-    @include media(540)
-        font-size: 12px
-        --padding: 12px
-        --height: 33px
+	@include media(540)
+		font-size: 12px
+		--padding: 12px
+		--height: 33px
     &.btn-white
         border-color: $white
         background: $white
@@ -373,114 +380,147 @@ img, video
         &:hover
             background: $primary
             color: $white
+	&.square
+		border-radius: 0px
+	&.btn-white
+		background: $white
+		color: $primary
+		&:hover
+			background: $primary
+			color: $white
 
-    &.btn-primary
-        background: $primary
-        color: $white
-        border-color: $primary
-        transition: color .3s ease, border-color .3s ease, box-shadow .3s ease
-        &::before
-            content: ''
-            position: absolute
-            inset: 0
-            background: $white
-            border-radius: inherit
-            transform: scaleX(0)
-            transform-origin: right
-            transition: transform .4s cubic-bezier(.77,0,.18,1)
-            z-index: -1
-        &:hover
-            color: $primary
-            border-color: $primary
-            box-shadow: 0 6px 20px rgba($primary, .35)
-            &::before
-                transform: scaleX(1)
-                transform-origin: left
+	&.btn-primary
+		background: $primary
+		color: $white
+		border-color: $primary
+		transition: color .3s ease, border-color .3s ease, box-shadow .3s ease
+		&::before
+			content: ''
+			position: absolute
+			inset: 0
+			background: $white
+			border-radius: inherit
+			transform: scaleX(0)
+			transform-origin: right
+			transition: transform .4s cubic-bezier(.77,0,.18,1)
+			z-index: -1
+		&:hover
+			color: $primary
+			border-color: $primary
+			box-shadow: 0 6px 20px rgba($primary, .35)
+			&::before
+				transform: scaleX(1)
+				transform-origin: left
+	&.btn-outline-primary
+		background: transparent
+		color: $primary
+		border-color: $primary
+		transition: color .3s ease, border-color .3s ease, box-shadow .3s ease
+		&::before
+			content: ''
+			position: absolute
+			inset: 0
+			background: $primary
+			border-radius: inherit
+			transform: scaleX(0)
+			transform-origin: right
+			transition: transform .4s cubic-bezier(.77,0,.18,1)
+			z-index: -1
+		&:hover
+			color: $white
+			border-color: $primary
+			background: $primary
+			box-shadow: 0 6px 20px rgba($primary, .35)
+			&::before
+				transform: scaleX(1)
+				transform-origin: left
 
-    &.btn-outline-white
-        background: transparent
-        color: $white
-        border-color: $white
-        transition: color .3s ease, box-shadow .3s ease
-        &::before
-            content: ''
-            position: absolute
-            inset: 0
-            background: $white
-            border-radius: inherit
-            transform: scaleY(0)
-            transform-origin: bottom
-            transition: transform .4s cubic-bezier(.77,0,.18,1)
-            z-index: -1
-        &:hover
-            color: $primary
-            border-color: $white
-            box-shadow: 0 6px 20px rgba($white, .2)
-            &::before
-                transform: scaleY(1)
-                transform-origin: top
+	&.btn-outline-white
+		background: transparent
+		color: $white
+		border-color: $white
+		transition: color .3s ease, box-shadow .3s ease
+		&::before
+			content: ''
+			position: absolute
+			inset: 0
+			background: $white
+			border-radius: inherit
+			transform: scaleY(0)
+			transform-origin: bottom
+			transition: transform .4s cubic-bezier(.77,0,.18,1)
+			z-index: -1
+		&:hover
+			color: $primary
+			border-color: $white
+			box-shadow: 0 6px 20px rgba($white, .2)
+			&::before
+				transform: scaleY(1)
+				transform-origin: top
 
 .form-grid
-    --item: 1
-    --gaplr: 30px
-    --gaptb: 32px
-    display: grid
-    grid-template-columns: repeat(var(--item), calc((100% - (var(--gaplr) * (var(--item) - 1))) / var(--item)))
-    gap: var(--gaptb) var(--gaplr)
-    &.form-2
-        --item: 2
-    &.form-3
-        --item: 3
-    .full
-        grid-column: span var(--item)
+	--item: 1
+	--gaplr: 30px
+	--gaptb: 32px
+	display: grid
+	grid-template-columns: repeat(var(--item), calc((100% - (var(--gaplr) * (var(--item) - 1))) / var(--item)))
+	gap: var(--gaptb) var(--gaplr)
+	&.form-2
+		--item: 2
+	&.form-3
+		--item: 3
+	.full
+		grid-column: span var(--item)
 
 //banner
 
 .banner
-    position: relative
-    overflow: hidden
-    @include before
-    &::before
-        z-index: 1
-        background: linear-gradient(90deg, #000000 0%, #6660 55%), linear-gradient(#00000073 0%, #01010100 100%)
+	position: relative
+	overflow: hidden
+	@include before
+	&::before
+		z-index: 1
+		background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(102, 102, 102, 0) 59.13%),linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(1, 1, 1, 0) 100%)
 
-    .bg
-        height: 100vh
-        line-height: 0
-        video,img
-            width: 100%
-            height: 100%
-            object-fit: cover
-    .banner-wrapper
-        position: absolute
-        left: 0
-        right: 0
-        top: 50%
-        translate: 0 -50%
-        z-index: 2  
-        .heading, .content
-            h1, h2
-                margin-top: 70px
-                font-size: 48px
-                line-height: 1.2
-                font-weight: 600
-                color: var(--white)
-                @include media(991)
-                    font-size: 32px
-                @include media(768)
-                    font-size: 30px
-                @include media(540)
-                    font-size: 28px
-            p
-                margin: 0
-                font-size: 15px
-                line-height: 1.4
-                color: var(--white)
+	.bg
+		height: 100vh
+		line-height: 0
+		video,img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.banner-wrapper
+		position: absolute
+		left: 0
+		right: 0
+		top: 50%
+		translate: 0 -50%
+		z-index: 2
+		.content
+			h1, h2
+				font-size: 48px
+				line-height: 1.2
+				font-weight: 600
+				color: var(--white)
+				@include media(991)
+					font-size: 32px
+				@include media(768)
+					font-size: 30px
+				@include media(540)
+					font-size: 28px
+			p
+				font-size: 16px
+				line-height: 1.5
+				margin-top: 4px
+				color: var(--white)
+				opacity: .8
+				@include media(768)
+					line-height: 1.2
 
 // swiper
 
 .swiper-slide
-    height: auto !important
+	height: auto
 
 .swiper-nav
     line-height: 0
@@ -565,319 +605,324 @@ img, video
                 width: auto
                 height: auto
 .swiper-prev
-    svg,img
-        transform: scaleX(-1)
+	svg,img
+		transform: scaleX(-1)
 
 .swiper-prev,.swiper-next
-    &.swiper-button-disabled
-        cursor: no-drop
-        opacity: .4
-    &.swiper-button-lock
-        display: none !important
+	&.swiper-button-disabled
+		cursor: no-drop
+		opacity: .4
+	&.swiper-button-lock
+		display: none !important
 
 // Other
 
 .play-btn
-    --btnsize: 56px
-    --border: 2px
-    --bordercolor: var(--white)
-    --playbtncolor: var(--primary)
-    height: var(--btnsize)
-    width: var(--btnsize)
-    border-radius: 50%
-    border: var(--border) solid var(--bordercolor)
-    position: relative
-    background: var(--white)
-    @include media(1024)
-        --btnsize: 50px
-    @include media(675)
-        --btnsize: 45px
-        --border: 1px
-    &::before
-        width: 100%
-        height: 100%
-        top: 50%
-        right: 0
-        bottom: 0
-        left: 50%
-        position: absolute
-        content: ""
-        transform: translateX(-50%) translateY(-50%)
-        background: var(--bordercolor)
-        border-radius: 50%
-        display: block
-        animation: pulse-border 1500ms ease-out infinite
-        @keyframes pulse-border
-            0%
-                transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1)
-                opacity: 0.5
-            100%
-                transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5)
-                opacity: 0
-    &::after
-        content: ''
-        position: absolute
-        top: 50%
-        left: 50%
-        translate: -50% -50%
-        width: 0
-        height: 0
-        border-top: calc(var(--btnsize) / 8) solid transparent
-        border-bottom: calc(var(--btnsize) / 8) solid transparent
-        border-left: calc(var(--btnsize) / 5.6) solid var(--playbtncolor)
+	--btnsize: 56px
+	--border: 2px
+	--bordercolor: var(--white)
+	--playbtncolor: var(--primary)
+	height: var(--btnsize)
+	width: var(--btnsize)
+	border-radius: 50%
+	border: var(--border) solid var(--bordercolor)
+	position: relative
+	background: var(--white)
+	@include media(1024)
+		--btnsize: 50px
+	@include media(675)
+		--btnsize: 45px
+		--border: 1px
+	&.outline
+		background: transparent
+		border: 1px solid $white
+		&::after
+			border-left: calc(var(--btnsize) / 5.6) solid var(--white)
+
+	&::before
+		width: 100%
+		height: 100%
+		top: 50%
+		right: 0
+		bottom: 0
+		left: 50%
+		position: absolute
+		content: ""
+		transform: translateX(-50%) translateY(-50%)
+		background: var(--bordercolor)
+		border-radius: 50%
+		display: block
+		animation: pulse-border 1500ms ease-out infinite
+		@keyframes pulse-border
+			0%
+				transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1)
+				opacity: 0.5
+			100%
+				transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5)
+				opacity: 0
+	&::after
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		translate: -50% -50%
+		width: 0
+		height: 0
+		border-top: calc(var(--btnsize) / 8) solid transparent
+		border-bottom: calc(var(--btnsize) / 8) solid transparent
+		border-left: calc(var(--btnsize) / 5.6) solid var(--playbtncolor)
 .website-content
-    > :first-child
-        margin-top: 0 !important
-    > :last-child
-        margin-bottom: 0 !important
-    h1, h2, h3, h4, h5, h6
-        color: $black
-    h1
-        font-size: 48px
-        margin-bottom: 45px
-        text-align: center
-        @include media(675)
-            font-size: 34px
-        @include media(520)
-            font-size: 30px
-    h2
-        font-size: 34px
-        @include media(675)
-            font-size: 24px
-    h3
-        font-size: 28px
-        line-height: 1.21
-        @include media(675)
-            font-size: 22px
-    h4
-        font-size: 22px
-        @include media(675)
-            font-size: 20px
-    h5
-        font-size: 18px
-        @include media(675)
-            font-size: 18px
-    h6
-        font-size: 18px
-    h2,h3,h4
-        margin: 40px 0 18px
-    h5,h6
-        margin: 28px 0 18px
-    p,li
-        color: $text
-        b
-            font-weight: normal
-    a
-        color: $black
-        &:hover
-            text-decoration: underline
-    p,ul
-        margin-bottom: 20px
-    ul
-        padding-left: 18px
-        @include media(675)
-            padding-left: 10px
-        li
-            position: relative
-            padding-left: 28px
-            @include media(675)
-                padding-left: 20px
-            &:not(:last-child)
-                margin-bottom: 6px
-            &::before
-                content: ''
-                position: absolute
-                top: 8px
-                left: 0
-                width: 10px
-                aspect-ratio: 1
-                border-radius: 50%
-                background: $primary
+	> :first-child
+		margin-top: 0 !important
+	> :last-child
+		margin-bottom: 0 !important
+	&.website-content-white
+		>*
+			color: $white
+	h1, h2, h3, h4, h5, h6
+		color: $black
+	h1
+		font-size: 48px
+		margin-bottom: 45px
+		text-align: center
+		@include media(675)
+			font-size: 34px
+		@include media(520)
+			font-size: 30px
+	h2
+		font-size: 34px
+		@include media(675)
+			font-size: 24px
+	h3
+		font-size: 28px
+		line-height: 1.21
+		@include media(675)
+			font-size: 22px
+	h4
+		font-size: 20px
+		@include media(675)
+			font-size: 20px
+	h5
+		font-size: 18px
+		@include media(675)
+			font-size: 18px
+	h6
+		font-size: 18px
+	h2,h3,h4
+		margin: 40px 0 18px
+	h5,h6
+		margin: 28px 0 18px
+	p,li
+		color: $text
+		b
+			font-weight: normal
+	a
+		color: $black
+		&:hover
+			text-decoration: underline
+	p,ul
+		margin-bottom: 20px
+	ul
+		// padding-left: 18px
+		// @include media(675)
+		// 	padding-left: 10px
+		li
+			position: relative
+			padding-left: 28px
+			@include media(675)
+				padding-left: 20px
+			&:not(:last-child)
+				margin-bottom: 6px
+			&::before
+				content: ''
+				position: absolute
+				top: 8px
+				left: 0
+				width: 10px
+				aspect-ratio: 1
+				border-radius: 50%
+				background: $primary
 .slider-section
-    .upper-sec
-        position: relative
-        margin-bottom: 3rem
-        @include media(991)
-            margin-bottom: 2.5rem
-        @include media(540)
-            margin-bottom: 2rem
-        .swiper-nav
-            position: absolute
-            top: 50%
-            right: 2%
-            transform: translate(2%, -50%)
-            z-index: 2
-            @include media(675)
-                display: none
-        .heading
-            text-align: center
+	.upper-sec
+		position: relative
+		margin-bottom: 3rem
+		@include media(991)
+			margin-bottom: 2.5rem
+		@include media(540)
+			margin-bottom: 2rem
+		.swiper-nav
+			position: absolute
+			top: 50%
+			right: 2%
+			transform: translate(2%, -50%)
+			z-index: 2
+			@include media(675)
+				display: none
+		.heading
+			text-align: center
 
 .common-grid
-    display: grid
-    grid-template-columns: repeat(3,1fr)
-    grid-gap: 50px 20px
-    @include media(991)
-        grid-template-columns: repeat(2,1fr)
-        grid-gap: 30px 18px
-    @include media(675)
-        grid-template-columns: 100%
-        grid-gap: 10px
+	display: grid
+	grid-template-columns: repeat(3,1fr)
+	grid-gap: 50px 20px
+	@include media(991)
+		grid-template-columns: repeat(2,1fr)
+		grid-gap: 30px 18px
+	@include media(675)
+		grid-template-columns: 100%
+		grid-gap: 10px
 
 .gray-bg
-    background: $gray
+	background: $gray
 
 .light-bg
-    background: var(--bglight)
+	background: var(--bglight)
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
-    border-radius: 50%
-    background: $primary
-    border-color: $primary
-    height: 17px
-    width: 17px
-    border: none !important
-    top: 50%
-    translate: 0 -50%
-    &:focus
-        outline: none
+	border-radius: 50%
+	background: $primary
+	border-color: $primary
+	height: 17px
+	width: 17px
+	border: none !important
+	top: 50%
+	translate: 0 -50%
+	&:focus
+		outline: none
 .ui-slider-horizontal
-    height: 2px
-    border: none !important
+	height: 2px
+	border: none !important
 .ui-widget-content
-    background: #CECECE
-    border: none !important
+	background: #CECECE
+	border: none !important
 .ui-widget-header
-    background: $primary
+	background: $primary
 
 .breadcrumps
-    @include media(991)
-        display: none
-    li
-        display: inline-block
-        vertical-align: middle
-        a
-            color: $text
-            font-size: 14px
-            @include media(520)
-                font-size: 12px
-                text-overflow: ellipsis
-            &.active
-                color: $black
-        &:not(:last-child)
-            position: relative
-            padding-right: 20px
-            @include media(520)
-                padding-right: 8px
-            &::before
-                content: '>'
-                position: absolute
-                left: 100%
-                top: 50%
-                translate: 0 -50%
-                font-size: 12px
-                font-family: monospace
-                color: $text
-        &:not(:first-child)
-            padding-left: 20px
-            @include media(520)
-                padding-left: 8px
+	@include media(991)
+		display: none
+	li
+		display: inline-block
+		vertical-align: middle
+		a
+			color: $text
+			font-size: 14px
+			@include media(520)
+				font-size: 12px
+				text-overflow: ellipsis
+			&.active
+				color: $black
+		&:not(:last-child)
+			position: relative
+			padding-right: 20px
+			@include media(520)
+				padding-right: 8px
+			&::before
+				content: '>'
+				position: absolute
+				left: 100%
+				top: 50%
+				translate: 0 -50%
+				font-size: 12px
+				font-family: monospace
+				color: $text
+		&:not(:first-child)
+			padding-left: 20px
+			@include media(520)
+				padding-left: 8px
 
 [data-scrollTo]
-    cursor: pointer
+	cursor: pointer
 
 .fancybox__container
-    --fancybox-bg: var(--black)
+	--fancybox-bg: var(--black)
 
 .green-color
-    color: $green
+	color: $green
 .red-color
-    color: $red
+	color: $red
 .orange-color
-    color: orange
+	color: orange
 
 em
-    font-style: normal
+	font-style: normal
 
 .mt-hdrfxd
-    margin-top: var(--headerfixed)
+	margin-top: var(--headerfixed)
 
 .mt-hdr
-    margin-top: var(--headerheight)
+	margin-top: var(--headerheight)
 .primary
-    color: $primary
+	color: $primary
 
 .btn_wrap
-    display: flex
-    align-items: center
-    gap: 10px
+	display: flex
+	align-items: center
+	gap: 10px
 
-.InsightContainer
-    &.invert
-        .grid
-            .media
-                order: 2
-            .item-content
-                order: 1
-    .grid
-        display: grid
-        grid-template-columns: repeat(2,1fr)
-        align-items: start
-        gap: 50px
-        @include media(991)
-            grid-template-columns: 100%
-            gap: 30px
-        .media
-            position: relative
-            width: 571px
-            height: 416px
-            img,
-            video
-                width: 100%
-                height: 100%
-                object-fit: cover
-                display: block
-            .play-btn
-                --btnsize: 73px
-                position: absolute
-                top: 50%
-                left: 50%
-                transform: translate(-50%,-50%)
-        .item-content
-            width: 100%
-            max-width: 520px
-            h2
-                font-size: 36px
-                color: var(--primary)
-                margin-bottom: 20px
-                @include media(675)
-                    font-size: 20px
-            p
-                color: var(--para)
-                &:not(:last-child)
-                    margin-bottom: 20px
-            ul
-                margin: 20px 0
-                display: flex
-                flex-direction: column
-                gap: 15px
-                p
-                    margin: 5px 0
-                li
-                    position: relative
-                    padding-left: 30px
-                    color: var(--para)
-                    &::before
-                        position: absolute
-                        left: 0
-                        top: 0
-                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%231a56db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat
-                        background-size: contain
-                        width: 24px
-                        height: 24px
-                        content: ""
-            .btn
-                margin-top: 26px
 
+
+
+.menu-modal
+	background: $white
+	width: 100%
+	height: 100vh
+	transform: translateX(100%)
+	position: fixed
+	top: 0
+	right: 0
+	z-index: 10
+	overflow: hidden
+	transition: all .3s ease-in-out
+	&.is-open
+		transform: translateX(0)
+	.model-body
+		padding: 40px
+		.icon
+			width: 58px
+			height: 42px
+			object-fit: none
+		.nav
+			margin-top: 30px
+			li
+				a
+					font-size: 24px
+					@include media(400)
+					transition: .4s ease
+					display: inline-block
+					&:hover
+						color: var(--primary)
+						transform: translateX(5px)
+				&:not(:last-child)
+					margin-bottom: 16px
+		.contact
+			border-top: 1px solid var(--primary)
+			margin-top: 32px
+			padding: 30px 0
+			.social
+				display: flex
+				align-items: center
+				gap: 20px
+				li
+					a
+						img
+							width: 20px
+							height: 20px
+			.btn
+				margin-top: 24px
+					
+.close-modal
+	font-size: 13px
+	display: flex 
+	justify-content: center
+	align-items: center
+	gap: 20px
+	position: absolute
+	right: 30px
+	top: 30px
+	img
+		width: 21px
+		height: 21px
 .accordian-wrapper
     border: 1px solid #D2D2D2
     margin-bottom: 20px

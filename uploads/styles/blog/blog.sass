@@ -1,0 +1,35 @@
+@import "../common"
+
+.banner
+    &.blogDetailHero
+        .bg
+            .banner-wrapper
+                top: unset
+                bottom: 8%
+                .heading
+                    h1
+                        font-size: 32px
+                        line-height: 38px
+                    p
+                        font-size: 15px
+                        @include media(600)
+                        margin-bottom: 15px
+
+.blogArticle
+    padding: 50px 0
+    .container
+        display: grid
+        grid-template-columns: 1fr 380px
+        gap: 50px
+        .left
+            &.website-content
+                img
+                    margin: 32px 0
+                    max-height: 364px
+                    display: block
+        .right
+            height: fit-content
+            
+                    
+
+
