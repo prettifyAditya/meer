@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState } from "react";
