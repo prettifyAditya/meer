@@ -648,6 +648,7 @@
     color: var(--primary);
   }
 }
+
 .theory-pop.model {
   max-width: 840px;
   height: -moz-fit-content;
