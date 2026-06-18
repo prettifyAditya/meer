@@ -3,69 +3,81 @@ import Image from "next/image";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SlideBtn from "../../atoms/SlideBtn";
+import Motion from "../../molecules/Motion";
 
 const ProjectHighlight = () => {
   return (
     <section className="projectHighlight">
-      <div className="heading">
-        <h2>Key Project Highlights</h2>
-        <p>
-          MEER is active in Sierra Leone, India, and Tanzania. We are deploying
-          cooling systems on homes, schools, and community buildings — while
-          training local teams to build and maintain them. Each project:
-        </p>
-      </div>
-      <div className="info">
-        {infoData?.map(({ title, icon }, i) => {
-          return (
-            <div className="project-highlight" key={i}>
-              <Image
-                className="icon"
-                src={icon}
-                alt="icon"
-                width={38}
-                height={38}
-              />
-              <p>{title}</p>
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="highlight-slider">
-        <Swiper
-          slidesPerView={1.8}
-          centeredSlides={true}
-          loop={true}
-          spaceBetween={52}
-          navigation={{
-            nextEl: ".highlight-button-next",
-            prevEl: ".highlight-button-prev",
-          }}
-          modules={[Navigation]}
-        >
-          {highlightData?.map(({ country, description, image, href }, i) => {
+      <Motion variant="fadeUp">
+        <div className="heading">
+          <h2>Key Project Highlights</h2>
+          <p>
+            MEER is active in Sierra Leone, India, and Tanzania. We are
+            deploying cooling systems on homes, schools, and community buildings
+            — while training local teams to build and maintain them. Each
+            project:
+          </p>
+        </div>
+      </Motion>
+      <Motion variant="fadeUp">
+        <div className="info">
+          {infoData?.map(({ title, icon }, i) => {
             return (
-              <SwiperSlide key={i}>
-                <figure className="highlight-card">
-                  <Image width={1920} height={1080} src={image} alt={country} />
-                  <figcaption className="content">
-                    <h4>{country}</h4>
-                    <p>{description}</p>
-                    <a href="#" className="btn btn-primary">
-                      Read More
-                    </a>
-                  </figcaption>
-                </figure>
-              </SwiperSlide>
+              <div className="project-highlight" key={i}>
+                <Image
+                  className="icon"
+                  src={icon}
+                  alt="icon"
+                  width={38}
+                  height={38}
+                />
+                <p>{title}</p>
+              </div>
             );
           })}
-        </Swiper>
-        <div className="swiper-nav center-full white">
-          <SlideBtn className="highlight-button-prev" />
-          <SlideBtn className="highlight-button-next" />
         </div>
-      </div>
+      </Motion>
+      <Motion variant="fadeUp">
+        <div className="highlight-slider">
+          <Swiper
+            slidesPerView={1.8}
+            centeredSlides={true}
+            loop={true}
+            spaceBetween={52}
+            navigation={{
+              nextEl: ".highlight-button-next",
+              prevEl: ".highlight-button-prev",
+            }}
+            modules={[Navigation]}
+          >
+            {highlightData?.map(({ country, description, image, href }, i) => {
+              return (
+                <SwiperSlide key={i}>
+                  <figure className="highlight-card">
+                    <Image
+                      width={1920}
+                      height={1080}
+                      src={image}
+                      alt={country}
+                    />
+                    <figcaption className="content">
+                      <h4>{country}</h4>
+                      <p>{description}</p>
+                      <a href="#" className="btn btn-primary">
+                        Read More
+                      </a>
+                    </figcaption>
+                  </figure>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+          <div className="swiper-nav center-full white">
+            <SlideBtn className="highlight-button-prev" />
+            <SlideBtn className="highlight-button-next" />
+          </div>
+        </div>
+      </Motion>
     </section>
   );
 };

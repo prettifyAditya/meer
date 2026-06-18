@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import MapFilter from "../../atoms/MapFilter";
 import ProjectsMap from "../../molecules/ProjectsMap";
+import Motion from "../../molecules/Motion";
 
 const RegionImpacts = () => {
   const [activeRegion, setActiveRegion] = useState(0);
@@ -12,67 +13,71 @@ const RegionImpacts = () => {
   return (
     <section className="regionImpacts">
       <div className="container">
-        <div className="heading">
-          <h6>Impact Across Regions</h6>
-          <h2>MEER Global Projects</h2>
-        </div>
-        <div className="content">
-          <div className="left">
-            <div className="upper">
-              <h4>Search Projects</h4>
-              <div className="map-filter">
-                <MapFilter
-                  type="country"
-                  data={data.map(({ country }) => country)}
-                  state={projectStatus}
-                  setState={setProjectStatus}
-                />
-                <MapFilter
-                  type="status"
-                  data={["Ongoing", "Delivered"]}
-                  state={projectStatus}
-                  setState={setProjectStatus}
-                />
+        <Motion variant="fadeUp">
+          <div className="heading">
+            <h6>Impact Across Regions</h6>
+            <h2>MEER Global Projects</h2>
+          </div>
+        </Motion>
+        <Motion variant="fadeUp">
+          <div className="content">
+            <div className="left">
+              <div className="upper">
+                <h4>Search Projects</h4>
+                <div className="map-filter">
+                  <MapFilter
+                    type="country"
+                    data={data.map(({ country }) => country)}
+                    state={projectStatus}
+                    setState={setProjectStatus}
+                  />
+                  <MapFilter
+                    type="status"
+                    data={["Ongoing", "Delivered"]}
+                    state={projectStatus}
+                    setState={setProjectStatus}
+                  />
+                </div>
               </div>
+              <ul className="filter-content">
+                {data[activeRegion].projects.map(
+                  ({ projectName, role, focus }, i) => {
+                    const isProjectActive = activeProject === i;
+                    return (
+                      <li
+                        key={i}
+                        className={isProjectActive ? "active" : ""}
+                        onClick={() => setActiveProject(i)}
+                      >
+                        <div className="info">
+                          <h5>{projectName}</h5>
+                          <p>
+                            <strong>Role:</strong> {role}
+                          </p>
+                          <p>
+                            <strong>Focus:</strong> {focus}
+                          </p>
+                        </div>
+                        <figure className="icon">
+                          <Image
+                            src="/icon/right-large-blue.svg"
+                            alt="icon"
+                            width={26}
+                            height={11}
+                          />
+                        </figure>
+                      </li>
+                    );
+                  },
+                )}
+              </ul>
             </div>
-            <ul className="filter-content">
-              {data[activeRegion].projects.map(
-                ({ projectName, role, focus }, i) => {
-                  const isProjectActive = activeProject === i;
-                  return (
-                    <li
-                      key={i}
-                      className={isProjectActive ? "active" : ""}
-                      onClick={() => setActiveProject(i)}
-                    >
-                      <div className="info">
-                        <h5>{projectName}</h5>
-                        <p>
-                          <strong>Role:</strong> {role}
-                        </p>
-                        <p>
-                          <strong>Focus:</strong> {focus}
-                        </p>
-                      </div>
-                      <figure className="icon">
-                        <Image
-                          src="/icon/right-large-blue.svg"
-                          alt="icon"
-                          width={26}
-                          height={11}
-                        />
-                      </figure>
-                    </li>
-                  );
-                },
-              )}
-            </ul>
-          </div>
 
-          <div className="right">
-            <ProjectsMap projects={data[0].projects} />
+            <div className="right">
+              <ProjectsMap projects={data[0].projects} />
+            </div>
           </div>
-        </div>
+        </Motion>
       </div>
     </section>
   );
@@ -117,7 +122,6 @@ const data = [
         },
         status: "ongoing",
       },
-      
     ],
   },
   {

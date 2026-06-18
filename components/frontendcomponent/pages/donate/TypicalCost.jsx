@@ -1,23 +1,38 @@
+"use client";
 import Image from "next/image";
+import Motion from "../../molecules/Motion";
+import { motion } from "motion/react";
 
 export default function TypicalCost() {
   return (
     <section>
       <div className="typical_costs sec-pad-all">
         <div className="container">
-          <div className="heading">
-            <h2>Typical Costs for Projects</h2>
-          </div>
+          <Motion variant="fadeUp">
+            <div className="heading">
+              <h2>Typical Costs for Projects</h2>
+            </div>
+          </Motion>
           <div className="main_wrapper flex">
-            <figure>
+            <motion.figure
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <Image
                 src="/image/donate/typical-cost.jpg"
                 width={590}
                 height={442}
                 alt="Typical Cost"
               ></Image>
-            </figure>
-            <figcaption>
+            </motion.figure>
+            <motion.figcaption
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <ul>
                 <li>
                   <h6>$100</h6>
@@ -41,7 +56,7 @@ export default function TypicalCost() {
                   </p>
                 </li>
               </ul>
-            </figcaption>
+            </motion.figcaption>
           </div>
         </div>
       </div>

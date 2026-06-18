@@ -2028,6 +2028,9 @@ em {
   font-size: 16px;
 }
 
+.InsightContainer {
+  overflow: hidden;
+}
 .InsightContainer.invert .grid .media {
   order: 2;
 }

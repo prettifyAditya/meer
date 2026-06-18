@@ -1,3 +1,4 @@
+import Motion from "../../molecules/Motion";
 import InsightContainer from "../../organisms/InsightContainer";
 
 const SolutionDesigned = () => {
@@ -7,14 +8,19 @@ const SolutionDesigned = () => {
   return (
     <section className="SolutionDesigned">
       <div className="container">
-        <div className="heading">
-          <h2>Our Solutions are Designed To</h2>
-        </div>
+        <Motion variant="fadeUp">
+          <div className="heading">
+            <h2>Our Solutions are Designed To</h2>
+          </div>
+        </Motion>
         <InsightContainer
           className="invert"
           imgSrc={imgSrc}
           detail={detail}
-          isBtn={{ text: "Science behind", href: "#" }}
+          isBtn={{
+            text: "Science and Research",
+            href: "/science-and-research",
+          }}
         />
       </div>
     </section>

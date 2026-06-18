@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 export default function OurProgress() {
   return (
@@ -6,7 +8,12 @@ export default function OurProgress() {
       <div className="our_progress sec-pad-all">
         <div className="container">
           <div className="main_wrapper flex">
-            <figure>
+            <motion.figure
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <video
                 src="/image/donate/our-progress.mp4"
                 autoPlay
@@ -20,8 +27,13 @@ export default function OurProgress() {
                 height={324}
                 alt="Our Progress"
               ></Image> */}
-            </figure>
-            <figcaption>
+            </motion.figure>
+            <motion.figcaption
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <h2>Our Progress</h2>
               <p>
                 MEER successfully installed 800 m2 of solar reflectors in the
@@ -46,7 +58,7 @@ export default function OurProgress() {
                   <h6>up to 500</h6>
                 </div>
               </div>
-            </figcaption>
+            </motion.figcaption>
           </div>
         </div>
       </div>

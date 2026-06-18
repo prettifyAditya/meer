@@ -12,7 +12,7 @@ const WhoWeAre = () => {
         className="container"
         videoSrc={videoSrc}
         heading={heading}
-        isBtn={{ text: "Learn More About Us", href: "#" }}
+        isBtn={{ text: "Learn More About Us", href: "/about-us" }}
         isPopUpVideo={() => openModal("video", "/video/about-banner.mp4")}
         detail={detail}
       />

@@ -44,6 +44,7 @@
 .missingPiece
     padding: 70px 0
     background: var(--gradient-a)
+    overflow: hidden
     .grid
         display: grid
         grid-template-columns: repeat(3,1fr)
@@ -110,6 +111,9 @@
             .btn
                 margin: 28px 0 0
         .right
+            .main_wrapper
+                position: sticky
+                top: calc( var(--headerheight) + 20px )
             .swiper
                 padding-bottom: 48px
                 .swiper-wrapper

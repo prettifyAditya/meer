@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "@/uploads/styles/component/component.css";
+import Motion from "./Motion";
 
 export default function HeroSection({
   classname = "",
@@ -31,10 +32,12 @@ export default function HeroSection({
           )}
           <div className="banner-wrapper">
             <div className="container-fluid">
-              <div className="heading">
-                <p>{tagline}</p>
-                <h1>{heading}</h1>
-              </div>
+              <Motion variant="fadeRight">
+                <div className="heading">
+                  <p>{tagline}</p>
+                  <h1>{heading}</h1>
+                </div>
+              </Motion>
             </div>
           </div>
         </div>

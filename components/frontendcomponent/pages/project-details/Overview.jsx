@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 export default function Overview({ id }) {
   return (
@@ -6,7 +8,12 @@ export default function Overview({ id }) {
       <div className="overview_sec sec-pad-all">
         <div className="container">
           <div className="main_wrapper flex">
-            <figcaption>
+            <motion.figcaption
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <h2>Overview</h2>
               <p>
                 Freetown's unique geography, reaching from coast to mountains,
@@ -32,15 +39,20 @@ export default function Overview({ id }) {
                   <h6>28.3 °C (83 °F)</h6>
                 </div>
               </div>
-            </figcaption>
-            <figure>
+            </motion.figcaption>
+            <motion.figure
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <Image
                 src="/image/project/overivew-img.jpg"
                 width={610}
                 height={325}
                 alt="Overview Image"
               ></Image>
-            </figure>
+            </motion.figure>
           </div>
         </div>
       </div>

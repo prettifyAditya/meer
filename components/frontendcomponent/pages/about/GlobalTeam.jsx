@@ -1,22 +1,25 @@
 import Button from "../../atoms/Button";
+import Motion from "../../molecules/Motion";
 import TabContainer from "../../organisms/TabContainer";
 
 export default function GlobalTeam() {
   return (
     <div className="global_team sec-pad-all">
       <div className="container">
-        <div className="heading">
-          <h2>Meet Our Global Team</h2>
-          <p>
-            MEER spans an international network of scientists, engineers,
-            project managers, volunteers, students and supporters. Energized and
-            motivated, our network aims to be a leader in climate mitigation and
-            adaptation development.
-          </p>
-        </div>
+        <Motion variant="fadeUp">
+          <div className="heading">
+            <h2>Meet Our Global Team</h2>
+            <p>
+              MEER spans an international network of scientists, engineers,
+              project managers, volunteers, students and supporters. Energized
+              and motivated, our network aims to be a leader in climate
+              mitigation and adaptation development.
+            </p>
+          </div>
+        </Motion>
         <TabContainer card="team" data={globalTeamData} swiperType="grid" />
         <div className="btn_wrap">
-          <Button>Work with us</Button>
+          <Button href="/science-and-research">Work with us</Button>
         </div>
       </div>
     </div>

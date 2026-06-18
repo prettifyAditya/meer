@@ -1,6 +1,9 @@
+"use client";
+import { motion } from "motion/react";
 import Image from "next/image";
 import Button from "../atoms/Button";
 import "@/uploads/styles/component/component.css";
+import Motion from "../molecules/Motion";
 
 const InsightContainer = ({
   isPopUpVideo,
@@ -14,7 +17,13 @@ const InsightContainer = ({
   return (
     <div className={`InsightContainer  ${className} `}>
       <div className="grid">
-        <div className="media">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="media"
+        >
           {imgSrc && (
             <Image src={imgSrc} alt={imgSrc} width={400} height={400} />
           )}
@@ -24,8 +33,14 @@ const InsightContainer = ({
           {videoSrc && (
             <video src={videoSrc} autoPlay muted loop playsInline></video>
           )}
-        </div>
-        <div className={`item-content ${className}`}>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className={`item-content ${className}`}
+        >
           <h2>{heading}</h2>
           {detail && <div dangerouslySetInnerHTML={{ __html: detail }} />}
           {isBtn && (
@@ -33,7 +48,7 @@ const InsightContainer = ({
               {isBtn.text}
             </Button>
           )}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

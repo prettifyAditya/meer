@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Motion from "../../molecules/Motion";
 
 export default function DataMonitoring({ id }) {
   return (
@@ -13,24 +14,28 @@ export default function DataMonitoring({ id }) {
           ></Image>
           <div className="banner-wrapper">
             <div className="container">
-              <div className="icon">
-                <Image
-                  src="/image/icon-white.svg"
-                  width={60}
-                  height={40}
-                  alt="Meer Icon"
-                ></Image>
-              </div>
-              <div className="heading">
-                <h2>Data & Monitoring</h2>
-                <p>
-                  To measure performance, MEER is deploying environmental
-                  sensors that track temperature, humidity, and radiation in
-                  real time. This data informs both scientific validation and
-                  community feedback loops, ensuring the designs evolve with
-                  local needs.
-                </p>
-              </div>
+              <Motion variant="fadeUp">
+                <div className="icon">
+                  <Image
+                    src="/image/icon-white.svg"
+                    width={60}
+                    height={40}
+                    alt="Meer Icon"
+                  ></Image>
+                </div>
+              </Motion>
+              <Motion variant="fadeRight">
+                <div className="heading">
+                  <h2>Data & Monitoring</h2>
+                  <p>
+                    To measure performance, MEER is deploying environmental
+                    sensors that track temperature, humidity, and radiation in
+                    real time. This data informs both scientific validation and
+                    community feedback loops, ensuring the designs evolve with
+                    local needs.
+                  </p>
+                </div>
+              </Motion>
             </div>
           </div>
         </div>

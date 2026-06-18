@@ -88,6 +88,9 @@
   top: calc(var(--headerheight) + 20px);
   max-width: 579px;
 }
+.info_grahphic.science-research-secC .main_wrapper figcaption ul {
+  border-left: none;
+}
 .info_grahphic.science-research-secC .main_wrapper figcaption ul li {
   position: relative;
   margin-bottom: 20px;
@@ -95,6 +98,7 @@
   color: var(--para);
 }
 .info_grahphic.science-research-secC .main_wrapper figcaption ul li::before {
+  border: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -307,6 +311,7 @@
   display: flex;
   justify-content: space-between;
   gap: 60px;
+  overflow: hidden;
 }
 .science-research-secG .flex-box .col:first-child {
   max-width: 337px;

@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
-import "@/uploads/styles/component/component.css";
+import { motion } from "motion/react";
 import { useModal } from "@/hooks/useModal";
+import "@/uploads/styles/component/component.css";
 
 export default function InfoGraphic({
   classname = "",
@@ -22,7 +23,12 @@ export default function InfoGraphic({
       <div className={`info_grahphic sec-pad-all ${classname}`}>
         <div className="container">
           <div className="main_wrapper flex">
-            <figure>
+            <motion.figure
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               {mediaSrc.includes("mp4") ? (
                 <video src={mediaSrc} autoPlay muted loop playsInline></video>
               ) : (
@@ -55,8 +61,13 @@ export default function InfoGraphic({
                   <h6>Dr. Ye Tao</h6>
                 </div>
               )}
-            </figure>
-            <figcaption>
+            </motion.figure>
+            <motion.figcaption
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               {location && <span className="location">{location}</span>}
               <div className="heading">
                 <h2>{heading}</h2>
@@ -66,7 +77,7 @@ export default function InfoGraphic({
                 dangerouslySetInnerHTML={{ __html: desc }}
               ></div>
               {cta}
-            </figcaption>
+            </motion.figcaption>
           </div>
         </div>
       </div>

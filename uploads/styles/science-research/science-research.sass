@@ -74,12 +74,14 @@
             max-width: 579px
         figcaption
             ul
+                border-left: none
                 li
                     position: relative
                     margin-bottom: 20px      
                     padding-left: 30px
                     color: var(--para)
                     &::before
+                        border: none
                         position: absolute
                         left: 0
                         top: 0
@@ -267,6 +269,7 @@
         display: flex
         justify-content: space-between
         gap: 60px
+        overflow: hidden
         .col:first-child
             max-width: 337px
             width: fit-content

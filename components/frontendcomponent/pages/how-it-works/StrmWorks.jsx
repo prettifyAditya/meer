@@ -6,6 +6,7 @@ import SwiperButton from "../../atoms/SwiperButton";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
+import Motion from "../../molecules/Motion";
 
 export default function StrmWorks() {
   const swiperRef = useRef(null);
@@ -13,63 +14,65 @@ export default function StrmWorks() {
     <section>
       <div className="strm_works sec-pad-all">
         <div className="container">
-          <div className="heading">
-            <h2>How SRTM Works: The Physics Made Simple</h2>
-            <p>SRTM operates through four connected physical processes.</p>
-          </div>
-          <div className="main_wrapper">
-            <div className="swiper-nav primary center-full">
-              <SwiperButton classname={`srtm-prev swiper-prev`} />
-              <SwiperButton classname={`srtm-next swiper-next`} />
+          <Motion variant="fadeUp">
+            <div className="heading">
+              <h2>How SRTM Works: The Physics Made Simple</h2>
+              <p>SRTM operates through four connected physical processes.</p>
             </div>
-            <Swiper
-              ref={swiperRef}
-              className="srtm-slider"
-              modules={[Navigation]}
-              speed={1000}
-              navigation={{
-                prevEl: `.srtm-prev`,
-                nextEl: `.srtm-next`,
-              }}
-              breakpoints={{
-                0: {
-                  slidesPerView: 1.2,
-                  spaceBetween: 10,
-                },
-                540: {
-                  slidesPerView: 2,
-                  spaceBetween: 15,
-                },
-                991: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-              }}
-              onSwiper={(swiper) => (swiperRef.current = swiper)}
-            >
-              {data.map((item) => (
-                <SwiperSlide key={item.id}>
-                  <div className="strm_col flex">
-                    <figure>
-                      <Image
-                        src={item.imgSrc}
-                        width={525}
-                        height={418}
-                        alt="Strm Image"
-                      ></Image>
-                    </figure>
-                    <figcaption>
-                      <h5>{item.heading}</h5>
-                      <div
-                        className="desc"
-                        dangerouslySetInnerHTML={{ __html: item.desc }}
-                      ></div>
-                    </figcaption>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+            <div className="main_wrapper">
+              <div className="swiper-nav primary center-full">
+                <SwiperButton classname={`srtm-prev swiper-prev`} />
+                <SwiperButton classname={`srtm-next swiper-next`} />
+              </div>
+              <Swiper
+                ref={swiperRef}
+                className="srtm-slider"
+                modules={[Navigation]}
+                speed={1000}
+                navigation={{
+                  prevEl: `.srtm-prev`,
+                  nextEl: `.srtm-next`,
+                }}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                  },
+                  540: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                  },
+                  991: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                }}
+                onSwiper={(swiper) => (swiperRef.current = swiper)}
+              >
+                {data.map((item) => (
+                  <SwiperSlide key={item.id}>
+                    <div className="strm_col flex">
+                      <figure>
+                        <Image
+                          src={item.imgSrc}
+                          width={525}
+                          height={418}
+                          alt="Strm Image"
+                        ></Image>
+                      </figure>
+                      <figcaption>
+                        <h5>{item.heading}</h5>
+                        <div
+                          className="desc"
+                          dangerouslySetInnerHTML={{ __html: item.desc }}
+                        ></div>
+                      </figcaption>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </Motion>
         </div>
       </div>
     </section>

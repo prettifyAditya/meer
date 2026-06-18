@@ -27,6 +27,7 @@
   --gap: 65px;
 }
 .info_grahphic .main_wrapper {
+  overflow: hidden;
   align-items: center;
   --gap: 50px;
   gap: var(--gap);
@@ -662,6 +663,8 @@
 .latest-article {
   box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
   padding: 20px 28px;
+  position: sticky;
+  top: calc(var(--headerheight) + 20px);
 }
 .latest-article h3 {
   font-size: 20px;
@@ -807,7 +810,7 @@
 }
 
 .otherBanner {
-  height: 271px;
+  height: 380px;
   margin-top: var(--headerheight);
 }
 .otherBanner .container {

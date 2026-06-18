@@ -1,13 +1,16 @@
 import InfoGraphic from "../../molecules/InfoGraphic";
+import Motion from "../../molecules/Motion";
 
 export default function CoreIdea() {
   return (
     <section>
       <div className="core_idea_sec sec-pad-all">
         <div className="container">
-          <div className="heading main-head">
-            <h2>The Core Idea</h2>
-          </div>
+          <Motion variant="fadeUp">
+            <div className="heading main-head">
+              <h2>The Core Idea</h2>
+            </div>
+          </Motion>
           <InfoGraphic
             classname="core_idea"
             heading="Cooler surfaces create cooler air - starting where people live."

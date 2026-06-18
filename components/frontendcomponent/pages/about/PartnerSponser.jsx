@@ -1,4 +1,5 @@
 import Button from "../../atoms/Button";
+import Motion from "../../molecules/Motion";
 import LogoSlider from "../../organisms/LogoSlider";
 
 export default function PartnerSponser() {
@@ -6,14 +7,16 @@ export default function PartnerSponser() {
     <section>
       <div className="partner_sec sec-pad-all">
         <div className="container">
-          <div className="heading">
-            <h2>Partners & Sponsors</h2>
-          </div>
-          <LogoSlider data={data} />
-          <div className="get_in_touch">
-            <p>Interested in partnering with us?</p>
-            <Button>Get in touch</Button>
-          </div>
+          <Motion variant="fadeUp">
+            <div className="heading">
+              <h2>Partners & Sponsors</h2>
+            </div>
+            <LogoSlider data={data} />
+            <div className="get_in_touch">
+              <p>Interested in partnering with us?</p>
+              <Button href="/contact-us">Get in touch</Button>
+            </div>
+          </Motion>
         </div>
       </div>
     </section>
