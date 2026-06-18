@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "../../atoms/Button";
+import Motion from "../../molecules/Motion";
 
 export default function HelpUsExpand() {
   return (
@@ -14,23 +15,27 @@ export default function HelpUsExpand() {
           ></Image>
           <div className="banner-wrapper">
             <div className="container">
-              <div className="icon">
-                <Image
-                  src="/image/icon-white.svg"
-                  width={60}
-                  height={40}
-                  alt="Meer Icon"
-                ></Image>
-              </div>
-              <div className="heading">
-                <h2>Help us expand cooling access in Freetown.</h2>
-                <p>
-                  MEER’s Freetown project serves as a proof of concept for
-                  equitable heat adaptation — a blueprint for similar
-                  interventions across the Global South.
-                </p>
-                <Button>Donate</Button>
-              </div>
+              <Motion variant="fadeUp">
+                <div className="icon">
+                  <Image
+                    src="/image/icon-white.svg"
+                    width={60}
+                    height={40}
+                    alt="Meer Icon"
+                  ></Image>
+                </div>
+              </Motion>
+              <Motion variant="fadeRight">
+                <div className="heading">
+                  <h2>Help us expand cooling access in Freetown.</h2>
+                  <p>
+                    MEER’s Freetown project serves as a proof of concept for
+                    equitable heat adaptation — a blueprint for similar
+                    interventions across the Global South.
+                  </p>
+                  <Button>Donate</Button>
+                </div>
+              </Motion>
             </div>
           </div>
         </div>

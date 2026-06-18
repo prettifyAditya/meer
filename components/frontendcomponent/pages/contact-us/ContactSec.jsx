@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { motion } from "motion/react";
 import Input from "../../atoms/Input";
 import Select from "../../atoms/Select";
 import Textarea from "../../atoms/Textarea";
@@ -26,7 +27,13 @@ export default function ContactSec() {
     <div className="contact_sec sec-pad-all">
       <div className="container">
         <div className="main_wrapper flex">
-          <div className="colA">
+          <motion.div
+            className="colA"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <Image
               className="logo"
               src="/image/logo-dark.svg"
@@ -130,8 +137,14 @@ export default function ContactSec() {
                 </Link>
               </li>
             </ul>
-          </div>
-          <div className="colB">
+          </motion.div>
+          <motion.div
+            className="colB"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <div className="heading">
               <h2>Let’s Build a Cooler Future Together</h2>
             </div>
@@ -190,7 +203,7 @@ export default function ContactSec() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

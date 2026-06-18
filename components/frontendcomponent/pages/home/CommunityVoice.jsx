@@ -4,53 +4,57 @@ import React from "react";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SlideBtn from "../../atoms/SlideBtn";
+import Motion from "../../molecules/Motion";
 
 const CommunityVoice = () => {
   return (
     <section className="communityVoice">
       <div className="container">
-        <div className="heading">
-          <h6>Real Stories, Real Impact</h6>
-          <h2>Voices from the Community</h2>
-
-          <div className="swiper-nav group square primary-border">
-            <SlideBtn className="community-button-prev"></SlideBtn>
-            <SlideBtn className="community-button-next"></SlideBtn>
+        <Motion>
+          <div className="heading">
+            <h6>Real Stories, Real Impact</h6>
+            <h2>Voices from the Community</h2>
+            <div className="swiper-nav group square primary-border">
+              <SlideBtn className="community-button-prev"></SlideBtn>
+              <SlideBtn className="community-button-next"></SlideBtn>
+            </div>
           </div>
-        </div>
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={20}
-          modules={[Navigation]}
-          className="communitySlider"
-          navigation={{
-            prevEl: ".community-button-prev",
-            nextEl: ".community-button-next",
-          }}
-        >
-          {data?.map(({ image, description }, i) => {
-            return (
-              <SwiperSlide key={i}>
-                <figure className="community-card">
-                  <Image
-                    className="img"
-                    src={image}
-                    alt="community"
-                    width={1080}
-                    height={1920}
-                  />
-                  <img className="logo" src="/image/logo.svg" alt="" />
-                  <figcaption>
-                    <p>{description}</p>
-                    {/* <div className="btn-container">
+        </Motion>
+        <Motion variant="fadeUp">
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={20}
+            modules={[Navigation]}
+            className="communitySlider"
+            navigation={{
+              prevEl: ".community-button-prev",
+              nextEl: ".community-button-next",
+            }}
+          >
+            {data?.map(({ image, description }, i) => {
+              return (
+                <SwiperSlide key={i}>
+                  <figure className="community-card">
+                    <Image
+                      className="img"
+                      src={image}
+                      alt="community"
+                      width={1080}
+                      height={1920}
+                    />
+                    <img className="logo" src="/image/logo.svg" alt="" />
+                    <figcaption>
+                      <p>{description}</p>
+                      {/* <div className="btn-container">
                       <button className="play-btn outline"></button>
                     </div> */}
-                  </figcaption>
-                </figure>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+                    </figcaption>
+                  </figure>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </Motion>
       </div>
     </section>
   );

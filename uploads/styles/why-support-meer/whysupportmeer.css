@@ -42,6 +42,9 @@
   position: sticky;
   top: calc(var(--headerheight) + 20px);
 }
+.info_grahphic.wsm-secB .main_wrapper figcaption ul {
+  border-left: none;
+}
 .info_grahphic.wsm-secB .main_wrapper figcaption ul li {
   position: relative;
   margin-bottom: 20px;
@@ -49,6 +52,7 @@
   color: var(--para);
 }
 .info_grahphic.wsm-secB .main_wrapper figcaption ul li::before {
+  border: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -226,6 +230,9 @@
 .info_grahphic.wsm-secE .main_wrapper figcaption h2 {
   max-width: 438px;
 }
+.info_grahphic.wsm-secE .main_wrapper figcaption ul {
+  border-left: none;
+}
 .info_grahphic.wsm-secE .main_wrapper figcaption ul li {
   position: relative;
   margin-bottom: 20px;
@@ -233,6 +240,7 @@
   color: var(--para);
 }
 .info_grahphic.wsm-secE .main_wrapper figcaption ul li::before {
+  border: none;
   position: absolute;
   left: 0;
   top: 0;

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { motion } from "motion/react";
 import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -72,17 +73,26 @@ export default function OurStrategy({ data }) {
           </div>
         </div>
         <div className="info_details flex container">
-          <figure>
+          <motion.figure
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <Image
               src="/image/logo-dark.svg"
               width={120}
               height={35}
               alt="Meer Logo"
             />
-          </figure>
-          <figcaption
+          </motion.figure>
+          <motion.figcaption
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
             dangerouslySetInnerHTML={{ __html: data.smallDescription }}
-          ></figcaption>
+          ></motion.figcaption>
         </div>
       </div>
     </section>
