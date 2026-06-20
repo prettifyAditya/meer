@@ -15,7 +15,7 @@ const Header = () => {
   const { openModal } = useModal();
   const pathName = usePathname();
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
@@ -67,10 +67,15 @@ const Header = () => {
                 <Link href="/connect">Connect</Link>
               </li>
             </ul>
-            <div>
+            <div className="btn_wrap">
               <Button onClick={() => openModal("menu")} variant="btn-primary">
                 Donate
               </Button>
+              <button type="button" className="ham-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
             </div>
           </div>
         </div>

@@ -1,6 +1,9 @@
-import Image from "next/image";
+"use client";
 import React from "react";
+import Image from "next/image";
+import { Navigation } from "swiper/modules";
 import Motion from "../../molecules/Motion";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Safe = () => {
   return (
@@ -24,20 +27,36 @@ const Safe = () => {
         </Motion>
         <Motion variant="fadeUp">
           <div className="content">
-            {data?.map(({ title, icon }, i) => {
-              return (
-                <div className="safe-card" key={i}>
-                  <Image
-                    className="icon"
-                    src={icon}
-                    alt="icon"
-                    width={52}
-                    height={52}
-                  />
-                  <p>{title}</p>
-                </div>
-              );
-            })}
+            <Swiper
+              breakpoints={{
+                0: { slidesPerView: 1.4, spaceBetween: 15 },
+                540: { slidesPerView: 2, spaceBetween: 20 },
+                768: { slidesPerView: 3, spaceBetween: 20 },
+                991: { slidesPerView: 4, spaceBetween: 20 },
+              }}
+              navigation={{
+                nextEl: ".highlight-button-next",
+                prevEl: ".highlight-button-prev",
+              }}
+              modules={[Navigation]}
+            >
+              {data?.map(({ title, icon }, i) => {
+                return (
+                  <SwiperSlide key={i}>
+                    <div className="safe-card">
+                      <Image
+                        className="icon"
+                        src={icon}
+                        alt="icon"
+                        width={52}
+                        height={52}
+                      />
+                      <p>{title}</p>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
           </div>
         </Motion>
       </div>

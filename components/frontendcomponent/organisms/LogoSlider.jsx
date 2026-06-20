@@ -15,8 +15,15 @@ const LogoSlider = ({ data }) => {
           disableOnInteraction: true,
         }}
         allowTouchMove={false}
-        slidesPerView={7}
-        spaceBetween={32}
+        breakpoints={{
+          0: { slidesPerView: 4, spaceBetween: 20 },
+          540: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+          768: { slidesPerView: 6, spaceBetween: 25 },
+          991: { slidesPerView: 7, spaceBetween: 30 },
+        }}
         loop={true}
         speed={2000}
       >

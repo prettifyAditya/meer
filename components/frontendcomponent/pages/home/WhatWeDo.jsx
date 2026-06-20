@@ -69,7 +69,7 @@ const WhatWeDo = () => {
           <div className="main_wrapper">
             <Swiper
               loop={true}
-              spaceBetween={0}
+              speed={1000}
               modules={[Autoplay, Navigation, Pagination]}
               autoplay={{
                 delay: 0,
@@ -84,8 +84,13 @@ const WhatWeDo = () => {
                 type: "progressbar",
               }}
               breakpoints={{
-                0: { slidesPerView: 1.2, spaceBetween: 20 },
-                768: { slidesPerView: 1.9 },
+                0: {
+                  slidesPerView: 1.4,
+                  spaceBetween: 0,
+                  centeredSlides: true,
+                },
+                540: { slidesPerView: 1.6, centeredSlides: true },
+                991: { slidesPerView: 1.9 },
               }}
               modules={[Pagination, Navigation]}
             >

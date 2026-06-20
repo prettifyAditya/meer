@@ -2,654 +2,699 @@
 
 // Hero Section
 .banner
-    &.hero_banner
-        .bg
-            .banner-wrapper
-                top: unset
-                bottom: 20%
-                transform: translate(0, 20%)
-                .heading
-                    max-width: 570px
-                    p, h1
-                        color: var(--white)
+	&.hero_banner
+		.bg
+			@include media(768)
+				height: 600px
+			@include media(540)
+				height: 400px
+			.banner-wrapper
+				top: unset
+				bottom: 20%
+				transform: translate(0, 20%)
+				.heading
+					max-width: 570px
+					p, h1
+						color: var(--white)
 
 .info_grahphic
-    &.who_we_are
-        .main_wrapper
-            --gap: 65px
-    .main_wrapper
-        overflow: hidden
-        align-items: center
-        --gap: 50px
-        gap: var(--gap)
-        figure
-            flex: 1
-            position: relative
-            width: 100%
-            max-width: 50%
-            line-height: 0
-            .play-btn
-                position: absolute
-                top: 50%
-                left: 50%
-                transform: translate(-50%, -50%)
-            .logoIcon
-                width: 60px
-                height: 45px
-                position: absolute
-                top: 30px
-                left: 30px
-            .ceo_details
-                position: absolute
-                bottom: 40px
-                left: 30px
-                line-height: 1.2
-                p
-                    font-weight: 600
-                    margin-bottom: 5px
-                    color: $white
-                h6
-                    font-size: 40px
-                    font-weight: 500
-                    color: $white
-        figcaption
-            flex: 1
-            width: 100%
-            max-width: calc( 100% - var(--gap) )
-            .location
-                display: inline-block
-                margin-bottom: 20px
-                color: $text
-                font-size: 14px
-                padding: 7px 35px
-                border-radius: 25px
-                background: #EDEDED
-                font-weight: 500
-            .heading
-                h2
-                    font-size: 36px
-                    color: $primary
-                    font-weight: 700
-            .desc
-                margin-top: 20px
-                p
-                    font-weight: 400
-                    line-height: 1.5
-                    &:not(:last-child)
-                        margin-bottom: 20px
-                ul
-                    border-left: 1px solid $primary
-                    margin: 0 0 20px 10px
-                    padding-top: 10px
-                    li
-                        position: relative
-                        padding-left: 20px
-                        &:not(:last-child)
-                            margin-bottom: 15px
-                        font-weight: 400
-                        &::before
-                            content: ""
-                            position: absolute
-                            left: -9px
-                            top: 7px
-                            width: 16px
-                            height: 16px
-                            background: $white
-                            border: 1px solid $primary
-                            border-radius: 50%
-            .btn
-                margin-top: 40px
-                                  
+	&.who_we_are
+		.container
+			@include media(540)
+				padding: 0
+		.main_wrapper
+			--gap: 65px
+			@include media(1170) 
+				--gap: 50px
+			@include media(991)
+				--gap: 40px
+			@include media(768)
+				--gap: 30px
+			@include media(540)
+				figure
+					order: 1
+			figcaption
+				@include media(540)
+					padding: var(--containerfluid)
+	.main_wrapper
+		overflow: hidden
+		align-items: center
+		--gap: 50px
+		gap: var(--gap)
+		@include media(991)
+			--gap: 30px
+			align-items: start
+		@include media(768)
+			--gap: 30px
+		figure
+			flex: 1
+			position: relative
+			width: 100%
+			max-width: 50%
+			line-height: 0
+			@include media(991)
+				opacity: 1 !important
+				transform: none !important	
+			@include media(768)
+				flex: 0 1 100%
+				max-width: 100%
+			.play-btn
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+			.logoIcon
+				width: 60px
+				height: 45px
+				position: absolute
+				top: 30px
+				left: 30px
+				@include media(991)
+					width: 50px
+					height: 36px
+					top: 20px
+					left: 20px
+				@include media(540)
+					width: 40px
+					height: 30px
+			.ceo_details
+				position: absolute
+				bottom: 40px
+				left: 30px
+				line-height: 1.2
+				@include media(991)
+					bottom: 30px
+					left: 20px
+				@include media(540)
+					bottom: 20px
+					left: 20px
+				p
+					font-weight: 600
+					margin-bottom: 5px
+					color: $white
+					@include media(991)
+						font-size: 14px
+				h6
+					font-size: 40px
+					font-weight: 500
+					color: $white
+					@include media(991)
+						font-size: 28px
+		figcaption
+			flex: 1
+			width: 100%
+			max-width: calc( 100% - var(--gap) )
+			@include media(991)
+				opacity: 1 !important
+				transform: none !important
+			@include media(768)
+				flex: 0 1 100%
+				max-width: 100%
+			.location
+				display: inline-block
+				margin-bottom: 20px
+				color: $text
+				font-size: 14px
+				padding: 7px 35px
+				border-radius: 25px
+				background: #EDEDED
+				font-weight: 500
+			.heading
+				h2
+					font-size: 36px
+					color: $primary
+					font-weight: 700
+					@include media(991)
+						font-size: 32px
+					@include media(768)
+						font-size: 28px
+					@include media(540)
+						text-align: center
+						font-size: 24px
+			.desc
+				margin-top: 20px
+				@include media(768)
+					margin-top: 15px
+				p
+					font-weight: 400
+					line-height: 1.5
+					&:not(:last-child)
+						margin-bottom: 20px
+				ul
+					border-left: 1px solid $primary
+					margin: 0 0 20px 10px
+					padding-top: 10px
+					li
+						position: relative
+						padding-left: 20px
+						&:not(:last-child)
+							margin-bottom: 15px
+						font-weight: 400
+						&::before
+							content: ""
+							position: absolute
+							left: -9px
+							top: 7px
+							width: 16px
+							height: 16px
+							background: $white
+							border: 1px solid $primary
+							border-radius: 50%
+			.btn
+				margin-top: 40px
+								  
 .strategy_col.item-md
-    width: 100%
-    height: 100%
-    &:hover
-        figure
-            img
-                transform: scale(1.2)
-    &::before
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(102, 102, 102, 0.00) 100%),
-    .logoIcon
-        position: absolute
-        top: 30px
-        left: 40px
-        width: 60px
-        height: 40px
-    figcaption
-        padding: 0 40px 40px
-        .content
-            @include media-min(1440)
-                max-width: 80%
-            *
-                &:not(.btn)
-                    color: $white
-            h5
-                font-size: 24px
-                font-weight: 700
-                margin-bottom: 8px
-            .btn
-                z-index: 1
-                margin-top: 20px
+	width: 100%
+	height: 100%
+	@include media(540)
+		height: 355px
+	&:hover
+		figure
+			img
+				transform: scale(1.2)
+	&::before
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(102, 102, 102, 0.00) 100%),
+	.logoIcon
+		position: absolute
+		top: 30px
+		left: 40px
+		width: 60px
+		height: 40px
+		@include media(991)
+			left: 30px
+			width: 55px
+		@include media(768)     
+			width: 36px
+			height: 27px
+			top: 25px
+			left: 25px
+		@include media(540)
+			width: 32px
+			height: 22px
+			top: 20px
+			left: 20px
+	figcaption
+		padding: 0 40px 40px
+		@include media(991)
+			padding: 0 30px 30px
+		@include media(768)
+			padding: 0 25px 25px
+		@include media(540)
+			padding: 0 20px 20px
+		.content
+			@include media-min(1440)
+				max-width: 80%
+			*
+				&:not(.btn)
+					color: $white
+			h5
+				font-size: 24px
+				font-weight: 700
+				margin-bottom: 8px
+				@include media(768)
+					font-size: 22px
+				@include media(540)
+					font-size: 18px
+			p
+				@include media(768)
+					font-size: 14px
+			.btn
+				z-index: 1
+				margin-top: 20px
 
 .tab-container
-    .row
-        margin: 30px 0 40px 0 
-        border-bottom: 1px solid rgba(0, 77, 153, 0.22)
-        position: relative
-        .swiper-nav
-            position: absolute
-            right: 0
-            top: 50%
-            transform: translateY(-50%)
-        .tabs
-            display: flex
-            .tab
-                cursor: pointer
-                @include font(500)
-                padding: 16px 40px
-                position: relative
-                transition: .5s ease-in-out
-                &::before
-                    content: ""
-                    height: 3px
-                    background: $primary
-                    width: 0%
-                    left: 0
-                    position: absolute
-                    bottom: 0
-                    transition: width .5s ease-in-out
-                &.active
-                    color: $primary
-                    &::before
-                        transform: scale(1)
-                        width: 100%
-    .content
-        height: 0
-        opacity: 0
-        overflow: hidden
-        transform: translateY(20px)
-        transition: opacity .5s ease-in-out, transform .5s ease-in-out
-        &.active
-            opacity: 1
-            height: 100%
-            transform: translateY(0)
+	.row
+		margin: 30px 0 40px 0 
+		border-bottom: 1px solid rgba(0, 77, 153, 0.22)
+		position: relative
+		.swiper-nav
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			@include media(768) 
+				width: 100%
+				justify-content: space-between
+				button
+					border: none
+					box-shadow: none
+			@include media(540) 
+				display: none
+		.tabs
+			display: flex
+			@include media(768) 
+				overflow-x: auto
+				max-width: 100%
+				justify-content: center
+				@include scrollbar($width: 0)
+				position: relative
+				z-index: 2
+			@include media(540) 
+				justify-content: start
+			.tab
+				cursor: pointer
+				@include font(500)
+				padding: 16px 40px
+				position: relative
+				transition: .5s ease-in-out
+				@include media(1170)   
+					padding: 16px 30px
+				@include media(768) 
+					white-space: nowrap
+					padding: 15px 20px
+				&::before
+					content: ""
+					height: 3px
+					background: $primary
+					width: 0%
+					left: 0
+					position: absolute
+					bottom: 0
+					transition: width .5s ease-in-out
+				&.active
+					color: $primary
+					&::before
+						transform: scale(1)
+						width: 100%
+	.content
+		height: 0
+		opacity: 0
+		overflow: hidden
+		transform: translateY(20px)
+		transition: opacity .5s ease-in-out, transform .5s ease-in-out
+		&.active
+			opacity: 1
+			height: 100%
+			transform: translateY(0)
 
 .logo-slider
-    .swiper
-        .swiper-wrapper
-            transition-timing-function: linear
-            .swiper-slide
-                figure
-                    padding: 5px
-                    height: 72px
-                    img
-                        object-fit: contain
+	.swiper
+		.swiper-wrapper
+			transition-timing-function: linear
+			.swiper-slide
+				figure
+					padding: 5px
+					height: 72px
+					img
+						object-fit: contain
 
 .team_col.item-md
-    cursor: pointer
-    &::before
-        background: linear-gradient(0deg, #000, #0000 50%)
-    &:hover
-        figure
-            img
-                transform: scale(1.2)
-    figcaption
-        padding: 0 25px 25px
-        * 
-            color: $white
-        h6
-            font-size: 18px
-            font-weight: 700
-        p
-            font-size: 14px
-            font-weight: 500
+	cursor: pointer
+	&::before
+		background: linear-gradient(0deg, #000, #0000 50%)
+	&:hover
+		figure
+			img
+				transform: scale(1.2)
+	figcaption
+		padding: 0 25px 25px
+		@include media(991)
+			padding: 0 20px 20px
+		* 
+			color: $white
+		h6
+			font-size: 18px
+			font-weight: 700
+		p
+			font-size: 14px
+			font-weight: 500
 
 .team-pop.model
-    max-width: 1000px
-    height: fit-content
-    left: 50%
-    top: 50%
-    transform: translate(-50%, 100vh)
-    transition: 0.6s ease
-    @include media(768)
-        height: 100%
-        border-radius: 0
-        overflow-y: auto
-    &.is-open
-        transform: translate(-50%, -50%)
-        transition: 0.6s ease
-    .close:not(.btn)
-        display: flex
-        align-items: center
-        gap: 12px
-        font-size: 14px
-        top: 20px
-        right: 20px
-        z-index: 1
-        svg
-            width: 20px
-            height: 20px
-            path
-                stroke: $primary
-                stroke-width: 2px
-    .model-body
-        padding: 0 50px 80px
-        margin-top: 80px
-        background: $white
-        @include media(991)  
-            padding: 0 30px 80px
-        @include media(768)
-            padding: 0 20px 20px  
-            margin-top: 50px
-        @include media(540)
-            overflow-y: auto    
-        .team_wrapper
-            display: flex
-            flex-wrap: wrap
-            align-items: center
-            gap: 60px
-            @include media(768)
-                flex-direction: column
-            @include media(540) 
-                gap: 20px
-            figure
-                flex: 0 1 auto
-                width: 100%
-                max-width: 280px
-                position: relative
-                line-height: 0
-                display: flex
-                align-items: center
-                justify-content: center
-                @include media(768) 
-                    flex: 0 1 50%
-                    width: 50%
-                @include media(540) 
-                    flex: 0 1 100%
-                    width: 70%
-                .social_icon
-                    padding: 15px 12px
-                    background: $primary
-                    position: absolute
-                    top: 0%
-                    right: 0%
-                    z-index: 0
-                    display: flex
-                    flex-direction: column
-                    gap: 15px
-                    .socialLinks
-                        color: $white
-                        display: block
-                        width: 22px
-                        height: 22px
-            figcaption
-                flex: 1
-                .heading
-                    padding-bottom: 15px
-                    border-bottom: 1px solid $primary
-                    @include media(768) 
-                        text-align: center
-                    h6
-                        font-weight: 700
-                        font-size: 28px
-                        color: $primary
-                        @include media(991)  
-                            font-size: 22px
-                        @include media(540) 
-                            font-size: 20px
-                    p
-                        font-size: 16px
-                        font-weight: 500
-                        color: $text
-                        margin-top: 0
-                .team_details
-                    margin-top: 20px
-                    padding: 0px 15px 15px 0
-                    max-height: 240px
-                    overflow-y: auto
-                    @include scrollbar($width: 4px,$background: #D9D9D9,$color: $primary,)
-                    @include media(768) 
-                        max-height: 100%
-                        overflow-y: visible
-                    p
-                        font-size: 14px
-                        &:not(:last-child)
-                            margin-bottom: 10px
+	max-width: 1000px
+	height: fit-content
+	left: 50%
+	top: 50%
+	transform: translate(-50%, 100vh)
+	transition: 0.6s ease
+	@include media(768)
+		height: 100%
+		border-radius: 0
+		overflow-y: auto
+	&.is-open
+		transform: translate(-50%, -50%)
+		transition: 0.6s ease
+	.close:not(.btn)
+		display: flex
+		align-items: center
+		gap: 12px
+		font-size: 14px
+		top: 20px
+		right: 20px
+		z-index: 1
+		svg
+			width: 20px
+			height: 20px
+			path
+				stroke: $primary
+				stroke-width: 2px
+	.model-body
+		padding: 0 50px 80px
+		margin-top: 80px
+		background: $white
+		@include media(991)  
+			padding: 0 30px 80px
+		@include media(768)
+			padding: 0 20px 20px  
+			margin-top: 50px
+		@include media(540)
+			overflow-y: auto    
+		.team_wrapper
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			gap: 60px
+			@include media(768)
+				flex-direction: column
+			@include media(540) 
+				gap: 20px
+			figure
+				flex: 0 1 auto
+				width: 100%
+				max-width: 280px
+				position: relative
+				line-height: 0
+				display: flex
+				align-items: center
+				justify-content: center
+				@include media(768) 
+					flex: 0 1 50%
+					width: 50%
+				@include media(540) 
+					flex: 0 1 100%
+					width: 70%
+				.social_icon
+					padding: 15px 12px
+					background: $primary
+					position: absolute
+					top: 0%
+					right: 0%
+					z-index: 0
+					display: flex
+					flex-direction: column
+					gap: 15px
+					.socialLinks
+						color: $white
+						display: block
+						width: 22px
+						height: 22px
+			figcaption
+				flex: 1
+				.heading
+					padding-bottom: 15px
+					border-bottom: 1px solid $primary
+					@include media(768) 
+						text-align: center
+					h6
+						font-weight: 700
+						font-size: 28px
+						color: $primary
+						@include media(991)  
+							font-size: 22px
+						@include media(540) 
+							font-size: 20px
+					p
+						font-size: 16px
+						font-weight: 500
+						color: $text
+						margin-top: 0
+				.team_details
+					margin-top: 20px
+					padding: 0px 15px 15px 0
+					max-height: 240px
+					overflow-y: auto
+					@include scrollbar($width: 4px,$background: #D9D9D9,$color: $primary,)
+					@include media(768) 
+						max-height: 100%
+						overflow-y: visible
+					p
+						font-size: 14px
+						&:not(:last-child)
+							margin-bottom: 10px
 
 .resource-card
-    &.border
-        border: 1px solid rgba(218, 218, 218, 1)
-    figure
-        height: 196px
-        img
-            width: 100%
-            height: 100%
-            object-fit: cover
-            display: block
-    figcaption
-        background: var(--white)
-        padding: 16px
-        h4
-            font-size: 16px
-            margin-bottom: 8px
-            @include font(600)
-        .desc
-            margin-bottom: 24px
-        .info
-            display: flex
-            align-items: center
-            justify-content: space-between
-            position: relative
-            overflow: hidden
-            .date
-                font-size: 12px
-            .tag
-                border-radius: 50px
-                background: var(--bgpink)
-                padding: 6px 16px
-                font-size: 14px
-                color: $black
-                transition: .3s ease
-            .btn
-                font-size: 14px
-                padding: 6px 16px
-                --height: 30px
-                transition: .3s ease
-                position: absolute
-                right: 0
-                top: 50%
-                transform: translateY(-50%)
-                opacity: 0
-                transition: .3s ease
-    &:hover
-        box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.10)
-        figcaption
-            .tag
-                opacity: 0
-            .btn
-                opacity: 1
+	width: 100%
+	height: 100%
+	background: var(--white)
+	&.border
+		border: 1px solid rgba(218, 218, 218, 1)
+	figure
+		height: 196px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			display: block
+	figcaption
+		padding: 16px
+		h4
+			font-size: 16px
+			margin-bottom: 8px
+			@include font(600)
+		.desc
+			margin-bottom: 24px
+			@include line-clamp(3)
+		.info
+			display: flex
+			align-items: center
+			justify-content: space-between
+			position: relative
+			overflow: hidden
+			.date
+				font-size: 12px
+			.tag
+				border-radius: 50px
+				background: var(--bgpink)
+				padding: 6px 16px
+				font-size: 14px
+				color: $black
+				transition: .3s ease
+			.btn
+				font-size: 14px
+				padding: 6px 16px
+				--height: 30px
+				transition: .3s ease
+				position: absolute
+				right: 0
+				top: 50%
+				transform: translateY(-50%)
+				opacity: 0
+				transition: .3s ease
+	&:hover
+		box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.10)
+		figcaption
+			.tag
+				opacity: 0
+			.btn
+				opacity: 1
 
 .tab-container
-    .row
-        .swiper-nav
-            position: absolute
-            right: 0
-            top: 50%
-            transform: translateY(-50%)
-    .content
-        height: 0
-        opacity: 0
-        overflow: hidden
-        transform: translateY(20px)
-        transition: opacity .5s ease-in-out, transform .5s ease-in-out
-        &.active
-            opacity: 1
-            height: 100%
-            transform: translateY(0)
+	.row
+		.swiper-nav
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			@include media(768)     
+				z-index: 0
+	.content
+		height: 0
+		opacity: 0
+		overflow: hidden
+		transform: translateY(20px)
+		transition: opacity .5s ease-in-out, transform .5s ease-in-out
+		&.active
+			opacity: 1
+			height: 100%
+			transform: translateY(0)
 
 .logo-slider
-    .swiper
-        .swiper-wrapper
-            transition-timing-function: linear
-            .swiper-slide
-                figure
-                    padding: 5px
-                    height: 72px
-                    img
-                        object-fit: contain
+	.swiper
+		.swiper-wrapper
+			transition-timing-function: linear
+			.swiper-slide
+				figure
+					padding: 5px
+					height: 72px
+					img
+						object-fit: contain
 
 .map-select
-    background: var(--white)
-    display: flex
-    align-items: center
-    gap: 10px
-    padding: 7px 10px
-    position: relative
-    cursor: pointer
-    .type-icon
-        width: 16px
-        height: 16px
-    figcaption
-        flex: 1
-        .type
-            font-size: 12px
-            color: rgba(102, 102, 102, 0.5)
-        .value
-            font-size: 14px
-    .option-container
-        position: absolute
-        top: 100%
-        left: 0
-        right: 0
-        display: grid
-        grid-template-rows: 0fr
-        transition: all .5s ease
-        &.open
-            grid-template-rows: 1fr
-        .options
-            background: var(--white)
-            z-index: 1
-            border-top: 1px solid rgba(0, 0, 0, 0.15)
-            max-height: 150px
-            overflow-y: auto
-            &::-webkit-scrollbar
-                width: 4px
-            &::-webkit-scrollbar-track
-                background: transparent
-            &::-webkit-scrollbar-thumb
-                background: var(--primary)
-            li
-                padding: 8px 12px
-                cursor: pointer
-                transition: .3s ease
-                font-size: 14px
-                &:not(:last-child)
-                    border-bottom: 1px solid rgba(0, 0, 0, 0.08)
-                &.selected
-                    background: var(--bglight)
+	background: var(--white)
+	display: flex
+	align-items: center
+	gap: 10px
+	padding: 7px 10px
+	position: relative
+	cursor: pointer
+	@include media(768) 
+		border: 1px solid #E2E2E2
+	@include media(540) 
+		gap: 7px
+	.type-icon
+		flex: 0 1 auto
+		width: 16px
+		height: 16px
+	figcaption
+		flex: 1
+		.type
+			font-size: 12px
+			color: rgba(102, 102, 102, 0.5)
+		.value
+			font-size: 14px
+	.option-container
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		display: grid
+		grid-template-rows: 0fr
+		transition: all .5s ease
+		&.open
+			grid-template-rows: 1fr
+		.options
+			background: var(--white)
+			z-index: 1
+			border-top: 1px solid rgba(0, 0, 0, 0.15)
+			max-height: 150px
+			overflow-y: auto
+			&::-webkit-scrollbar
+				width: 4px
+			&::-webkit-scrollbar-track
+				background: transparent
+			&::-webkit-scrollbar-thumb
+				background: var(--primary)
+			li
+				padding: 8px 12px
+				cursor: pointer
+				transition: .3s ease
+				font-size: 14px
+				&:not(:last-child)
+					border-bottom: 1px solid rgba(0, 0, 0, 0.08)
+				&.selected
+					background: var(--bglight)
 
 .map-pointer
-    background: var(--white)
-    box-shadow: 0px 7.53px 27.11px 0px rgba(0, 0, 0, 0.16)
-    h4
-        font-size: 14px
-        color: var(--primary)
-        @include font(600)
-        margin-bottom: 5px
-    p
-        transition: all .5s ease
-        font-size: 12px
-        &:not(:last-child)
-            margin-bottom: 2px
-    .btn
-        margin-top: 16px
-        font-size: 12px
-        --height: 28px
-        @include font(500)
+	background: var(--white)
+	box-shadow: 0px 7.53px 27.11px 0px rgba(0, 0, 0, 0.16)
+	h4
+		font-size: 14px
+		color: var(--primary)
+		@include font(600)
+		margin-bottom: 5px
+	p
+		transition: all .5s ease
+		font-size: 12px
+		&:not(:last-child)
+			margin-bottom: 2px
+	.btn
+		margin-top: 16px
+		font-size: 12px
+		--height: 28px
+		@include font(500)
 
 .gm-style-iw
-    &.gm-style-iw-c
-        max-width: 320px !important
+	&.gm-style-iw-c
+		max-width: 320px !important
 
 .tab-row
-    border-bottom: 1px solid rgba(0, 77, 153, 0.22)
-    position: relative
-    &.full
-        .tabs
-            max-width: 100%
-    .swiper-nav
-        position: absolute
-        right: 0
-        top: 50%
-        transform: translateY(-50%)
-    .tabs
-        display: flex
-        max-width: 75%
-        .tab
-            cursor: pointer
-            @include font(500)
-            padding: 16px 40px
-            position: relative
-            transition: .5s ease-in-out
-            &::before
-                content: ""
-                height: 3px
-                background: $primary
-                width: 0%
-                left: 0
-                position: absolute
-                bottom: 0
-                transition: width .5s ease-in-out
-            &.active
-                color: $primary
-                &::before
-                    transform: scale(1)
-                    width: 100%
+	border-bottom: 1px solid rgba(0, 77, 153, 0.22)
+	position: relative
+	&.full
+		.tabs
+			max-width: 100%
+	.swiper-nav
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+	.tabs
+		display: flex
+		max-width: 75%
+		.tab
+			cursor: pointer
+			@include font(500)
+			padding: 16px 40px
+			position: relative
+			transition: .5s ease-in-out
+			&::before
+				content: ""
+				height: 3px
+				background: $primary
+				width: 0%
+				left: 0
+				position: absolute
+				bottom: 0
+				transition: width .5s ease-in-out
+			&.active
+				color: $primary
+				&::before
+					transform: scale(1)
+					width: 100%
 
 .latest-article
-    box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2)
-    padding: 20px 28px
-    position: sticky
-    top: calc( var(--headerheight) + 20px )
-    h3
-        font-size: 20px
-        @include font(600)
-        margin-bottom: 8px
-    ul
-        li
-            a
-                padding: 16px 0
-                display: flex
-                align-items: center
-                gap: 16px
-                figure
-                    width: 106px
-                    height: 74px
-                figcaption
-                    flex: 1
-                    h4
-                        font-size: 14px
-                        @include font(500)
-            &:first-child
-                a
-                    align-items: start
-                    flex-direction: column
-                    figure
-                        width: 100%
-                        height: 228px
-            &:not(:last-child)
-                border-bottom: 1px solid rgba(212, 212, 212, 1)
+	box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2)
+	padding: 20px 28px
+	position: sticky
+	top: calc( var(--headerheight) + 20px )
+	h3
+		font-size: 20px
+		@include font(600)
+		margin-bottom: 8px
+	ul
+		li
+			a
+				padding: 16px 0
+				display: flex
+				align-items: center
+				gap: 16px
+				figure
+					width: 106px
+					height: 74px
+				figcaption
+					flex: 1
+					h4
+						font-size: 14px
+						@include font(500)
+			&:first-child
+				a
+					align-items: start
+					flex-direction: column
+					figure
+						width: 100%
+						height: 228px
+			&:not(:last-child)
+				border-bottom: 1px solid rgba(212, 212, 212, 1)
 
 .moreSection
-    padding: 0px 0 60px
-    .container
-        .heading
-            h2
-                text-align: center
-        .content
-            position: relative
-            margin-top: 50px
-            .swiper 
-                max-width: 97%
-
-.InsightContainer
-    &.invert
-        .grid
-            .media
-                order: 2
-            .item-content
-                order: 1
-    &.light
-        .grid
-            .item-content
-                h2,
-                p,
-                li,
-                span
-                    color: var(--white)
-                ul
-                    li
-                        &::before
-                            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat
-    .grid
-        display: grid
-        grid-template-columns: repeat(2,1fr)
-        align-items: start
-        gap: 50px
-        @include media(991)
-            grid-template-columns: 100%
-            gap: 30px
-        .media
-            position: relative
-            width: 571px
-            height: 416px
-            img,
-            video
-                width: 100%
-                height: 100%
-                object-fit: cover
-                display: block
-            .play-btn
-                --btnsize: 73px
-                position: absolute
-                top: 50%
-                left: 50%
-                transform: translate(-50%,-50%)
-        .item-content
-            width: 100%
-            max-width: 520px
-            h2
-                font-size: 36px
-                color: var(--primary)
-                margin-bottom: 20px
-                @include media(675)
-                    font-size: 20px
-            p
-                color: var(--para)
-                &:not(:last-child)
-                    margin-bottom: 20px
-            ul
-                margin: 20px 0
-                display: flex
-                flex-direction: column
-                gap: 15px
-                p
-                    margin: 5px 0
-                li
-                    position: relative
-                    padding-left: 30px
-                    color: var(--para)
-                    &::before
-                        position: absolute
-                        left: 0
-                        top: 0
-                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%231a56db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat
-                        background-size: contain
-                        width: 24px
-                        height: 24px
-                        content: ""
-            .btn
-                margin-top: 26px
-
+	padding: 0px 0 60px
+	.container
+		.heading
+			h2
+				text-align: center
+		.content
+			position: relative
+			margin-top: 50px
+			.swiper 
+				max-width: 97%
 
 .otherBanner
-    height: 380px
-    margin-top: var(--headerheight)
-    .container
-        height: 100%
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        h2, p
-            text-align: center
-        h2
-            font-size: 48px
-            @include media(600)
-            color: $primary
-            margin-bottom: 14px
-        p
-            max-width: 476px
-            margin: 0 auto
-        .btn
-            margin-top: 24px
+	height: 380px
+	margin-top: var(--headerheight)
+	.container
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		h2, p
+			text-align: center
+		h2
+			font-size: 48px
+			@include media(600)
+			color: $primary
+			margin-bottom: 14px
+		p
+			max-width: 476px
+			margin: 0 auto
+		.btn
+			margin-top: 24px

@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import { Fragment, useEffect, useState } from "react";
 
 const variants = {
   fadeUp: {
@@ -28,16 +29,34 @@ const variants = {
   },
 };
 
-const Motion = ({ children, variant = "fadeUp", className = "" }) => (
-  <motion.div
-    className={className}
-    initial={variants[variant].initial}
-    whileInView={variants[variant].animate}
-    viewport={{ once: false }}
-    transition={{ duration: 1 }}
-  >
-    {children}
-  </motion.div>
-);
+const BREAKPOINT = 991;
+
+const Motion = ({ children, variant = "fadeUp", className = "" }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => setIsMobile(window.innerWidth < BREAKPOINT);
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  if (isMobile) {
+    return <Fragment>{children}</Fragment>;
+  }
+
+  return (
+    <motion.div
+      className={className}
+      initial={variants[variant].initial}
+      whileInView={variants[variant].animate}
+      viewport={{ once: false }}
+      transition={{ duration: 1 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 export default Motion;

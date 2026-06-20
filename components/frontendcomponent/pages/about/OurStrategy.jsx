@@ -36,16 +36,17 @@ export default function OurStrategy({ data }) {
             }}
             breakpoints={{
               0: {
-                slidesPerView: 1.2,
+                slidesPerView: 1.3,
                 spaceBetween: 10,
+                centeredSlides: false,
               },
               540: {
-                slidesPerView: 1.8,
+                slidesPerView: 1.3,
                 spaceBetween: 15,
               },
               768: {
-                slidesPerView: 2.5,
-                spaceBetween: 15,
+                slidesPerView: 1.5,
+                spaceBetween: 20,
               },
               991: {
                 slidesPerView: 1.8,

@@ -72,7 +72,7 @@ export default function TheoryChange({ data }) {
                           spaceBetween: 10,
                         },
                         540: {
-                          slidesPerView: 2,
+                          slidesPerView: 1.5,
                           spaceBetween: 15,
                         },
                         768: {

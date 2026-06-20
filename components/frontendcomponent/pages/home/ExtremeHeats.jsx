@@ -1,11 +1,16 @@
 import InsightContainer from "../../organisms/InsightContainer";
 
 const ExtremeHeats = () => {
-  if (!data) return null
-  const { heading, imgSrc, detail } = data
+  if (!data) return null;
+  const { heading, imgSrc, detail } = data;
   return (
     <section className="extremeHeat">
-      <InsightContainer className="container" heading={heading} imgSrc={imgSrc} detail={detail} />
+      <InsightContainer
+        className="container static"
+        heading={heading}
+        imgSrc={imgSrc}
+        detail={detail}
+      />
     </section>
   );
 };
@@ -22,5 +27,5 @@ const data = {
             <li>Water sources are drying up faster</li>
             <li>Millions of people are exposed to dangerous temperatures without cooling</li>
             <li>Heat-related illness and deaths are increasing</li>
-          </ul>`
-}
+          </ul>`,
+};

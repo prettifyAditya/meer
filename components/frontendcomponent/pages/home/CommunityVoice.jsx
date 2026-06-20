@@ -22,10 +22,18 @@ const CommunityVoice = () => {
         </Motion>
         <Motion variant="fadeUp">
           <Swiper
-            slidesPerView={4}
-            spaceBetween={20}
             modules={[Navigation]}
             className="communitySlider"
+            breakpoints={{
+              0: { slidesPerView: 1.3, spaceBetween: 15 },
+              540: { slidesPerView: 2, spaceBetween: 15 },
+              768: { slidesPerView: 3, spaceBetween: 15 },
+              991: { slidesPerView: 4, spaceBetween: 15 },
+              1280: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            }}
             navigation={{
               prevEl: ".community-button-prev",
               nextEl: ".community-button-next",

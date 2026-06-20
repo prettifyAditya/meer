@@ -1,22 +1,42 @@
+@import '../_var'
+    
 footer
     .upper
         background: var(--bglight)
         padding: 35px 0
+        @include media(1170) 
+            padding: 25px 0
         .flex
             display: flex
             justify-content: space-between
             align-items: center
+            @include media(1170) 
+                gap: 30px
+            @include media(768) 
+                flex-direction: column
+                gap: 20px
             h5
                 color: var(--primary)
                 font-weight: 700
+                @include media(540) 
+                    max-width: 210px
+                    text-align: center
             .form
                 display: flex
                 align-items: center
                 gap: 45px
+                @include media(1170) 
+                    gap: 20px
+                @include media(768) 
+                    flex-direction: column
+                    width: 250px
                 input
                     width: 440px
+                    @include media(1170) 
+                        width: 100%
                 .btn
-                    width: 160px
+                    // width: 160px
+                    --padding: 30px
     .lower
         background: var(--primary)
         padding: 50px 0
@@ -25,16 +45,29 @@ footer
             align-items: flex-start
             justify-content: space-between
             gap: 60px
+            @include media(1170) 
+                flex-wrap: wrap
+                gap: 30px
             .logo
                 flex: 0 0 182px
+                @include media(768) 
+                    flex: 0 1 100%
+                    order: 1
                 img
                     width: 100%
                     filter: brightness(0) invert(1)
+                    @include media(768) 
+                        display: block
+                        width: 170px
+                        margin: 0 auto
             .menu
                 flex: 0 1 auto
                 display: flex
                 flex-direction: column
                 gap: 10px
+                @include media(768) 
+                    flex: 0 1 45%
+                    order: 3
                 li
                     a
                         font-size: 20px
@@ -48,6 +81,9 @@ footer
                 display: flex
                 flex-direction: column
                 gap: 10px
+                @include media(768) 
+                    flex: 0 1 45%
+                    order: 3
                 p
                     font-size: 12px
                     font-weight: 700
@@ -68,6 +104,8 @@ footer
                 display: flex
                 flex-direction: column
                 gap: 10px
+                @include media(768) 
+                    flex: 0 1 100%
                 p.label
                     font-size: 11px
                     font-weight: 700
@@ -88,6 +126,11 @@ footer
                 flex-direction: column
                 align-items: flex-end
                 gap: 20px
+                @include media(1170) 
+                    flex: 0 1 100%
+                    order: 2
+                    align-items: center
+                    margin-bottom: 30px
                 ul
                     display: flex
                     align-items: center
@@ -102,10 +145,16 @@ footer
                             border: 1px solid var(--white)
                             border-radius: 50%
                             transition: .3s ease
+                            @include media(540) 
+                                width: 40px
+                                height: 40px
                             img
                                 width: 20px
                                 height: 20px
                                 filter: brightness(0) invert(1)
+                                @include media(540) 
+                                    width: 17px
+                                    height: 17px
                             &:hover
                                 border-color: #fff
                                 background: #ffffff20
@@ -118,6 +167,8 @@ footer
                     transition: .3s ease
                     padding: 10px 30px
                     margin-top: 20px
+                    @include media(1170) 
+                        margin-top: 0
                     &:hover
                         background: #ffffffcc
     .madeBy

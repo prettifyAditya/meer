@@ -17,7 +17,12 @@ export default function GlobalTeam() {
             </p>
           </div>
         </Motion>
-        <TabContainer card="team" data={globalTeamData} swiperType="grid" />
+        <TabContainer
+          className="about_team"
+          card="team"
+          data={globalTeamData}
+          swiperType="grid"
+        />
         <div className="btn_wrap">
           <Button href="/science-and-research">Work with us</Button>
         </div>

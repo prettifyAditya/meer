@@ -14,7 +14,7 @@ const SolutionDesigned = () => {
           </div>
         </Motion>
         <InsightContainer
-          className="invert"
+          className="invert static"
           imgSrc={imgSrc}
           detail={detail}
           isBtn={{

@@ -35,11 +35,11 @@ export default function StrmWorks() {
                 }}
                 breakpoints={{
                   0: {
-                    slidesPerView: 1.2,
+                    slidesPerView: 1,
                     spaceBetween: 10,
                   },
                   540: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 15,
                   },
                   991: {
