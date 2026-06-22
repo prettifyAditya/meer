@@ -2,32 +2,80 @@
 
 .impact_sec
     background: var(--lightbg)
+    .container
+        @include media(540)
+            padding: 0
     .heading
         text-align: center
     .info_grahphic
+        @include media(540)
+            padding: 10px 0 0 
+        .container
+            padding: 0
         .main_wrapper
+            @include media(540)
+                figure
+                    order: 1
+                figcaption
+                    padding: 0 var(--containerfluid)
             .play-btn
                 right: 30px
                 bottom: 40px
                 left: unset
                 top: unset
                 transform: unset
+                @include media(540)
+                    right: 20px
+                    bottom: 20px
 
 .banner
     &.why_we_exist
+        &::before
+            @include media(540)
+                display: none
+        .bg
+            @include media(768)
+                height: 600px
+            @include media(540)
+                height: 100%
+                display: flex
+                flex-direction: column-reverse
+            img
+                @include media(540)
+                    height: 300px
         .banner-wrapper
+            @include media(540)
+                position: relative
+                padding: 40px 20px 40px
+                top: 0
+                transform: translate(0)
+                .container
+                    padding: 0
             .icon
                 width: 62px
                 height: 42px
+                @include media(540)
+                    display: none
             .heading
                 max-width: 557px
                 h2
                     margin-top: 150px
+                    @include media(1170) 
+                        margin-top: 120px
+                    @include media(768)
+                        margin-top: 80px
+                    @include media(540)
+                        margin-top: 0
+                        color: $primary
+                        font-size: 28px
                 .desc
                     margin-top: 20px
                     p
                         &:not(:last-child)
                             margin-bottom: 15px
+                        @include media(540)
+                            color: $text
+                            text-align: left
 
 .theory_sec 
     background: $primary
@@ -45,6 +93,15 @@
         gap: 100px
         overflow-x: auto
         z-index: 0
+        @include media(1170) 
+            margin: 60px auto
+        @include media(768)
+            align-items: start
+            margin: 50px auto
+            gap: 65px
+        @include media(540)
+            gap: 17px
+            margin: 35px auto 45px
         &::before
             content: ""
             position: absolute
@@ -54,6 +111,8 @@
             height: 1px
             background: #FFFFFF33
             z-index: -1
+            @include media(768)
+                top: 30%
         .theory_icon
             display: flex
             flex-direction: column
@@ -61,6 +120,10 @@
             justify-content: center
             gap: 15px
             cursor: pointer
+            @include media(768)
+                gap: 10px
+            @include media(540)
+                gap: 8px
             &.active
                 figure
                     border-color: $white
@@ -82,16 +145,27 @@
                 @include media(991)
                     width: 60px
                     height: 60px
-                @include media(767)
+                @include media(768)
                     width: 50px
                     height: 50px
+                @include media(540)
+                    width: 40px
+                    height: 40px
                 img, svg
                     width: 50%
                     height: 50%
             p
                 transition: .5s ease
                 color: #FFFFFF80
+                @include media(768)
+                    text-align: center
+                    line-height: 1.2
+                    font-size: 14px
+                @include media(540)
+                    font-size: 12px
     .main_wrapper
+        @include media(540)
+            padding-right: 0
         .tab-nav-content
             .tabs
                 &:not(.active)
@@ -105,12 +179,17 @@
                             width: 100%
                             height: 100%
                             padding: 28px
+                            @include media(540)
+                                padding: 25px 20px
                             h6
                                 color: $primary
                                 font-weight: 600
                                 font-size: 20px
                                 line-height: 1.3
                                 margin-bottom: 15px
+                                @include media(540)
+                                    font-size: 18px
+                                    margin-bottom: 10px
                             .desc
                                 margin-bottom: 25px
                                 p
@@ -146,6 +225,8 @@
         .btn_wrap
             margin-top: 55px
             justify-content: center         
+            @include media(1170) 
+                margin-top: 45px
   
 .mission_vision
     background: $primary
@@ -156,6 +237,12 @@
     .heading
         text-align: center
         margin-bottom: 60px
+        @include media(991)
+            margin-bottom: 50px
+        @include media(768)
+            margin-bottom: 40px
+        @include media(540)
+            margin-bottom: 30px
         h2
             color: $white
     .main_wrapper
@@ -165,20 +252,36 @@
                 padding: 30px 20px
                 width: 100%
                 height: 100%
+                @include media(540)
+                    padding: 20px 15px
                 .title
                     display: flex
                     align-items: center
                     gap: 15px
                     margin-bottom: 20px
+                    @include media(768)
+                        margin-bottom: 15px
                     h6
                         flex: 1
                         color: $primary
                         font-weight: 700
                         font-size: 24px
+                        @include media(991)
+                            line-height: 1.2
+                        @include media(768)
+                            font-size: 22px
+                        @include media(540)
+                            font-size: 20px
                     .icon
                         flex: 0 1 auto
                         width: 50px
                         height: 50px
+                        @include media(991)
+                            width: 40px
+                            height: 40px
+                        @include media(540)
+                            width: 35px
+                            height: 35px
                 .desc
                     p
                         &:not(:last-child)
@@ -216,8 +319,17 @@
         text-align: center
         max-width: 450px
         margin: 0 auto 60px
+        @include media(1170) 
+            margin: 0 auto 50px
+        @include media(991)
+            margin: 0 auto 40px
+        p
+            @include media(540)
+                text-align: left
     .strategy_wrapper
         position: relative
+        @include media(540)
+            padding-left: var(--containerfluid)
         .swiper-nav
             max-width: 80%
             width: 80%
@@ -227,13 +339,42 @@
         background: $white
         padding: 40px
         align-items: center
+        @include media(991)
+            margin-top: 40px
+            padding: 30px
+        @include media(768)
+            flex-wrap: wrap
+            max-width: 90%
+        @include media(540)
+            margin-top: 35px
+            padding: 30px 20px
         figure
             flex: 0 1 auto
             padding-right: 55px
+            @include media(991)
+                padding-right: 40px
+                opacity: 1 in !important
+                transform: none !important
+            @include media(768)
+                flex: 0 1 100%
+                padding-right: 0
+                max-width: 160px
+                margin: 0 auto 20px
+            @include media(540)
+                max-width: 120px
+                margin: 0 auto 10px
         figcaption
             flex: 1
             padding-left: 55px
             border-left: 1px solid $primary
+            @include media(991)
+                padding-left: 35px
+                opacity: 1 in !important
+                transform: none !important
+            @include media(768)
+                flex: 0 1 100%
+                padding-left: 0
+                border-left: none
             p
                 &:not(:last-child)
                     margin-bottom: 20px
@@ -243,22 +384,48 @@
         text-align: center
         max-width: 630px
         margin: 0 auto 50px
+        @include media(768)
+            margin: 0 auto 40px
+        @include media(540)
+            margin: 0 auto 30px
+            p
+                text-align: left
+    .tab-container
+        .about_team
+            .tabs
+                li
+                    @include media(991)
+                        white-space: nowrap
     .btn_wrap
         justify-content: center
         margin-top: 50px
+        @include media(768)
+            margin-top: 40px
 
 .partner_sec
     background: linear-gradient(0deg, #FFFFFF, #FFFBE6)
     .heading
         text-align: center
         margin-bottom: 60px
+        @include media(768)
+            margin-bottom: 50px
+        @include media(540)
+            margin-bottom: 30px
     .logo-slider
         margin-bottom: 80px
+        @include media(768)
+            margin-bottom: 60px
+        @include media(540)
+            margin-bottom: 40px
     .get_in_touch
         display: flex
         align-items: center
         justify-content: center
         gap: 20px
+        @include media(768)
+            gap: 15px
+        @include media(540)
+            flex-direction: column
 
 .journey_sec
     .heading
@@ -266,6 +433,8 @@
         margin-bottom: 90px
         @include media(1170)
             margin-bottom: 160px
+        @include media(991)
+            margin-bottom: 110px
         @include media(768)
             margin-bottom: 40px
         @include media(540)     
@@ -293,7 +462,7 @@
             @include media(768)
                 flex-direction: column
                 padding: 20px 0 
-                gap: 10px
+                gap: 15px
                 height: auto
             &::before 
                 content: ""
@@ -306,7 +475,7 @@
                 background: #d0d0d0
                 z-index: 1
                 @include media(768)
-                    left: 30px
+                    left: 29px
                     right: auto
                     top: 0
                     transform: none
@@ -325,11 +494,13 @@
                         .year
                             color: $secondary
                             @include media(768)     
-                                color: $text
+                                color: $primary
                         .dot
                             background: $secondary
                             @include media(768)     
                                 background: #d0d0d0
+                            @include media(768)
+                                background: $primary
                             &::before
                                 height: 110px
                                 background: $secondary
@@ -350,8 +521,10 @@
                                 top: 100%
                             .content
                                 top: calc(50% + 30px)
+                                @include media(1170) 
+                                    top: calc(50% + 70px)
                                 @include media(991)
-                                    top: calc(50% + 30px)
+                                    top: calc(50% + 60px)
                 &:nth-of-type(even) 
                     @include media-min(768)
                         .time-item
@@ -364,8 +537,10 @@
                                     top: calc(50% + 20px)
                             .content
                                 bottom: calc(50% + 30px)
+                                @include media(1170) 
+                                    bottom: calc(50% + 70px)
                                 @include media(991)
-                                    bottom: calc(50% + 30px)
+                                    bottom: calc(50% + 60px)
                 &:last-of-type
                     @include media-min(768)
                         .time-item
@@ -390,6 +565,7 @@
                 z-index: 2
                 @include media(768)
                     display: flex
+                    flex-wrap: wrap
                     align-items: start
                     text-align: left
                     margin-bottom: 12px
@@ -408,10 +584,12 @@
                         left: 12px
                         bottom: 2px
                         transform: none
-                        margin-left: 30px
+                        margin-left: 45px
+                        color: $primary
+                        font-weight: 700
+                        font-size: 20px
                     @include media(540)     
-                        left: 8px
-                        margin-left: 20px
+                        margin-left: 30px
                 .dot
                     position: absolute
                     left: 50%
@@ -423,6 +601,8 @@
                     background: #d0d0d0
                     z-index: 3
                     transition: background 0.3s ease
+                    @include media(768)
+                        background: $primary
                     &::before
                         content: ""
                         position: absolute
@@ -459,21 +639,23 @@
                         transform: none
                         width: 100%
                         padding-left: 0
-                        margin-left: 30px
+                        margin-left: 57px
                         display: block
                         opacity: 1
                         visibility: visible
                     @include media(540)     
-                        margin-left: 25px
-                    h4
-                        font-size: 18px
-                        font-weight: 600
-                        line-height: 1.2
-                        margin-bottom: 6px
-                        @include media(991)
-                            font-size: 16px
-                        @include media(768)         
-                            color: $primary
+                        margin-left: 40px
+                        p
+                            font-size: 14px
+                    // h4
+                    //     font-size: 18px
+                    //     font-weight: 600
+                    //     line-height: 1.2
+                    //     margin-bottom: 6px
+                    //     @include media(991)
+                    //         font-size: 16px
+                    //     @include media(768)         
+                    //         color: $primary
 
 .theory-pop.model
     max-width: 840px

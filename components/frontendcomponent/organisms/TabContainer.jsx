@@ -10,15 +10,32 @@ import "swiper/css/grid";
 import "@/uploads/styles/component/component.css";
 import Motion from "../molecules/Motion";
 
-const TabContainer = ({ data, card, swiperType }) => {
+const TabContainer = ({ data, card, swiperType, className }) => {
   const gridProps =
-    swiperType === "grid" ? { grid: { rows: 2, fill: "row" } } : {};
+    swiperType === "grid"
+      ? {
+          grid: {
+            rows:
+              typeof window !== "undefined"
+                ? window.innerWidth > 768
+                  ? 2
+                  : 1
+                : 1,
+            fill: "row",
+          },
+        }
+      : {};
   const [activeTab, setActiveTab] = useState(0);
 
   return (
     <div className="tab-container">
       <Motion variant="fadeUp">
-        <TabRow data={data} activeTab={activeTab} setActiveTab={setActiveTab}>
+        <TabRow
+          className={className}
+          data={data}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+        >
           <div className="swiper-nav group primary-border square">
             <SlideBtn className={`resource-button-prev-${activeTab}`} />
             <SlideBtn className={`resource-button-next-${activeTab}`} />
@@ -37,8 +54,16 @@ const TabContainer = ({ data, card, swiperType }) => {
                   prevEl: `.resource-button-prev-${idx}`,
                 }}
                 modules={[Navigation, Grid]}
-                slidesPerView={4}
-                spaceBetween={20}
+                breakpoints={{
+                  0: { slidesPerView: 1.4, spaceBetween: 10 },
+                  540: { slidesPerView: 2, spaceBetween: 20 },
+                  768: { slidesPerView: 3, spaceBetween: 20 },
+                  991: { slidesPerView: 4, spaceBetween: 10 },
+                  1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                  },
+                }}
                 {...gridProps}
               >
                 {list.map((item, i) => {

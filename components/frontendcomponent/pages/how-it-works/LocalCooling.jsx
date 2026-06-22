@@ -1,7 +1,22 @@
+"use client";
 import Image from "next/image";
 import Motion from "../../molecules/Motion";
+import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 export default function LocalCooling() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 769);
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
   return (
     <section>
       <div className="local_cooling sec-pad-all">
@@ -15,39 +30,98 @@ export default function LocalCooling() {
               </p>
             </div>
             <div className="local_wrapper">
-              <div className="local_col">
-                <div className="icon">
-                  <Image
-                    src="/image/how-works/local1.svg"
-                    width={45}
-                    height={45}
-                    alt="Icon"
-                  />
-                </div>
-                <p>Cities absorb less heat</p>
-              </div>
-              <div className="local_col">
-                <div className="icon">
-                  <Image
-                    src="/image/how-works/local2.svg"
-                    width={45}
-                    height={45}
-                    alt="Icon"
-                  />
-                </div>
-                <p>Landscapes release less thermal energy into the air</p>
-              </div>
-              <div className="local_col">
-                <div className="icon">
-                  <Image
-                    src="/image/how-works/local3.svg"
-                    width={45}
-                    height={45}
-                    alt="Icon"
-                  />
-                </div>
-                <p>Atmospheric heating is reduced over large areas</p>
-              </div>
+              {isMobile ? (
+                <Swiper
+                  className="local_slider"
+                  speed={1000}
+                  breakpoints={{
+                    0: {
+                      slidesPerView: 1.2,
+                      spaceBetween: 15,
+                    },
+                    540: {
+                      slidesPerView: 2.3,
+                      spaceBetween: 15,
+                    },
+                  }}
+                >
+                  <SwiperSlide>
+                    <div className="local_col">
+                      <div className="icon">
+                        <Image
+                          src="/image/how-works/local1.svg"
+                          width={45}
+                          height={45}
+                          alt="Icon"
+                        />
+                      </div>
+                      <p>Cities absorb less heat</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="local_col">
+                      <div className="icon">
+                        <Image
+                          src="/image/how-works/local2.svg"
+                          width={45}
+                          height={45}
+                          alt="Icon"
+                        />
+                      </div>
+                      <p>Landscapes release less thermal energy into the air</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="local_col">
+                      <div className="icon">
+                        <Image
+                          src="/image/how-works/local3.svg"
+                          width={45}
+                          height={45}
+                          alt="Icon"
+                        />
+                      </div>
+                      <p>Atmospheric heating is reduced over large areas</p>
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+              ) : (
+                <>
+                  <div className="local_col">
+                    <div className="icon">
+                      <Image
+                        src="/image/how-works/local1.svg"
+                        width={45}
+                        height={45}
+                        alt="Icon"
+                      />
+                    </div>
+                    <p>Cities absorb less heat</p>
+                  </div>
+                  <div className="local_col">
+                    <div className="icon">
+                      <Image
+                        src="/image/how-works/local2.svg"
+                        width={45}
+                        height={45}
+                        alt="Icon"
+                      />
+                    </div>
+                    <p>Landscapes release less thermal energy into the air</p>
+                  </div>
+                  <div className="local_col">
+                    <div className="icon">
+                      <Image
+                        src="/image/how-works/local3.svg"
+                        width={45}
+                        height={45}
+                        alt="Icon"
+                      />
+                    </div>
+                    <p>Atmospheric heating is reduced over large areas</p>
+                  </div>
+                </>
+              )}
             </div>
             <div className="simple_terms flex">
               <figcaption>

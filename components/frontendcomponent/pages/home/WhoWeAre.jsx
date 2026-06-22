@@ -9,7 +9,7 @@ const WhoWeAre = () => {
   return (
     <section className="who-we-are">
       <InsightContainer
-        className="container"
+        className="container relative"
         videoSrc={videoSrc}
         heading={heading}
         isBtn={{ text: "Learn More About Us", href: "/about-us" }}

@@ -29,8 +29,20 @@ const OurResearchFocus = () => {
             <Motion variant="fadeUp">
               <div className="support-slider">
                 <Swiper
-                  slidesPerView={3}
-                  spaceBetween={20}
+                  breakpoints={{
+                    0: {
+                      slidesPerView: 1.3,
+                      spaceBetween: 15,
+                    },
+                    540: {
+                      slidesPerView: 2,
+                      spaceBetween: 20,
+                    },
+                    991: {
+                      slidesPerView: 3,
+                      spaceBetween: 20,
+                    },
+                  }}
                   navigation={{
                     nextEl: ".support-button-next",
                     prevEl: ".support-button-prev",

@@ -8,27 +8,64 @@
                 h1
                     margin-top: 25px
                     font-size: 36px
+                    @include media(991) 
+                        font-size: 32px
+                    @include media(768) 
+                        font-size: 28px
+                    @include media(540) 
+                        font-size: 24px
 
 .overview_sec
+    .container
+        @include media(768)
+            padding: 0
     .main_wrapper
         overflow: hidden
         align-items: center
         --gap: 100px
         gap: var(--gap)
+        @include media(1170) 
+            --gap: 50px
+        @include media(991)
+            --gap: 40px 
         figcaption, figure
             flex: 1
             max-width: 50%
             width: 100%
+            @include media(991) 
+                opacity: 1 !important
+                transform: none !important
+            @include media(768) 
+                flex: 0 1 100%
+                max-width: 100%
+                width: 100%
         figcaption
+            @include media(768)
+                padding: 0 var(--containerfluid)
+            @include media(540) 
+                text-align: center
+                padding: 0 13px 
             h2
                 color: $primary
                 font-weight: 600
                 font-size: 36px
                 margin-bottom: 10px
+                @include media(991) 
+                    font-size: 32px
+                @include media(768) 
+                    font-size: 28px
             .info_wrap
                 margin-top: 30px
                 display: flex
                 gap: 60px
+                @include media(1170) 
+                    margin-top: 25px
+                    gap: 30px
+                @include media(991) 
+                    gap: 25px
+                    margin-top: 20px
+                @include media(540)
+                    margin-top: 25px
                 .info_col
                     flex: 0 1 auto
                     p
@@ -39,13 +76,31 @@
                         font-weight: 600
                         font-size: 25px
                         color: $primary
+                        @include media(991) 
+                            font-size: 18px
 
 .info_grahphic 
     &.blue_arrow
+        // @include media(768) 
+        //     padding-bottom: 0
+        .container
+            @include media(768) 
+                padding: 0
         .main_wrapper
             align-items: start
             --gap: 70px
+            @include media(1170) 
+                --gap: 50px
+            @include media(991) 
+                --gap: 40px
+            figure
+                @include media(768) 
+                    order: 1
             figcaption
+                @include media(768) 
+                    padding: 0 var(--containerfluid)
+                @include media(540) 
+                    padding: 0 13px
                 .desc
                     ul
                         border-left: none
@@ -68,24 +123,52 @@
 
 .challenges_sec
     background: $primary
+    @include media(540) 
+        padding-bottom: 0
     .container
+        @include media(540) 
+            padding: 0
         >.heading
             text-align: center
             margin-bottom: 60px
+            @include media(991) 
+                margin-bottom: 50px
+            @include media(768) 
+                margin-bottom: 40px
+            @include media(540) 
+                margin-bottom: 20px
             h2
                 font-weight: 500
                 font-size: 20px
                 letter-spacing: 8px
                 text-transform: uppercase
                 color: #FFFFFFB2
+                @include media(768) 
+                    font-size: 16px
+                    font-weight: 400 
+                @include media(540) 
+                    font-size: 14px
     .info_grahphic.challenge_sec
         padding: 0
+        .container
+            padding: 0
         .main_wrapper 
             align-items: start
             --gap: 45px
+            @include media(991) 
+                --gap: 40px
+            figure
+                @include media(540) 
+                    order: 1
             figcaption
+                @include media(540) 
+                    padding: 0 13px
                 *
                     color: $white
+                .heading
+                    @include media(540) 
+                        max-width: 300px
+                        margin: 0 auto
                 .desc
                     p
                         font-weight: 400 
@@ -94,6 +177,9 @@
                         font-weight: 700
                         margin-bottom: 10px
                         line-height: 1.3
+                        @include media(540) 
+                            text-align: center
+                            font-size: 20px
                     ul
                         border-left: none
                         margin: 0 0 20px 10px
@@ -142,49 +228,116 @@
             height: 390px
 
 .banner.data-monitoring, .banner.help-us
+    &::before
+        @include media(540)
+            display: none
     .bg
         height: 680px
+        @include media(540)
+            height: 100%
+            display: flex
+            flex-direction: column-reverse
+            > img, > video
+                height: 300px
         .banner-wrapper
+            @include media(540)
+                position: relative
+                top: 0
+                transform: translate(0)
+                padding: 50px 20px 40px
+                background-color: $primary
+                .container 
+                    padding: 0
             .icon
                 width: 55px
                 height: 51px
+                @include media(540)
+                    margin: 0 auto 10px
                 img
                     object-fit: contain
             .heading
                 max-width: 455px
                 h2
                     font-size: 36px
+                    @include media(768)
+                        font-size: 32px
+                        margin-top: 20px
+                    @include media(540)
+                        font-size: 28px
+                        margin-top: 10px
                 p
                     margin-top: 20px
+                    @include media(540)
+                        margin-top: 15px 
                 .btn
                     margin-top: 20px
 
+.banner.help-us
+    .bg
+        .banner-wrapper
+            @include media(540)
+                background: $white
+                padding-top: 0
+                .icon
+                    filter: brightness(0) saturate(100%) invert(19%) sepia(89%) saturate(1992%) hue-rotate(195deg) brightness(94%) contrast(101%)
+                .heading
+                    h2
+                        color: $primary
+                    p
+                        color: $text
+
+
 .project_nav
     position: sticky
-    top: var(--headerheight)
+    top: var(--headerfixed)
     background: #F2F9FF
     z-index: 5
+    .container 
+        position: relative
+    .projectnav-slider
+        max-width: 96%
+        .swiper-wrapper
+            @include media(991) 
+                gap: 20px
+            @include media(768) 
+                gap: 0
+            .swiper-slide
+                @include media(768) 
+                    width: auto !important
+    .swiper-nav
+        @include media(768) 
+            display: flex !important
+        button
+            box-shadow: none
+            svg
+                path
+                    fill: $primary
     ul
         display: flex
         flex-wrap: wrap
         align-items: center
         gap: 40px
-        li
-            padding: 10px 5px
-            font-weight: 500
-            cursor: pointer
-            position: relative
-            transition: .5s ease
-            &.active
-                color: $primary
-                &::before
-                    width: 100%
+    li
+        display: flex
+        justify-content: center
+        white-space: nowrap
+        padding: 10px 5px
+        font-weight: 500
+        cursor: pointer
+        position: relative
+        transition: .5s ease
+        @include media(540) 
+            padding: 8px 5px
+        &.active
+            color: $primary
             &::before
-                content: ""
-                position: absolute
-                left: 0
-                bottom: 0
-                height: 2px
-                background: $primary
-                width: 0
-                transition: .5s ease
+                width: 100%
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            bottom: 0
+            height: 2px
+            background: $primary
+            width: 0
+            transition: .5s ease

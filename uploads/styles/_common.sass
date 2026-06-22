@@ -29,16 +29,16 @@ $scrollwidth: 8px
 	--containerfluid: 2rem
 	--gradient-a: linear-gradient(180deg, #C0D6F6 0%, #FFFFFF 50%, #C0D6F6 100%)
 	--gradient-b: radial-gradient(66.9% 66.9% at 37.11% 37.56%, #ACCEEB 0%, #5F96D1 35.54%, #325BA4 78.81%, #345795 100%)
-
-	@include media(1152)
-		--containerfluid: 1rem
 	@include media(991)
-		--containerfluid: 15px
+		--containerfluid: 30px
+	@include media(768)
+		--containerfluid: 20px
 	@include media(540)
+		--containerfluid: 15px
 		--headerheight: 80px
 		--headerfixed: 60px
 	@include media(320)
-		--containerfluid: 10px
+		--containerfluid: 15px
 
 .sec-heading
 	max-width: 600px
@@ -159,7 +159,12 @@ h3
 		font-weight: 700
 		line-height: 1.2
 		color: var(--primary)
-
+		@include media(991)
+			font-size: 32px
+		@include media(768)
+			font-size: 28px
+		@include media(540)
+			font-size: 24px
 	h6
 		font-size: 16px
 		text-transform: uppercase
@@ -371,8 +376,8 @@ img, video
 	transition: .5s ease
 	@include media(540)
 		font-size: 12px
-		--padding: 12px
-		--height: 33px
+		--padding: 16px
+		--height: 34px
 	&.btn-white
 		border-color: $white
 		background: $white
@@ -494,9 +499,12 @@ img, video
 		left: 0
 		right: 0
 		top: 50%
-		translate: 0 -50%
+		// translate: 0 -50%
+		transform: translate(0, -50%)
 		z-index: 2
 		.content, .heading
+			@include media(540)
+				text-align: center
 			h1, h2
 				margin-top: 70px
 				font-size: 48px
@@ -504,11 +512,12 @@ img, video
 				font-weight: 600
 				color: var(--white)
 				@include media(991)
-					font-size: 32px
+					font-size: 42px
 				@include media(768)
-					font-size: 30px
+					font-size: 36px
 				@include media(540)
-					font-size: 28px
+					font-size: 30px
+					margin-top: 30px
 			p
 				margin: 0
 				font-size: 15px
@@ -940,11 +949,15 @@ em
 	.title
 		padding: 20px
 		position: relative
+		@include media(991) 
+			padding: 15px
 		h4
 			font-weight: 700
 			color: #0000004D
 			font-size: 18px
 			transition: 0.5s ease
+			@include media(1170)
+				max-width: 90%
 		.ico
 			width: 16px
 			height: 16px
@@ -952,6 +965,10 @@ em
 			top: 27px
 			right: 30px
 			transition: 0.5s ease
+			@include media(540)
+				top: 50%
+				transform: translate(0, -50%)
+				right: 15px
 			&::before
 				content: ""
 				position: absolute
@@ -978,31 +995,62 @@ em
 	p
 		color: #626060
 		padding: 1px 20px 20px 20px 
+		padding: 1px 20px 20px 20px 
 		width: 93%
 		font-weight: 400
 		font-size: 16px
 
 .InsightContainer
 	overflow: hidden
+	@include media(540) 
+		padding: 0
 	&.invert
 		.grid
 			.media
 				order: 2
 			.item-content
 				order: 1
+	&.light
+		.grid
+			.item-content
+				h2,
+				p,
+				li,
+				span
+					color: var(--white)
+				ul
+					li
+						&::before
+							background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 6l6 6-6 6' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat
+	&.relative
+		.grid
+			.media
+				position: relative
+				top: unset
 	.grid
 		display: grid
 		grid-template-columns: repeat(2,1fr)
 		align-items: start
 		gap: 50px
+		@include media(1170) 
+			gap: 40px
 		@include media(991)
 			grid-template-columns: 100%
 			gap: 30px
+		@include media(540) 
+			gap: 25px
 		.media
 			position: sticky
 			top: calc( var(--headerheight) + 45px )
 			width: 571px
 			height: 416px
+			@include media(1280)
+				width: 100%
+				height: auto
+			@include media(991)
+				order: 2
+				opacity: 1 !important
+				transform: none !important	
 			img,
 			video
 				width: 100%
@@ -1015,24 +1063,45 @@ em
 				top: 50%
 				left: 50%
 				transform: translate(-50%,-50%)
+				@include media(1280)
+					--btnsize: 56px
 		.item-content
 			width: 100%
 			max-width: 520px
+			@include media(1280)
+				padding: 0
+			@include media(991)
+				max-width: 100%
+				opacity: 1 !important
+				transform: none !important
+			@include media(540) 
+				padding: 0 var(--containerfluid)
 			h2
 				font-size: 36px
 				color: var(--primary)
 				margin-bottom: 25px
-				@include media(675)
-					font-size: 20px
+				@include media(1170) 
+					margin-bottom: 20px
+				@include media(991)
+					font-size: 32px
+					margin-bottom: 15px
+				@include media(768) 
+					text-align: center
+				@include media(540)
+					font-size: 26px
 			p
 				color: var(--para)
 				&:not(:last-child)
 					margin-bottom: 20px
+					@include media(768) 
+						margin-bottom: 10px
 			ul
-				margin: 30px 0
+				margin: 20px 0
 				display: flex
 				flex-direction: column
-				gap: 24px
+				gap: 15px
+				@include media(991)
+					gap: 12px
 				p
 					margin: 5px 0
 				li

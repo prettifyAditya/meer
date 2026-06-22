@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 import Motion from "../../molecules/Motion";
+import Motion from "../../molecules/Motion";
 
 export default function StrmWorks() {
   const swiperRef = useRef(null);
@@ -35,11 +36,11 @@ export default function StrmWorks() {
                 }}
                 breakpoints={{
                   0: {
-                    slidesPerView: 1.2,
+                    slidesPerView: 1,
                     spaceBetween: 10,
                   },
                   540: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 15,
                   },
                   991: {

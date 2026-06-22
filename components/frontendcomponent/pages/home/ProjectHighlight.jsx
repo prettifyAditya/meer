@@ -4,6 +4,7 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SlideBtn from "../../atoms/SlideBtn";
 import Motion from "../../molecules/Motion";
+import Motion from "../../molecules/Motion";
 
 const ProjectHighlight = () => {
   return (
@@ -40,10 +41,26 @@ const ProjectHighlight = () => {
       <Motion variant="fadeUp">
         <div className="highlight-slider">
           <Swiper
-            slidesPerView={1.8}
             centeredSlides={true}
             loop={true}
-            spaceBetween={52}
+            breakpoints={{
+              0: {
+                slidesPerView: 1.2,
+                spaceBetween: 15,
+                centeredSlides: false,
+              },
+              540: {
+                centeredSlides: false,
+                slidesPerView: 2,
+                spaceBetween: 15,
+              },
+              768: { slidesPerView: 1.4, spaceBetween: 20 },
+              991: { slidesPerView: 1.4, spaceBetween: 40 },
+              1280: {
+                slidesPerView: 1.4,
+                spaceBetween: 56,
+              },
+            }}
             navigation={{
               nextEl: ".highlight-button-next",
               prevEl: ".highlight-button-prev",

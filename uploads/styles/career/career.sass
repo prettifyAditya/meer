@@ -12,21 +12,41 @@
         max-width: 480px
         margin: 0 auto 60px
         text-align: center
+        @include media(991) 
+            margin: 0 auto 50px
+            max-width: 410px
+        @include media(768) 
+            max-width: 350px
+            margin: 0 auto 40px
+        @include media(540) 
+            margin: 0 auto 30px
         p
             color: $primary
             text-transform: uppercase
             letter-spacing: 3px
             font-size: 16px
             margin: 0 0 10px 0 
+            @include media(540) 
+                font-size: 14px
     .main_wrapper
         display: flex
         flex-wrap: wrap
         gap: 20px
+        @include media(991) 
+            gap: 15px
+        @include media(768) 
+            gap: 25px
         .why_col
             flex: 1
             border: 1px solid #f3f3f3
             box-shadow: 0px 8px 24px 0 #959DA533
             padding: 30px
+            @include media(991) 
+                padding: 25px
+            @include media(768) 
+                flex: 0 1 100%
+            @include media(540) 
+                padding: 20px
             .icon
                 width: 60px
                 height: 60px
@@ -34,12 +54,22 @@
                 font-weight: 600
                 font-size: 20px
                 margin: 20px 0 10px
+                @include media(991) 
+                    line-height: 1.2
+                    margin: 15px 0 10px
 
 .our_culture
     .heading
         max-width: 480px
         margin: 0 auto 60px
         text-align: center
+        @include media(991) 
+            max-width: 360px
+            margin: 0 auto 50px
+        @include media(768) 
+            margin: 0 auto 40px
+        @include media(540) 
+            margin: 0 auto 30px
         p
             color: $primary
             text-transform: uppercase
@@ -55,26 +85,53 @@
     background: var(--lightbg)
     .main_wrapper
         gap: 150px
+        @include media(1170) 
+            gap: 90px
+        @include media(991) 
+            gap: 50px
+        @include media(768) 
+            gap: 40px
+        @include media(540) 
+            gap: 30px
         .heading
             flex: 0 1 auto
+            @include media(991) 
+                flex: 0 1 100%
+                text-align: center
             h2
                 position: sticky
                 top: calc( var(--headerheight) + 40px )
+                @include media(991) 
+                    position: static
         .openings_wrapper
             flex: 1
             display: flex
             flex-direction: column
+            @include media(991) 
+                flex: 0 1 100% 
+                max-width: 700px
+                margin: 0 auto
             .opening_item
                 padding: 30px 0
                 overflow: hidden
+                @include media(991) 
+                    padding: 25px 0
+                @include media(768) 
+                    padding: 20px 0
                 &:not(:last-child)
                     border-bottom: 1px solid #DADADA
+                &:first-child
+                    padding-top: 0
                 .opening_title
                     display: flex
                     flex-wrap: wrap
                     align-items: center
                     gap: 35px
                     cursor: pointer
+                    @include media(1170) 
+                        gap: 30px
+                    @include media(768) 
+                        gap: 20px
                     .opening_left
                         flex: 1
                         .location
@@ -85,15 +142,23 @@
                             p
                                 color: $primary
                                 font-weight: 500
+                                @include media(540) 
+                                    font-size: 14px
                         .job_title
                             font-weight: 600
                             font-size: 20px
                             margin: 5px 0 7px
+                            @include media(540) 
+                                font-size: 18px 
                         .role_info
                             display: flex
                             align-items: center
                             li
                                 padding: 0 10px
+                                @include media(768) 
+                                    padding: 0 8px
+                                @include media(540) 
+                                    font-size: 14px
                                 &:not(:last-child)
                                     border-right: 1px solid $text
                                 &:first-child
@@ -105,6 +170,8 @@
                         display: flex
                         align-items: center
                         justify-content: center
+                        @include media(540) 
+                            display: none
                         &.rotate
                             transform: rotate(-90deg)
                 .opening_details
@@ -222,9 +289,19 @@
         max-width: 530px
         text-align: center
         margin: 0 auto 60px
+        @include media(991) 
+            margin: 0 auto 50px
+        @include media(768) 
+            margin: 0 auto 40px
+        @include media(540) 
+            margin: 0 auto 30px
         h2
             font-size: 36px
             font-weight: 600
+            @include media(768) 
+                font-size: 32px
+            @include media(540) 
+                font-size: 24px
         .icon
             width: 55px
             height: 51px
@@ -237,4 +314,20 @@
         .form-grid
             --item: 2
             --gaplr: 70px
+            @include media(991) 
+                --gaplr: 40px
+            @include media(768)
+                --gaplr: 35px
+            @include media(540) 
+                --gaplr: 25px
+            .form-group
+                &.file-input
+                    .error
+                        @include media(768)
+                            top: calc(100% + 25px)
+                            text-align: left
+                            line-height: 1.2
+            .submit-grp
+                @include media(540)         
+                    margin-top: 10px
 

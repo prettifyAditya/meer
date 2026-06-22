@@ -6,6 +6,8 @@
             .heading
                 h1
                     margin-top: 40px
+                    @include media(540)
+                        margin-top: 30px
 
 .contact_sec
     .main_wrapper
@@ -13,21 +15,37 @@
         --gap: 100px
         gap: var(--gap)
         justify-content: space-between
+        @include media(991) 
+            --gap: 20px
+        @include media(768)
+            --gap: 60px
         .colA
             flex: 0 1 auto
             max-width: 320px
             width: 100%
+            @include media(991) 
+                opacity: 1 !important
+                transform: none !important
+            @include media(768)
+                flex: 0 1 100%
+                max-width: 100%
             .logo
                 width: 150px
                 height: 42px
             p
                 margin: 30px 0 
+                @include media(991) 
+                    margin: 25px 0 
+                @include media(540)
+                    margin: 20px 0 
             ul
                 &:not(.social_icons)
                     li
                         display: flex
                         align-items: start
                         gap: 20px
+                        @include media(540)
+                            gap: 15px
                         &:not(:last-child)
                             margin-bottom: 20px
                         &:hover
@@ -57,8 +75,8 @@
                 margin-top: 30px
                 @include media(991)
                     justify-content: center
-                @include media(540)
-                    justify-content: center
+                @include media(768)
+                    justify-content: start
                 li
                     a
                         display: flex
@@ -76,13 +94,36 @@
             flex: 1
             max-width: 700px
             padding: 0 40px 40px
+            @include media(991) 
+                opacity: 1 !important
+                transform: none !important
+                padding: 0
+            @include media(768)
+                flex: 0 1 100%
+                max-width: 100% 
             .heading
                 max-width: 335px
                 margin-bottom: 45px
+                @include media(991) 
+                    margin-bottom: 35px
+                @include media(768)
+                    text-align: center
+                    margin: 0 auto 45px
+                @include media(540)
+                    margin: 0 auto 40px
                 h2
                     font-size: 32px
                     font-weight: 600
+                    @include media(768)
+                        font-size: 30px
+                    @include media(540)
+                        font-size: 28px
             .form
                 .form-grid
                     --item: 2
                     --gaplr: 55px
+                    @include media(991) 
+                        --gaplr: 25px
+                    .submit-grp
+                        @include media(768)
+                            text-align: center
