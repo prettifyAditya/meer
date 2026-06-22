@@ -26,6 +26,12 @@
   bottom: 20%;
   transform: translate(0, 20%);
 }
+@media only screen and (max-width: 540px) {
+  .banner.hero_banner .bg .banner-wrapper {
+    bottom: 40%;
+    transform: translate(0, 40%);
+  }
+}
 .banner.hero_banner .bg .banner-wrapper .heading {
   max-width: 570px;
 }
@@ -258,6 +264,16 @@
 }
 .info_grahphic .main_wrapper figcaption .btn {
   margin-top: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .info_grahphic .main_wrapper figcaption .btn {
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .info_grahphic .main_wrapper figcaption .btn {
+    margin-top: 20px;
+  }
 }
 
 .strategy_col.item-md {

@@ -1,6 +1,10 @@
 "use client";
-
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import SwiperButton from "../../atoms/SwiperButton";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const navItems = [
   { label: "Overview", id: "overview" },
@@ -13,6 +17,7 @@ const navItems = [
 ];
 
 export default function ProjectNav() {
+  const swiperRef = useRef(null);
   const [activeId, setActiveId] = useState("overview");
 
   useEffect(() => {
@@ -26,7 +31,8 @@ export default function ProjectNav() {
         const el = document.getElementById(item.id);
         if (el) {
           const top = el.getBoundingClientRect().top + window.scrollY;
-          if (scrollPosition >= top - 20) { // small buffer of 20px
+          if (scrollPosition >= top - 20) {
+            // small buffer of 20px
             activeSection = item.id;
           }
         }
@@ -57,7 +63,51 @@ export default function ProjectNav() {
   return (
     <nav className="project_nav">
       <div className="container">
-        <ul>
+        <Swiper
+          ref={swiperRef}
+          className="projectnav-slider"
+          modules={[Navigation]}
+          speed={1000}
+          navigation={{
+            prevEl: `.projectnav-prev`,
+            nextEl: `.projectnav-next`,
+          }}
+          breakpoints={{
+            0: {
+              slidesPerView: "auto",
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 5,
+              spaceBetween: 0,
+            },
+            991: {
+              slidesPerView: 6,
+              spaceBetween: 25,
+            },
+            1280: {
+              slidesPerView: 7,
+              spaceBetween: 25,
+            },
+          }}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+        >
+          {navItems.map((item) => (
+            <SwiperSlide key={item.id}>
+              <li
+                className={activeId === item.id ? "active" : ""}
+                onClick={() => handleClick(item.id)}
+              >
+                {item.label}
+              </li>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="swiper-nav center-full">
+          <SwiperButton classname={`projectnav-prev swiper-prev`} />
+          <SwiperButton classname={`projectnav-next swiper-next`} />
+        </div>
+        {/* <ul>
           {navItems.map((item) => (
             <li
               key={item.id}
@@ -67,7 +117,7 @@ export default function ProjectNav() {
               {item.label}
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </nav>
   );

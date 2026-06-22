@@ -376,8 +376,8 @@ img, video
 	transition: .5s ease
 	@include media(540)
 		font-size: 12px
-		--padding: 12px
-		--height: 33px
+		--padding: 16px
+		--height: 34px
 	&.btn-white
 		border-color: $white
 		background: $white
@@ -499,7 +499,8 @@ img, video
 		left: 0
 		right: 0
 		top: 50%
-		translate: 0 -50%
+		// translate: 0 -50%
+		transform: translate(0, -50%)
 		z-index: 2
 		.content, .heading
 			@include media(540)
@@ -948,11 +949,15 @@ em
 	.title
 		padding: 20px
 		position: relative
+		@include media(991) 
+			padding: 15px
 		h4
 			font-weight: 700
 			color: #0000004D
 			font-size: 18px
 			transition: 0.5s ease
+			@include media(1170)
+				max-width: 90%
 		.ico
 			width: 16px
 			height: 16px
@@ -960,6 +965,10 @@ em
 			top: 27px
 			right: 30px
 			transition: 0.5s ease
+			@include media(540)
+				top: 50%
+				transform: translate(0, -50%)
+				right: 15px
 			&::before
 				content: ""
 				position: absolute

@@ -2,6 +2,14 @@
 
 .commanSec
     padding: 70px 0
+    @include media(1170)
+        padding: 60px 0
+    @include media(991)
+        padding: 50px 0
+    @include media(768)
+        padding: 40px 0
+    @include media(540)
+        padding: 30px 0
 .global-secA
     background: var(--bgpink)
 .global-secB
@@ -27,27 +35,30 @@
             margin: 0 auto
     .grid
         position: relative
-        &::after
-            content: ''
-            width: 2px
-            height: calc(100% - 148px)
-            background: var(--primary)
-            position: absolute
-            top: 50%
-            left: 27px
-            right: 0
-            transform: translateY(-50%)
         .item-content
             ul
+                border-left: 1px solid $primary
+                margin: 0 0 20px 10px
+                padding: 30px 0
                 gap: 30px
                 li
+                    position: relative
+                    padding-left: 25px
+                    &:not(:last-child)
+                        margin-bottom: 15px
+                    font-weight: 400
                     &::before
-                        width: 20px
-                        height: 20px
-                        background: var(--primary)
+                        content: ""
+                        position: absolute
+                        left: -9px
+                        top: 7px
+                        width: 16px
+                        height: 16px
+                        background: $primary
                         border-radius: 50%
-                        left: -30px
                     h6
                         color: var(--primary)
                         font-weight: 600
                         font-size: 20px
+
+.can_we_build

@@ -1239,8 +1239,8 @@ img, video {
 @media only screen and (max-width: 540px) {
   .btn {
     font-size: 12px;
-    --padding: 12px;
-    --height: 33px;
+    --padding: 16px;
+    --height: 34px;
   }
 }
 .btn.btn-white {
@@ -1400,7 +1400,7 @@ img, video {
   left: 0;
   right: 0;
   top: 50%;
-  translate: 0 -50%;
+  transform: translate(0, -50%);
   z-index: 2;
 }
 @media only screen and (max-width: 540px) {
@@ -2001,11 +2001,21 @@ em {
   padding: 20px;
   position: relative;
 }
+@media only screen and (max-width: 991px) {
+  .accordian-wrapper .title {
+    padding: 15px;
+  }
+}
 .accordian-wrapper .title h4 {
   font-weight: 700;
   color: rgba(0, 0, 0, 0.3019607843);
   font-size: 18px;
   transition: 0.5s ease;
+}
+@media only screen and (max-width: 1170px) {
+  .accordian-wrapper .title h4 {
+    max-width: 90%;
+  }
 }
 .accordian-wrapper .title .ico {
   width: 16px;
@@ -2014,6 +2024,13 @@ em {
   top: 27px;
   right: 30px;
   transition: 0.5s ease;
+}
+@media only screen and (max-width: 540px) {
+  .accordian-wrapper .title .ico {
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 15px;
+  }
 }
 .accordian-wrapper .title .ico::before {
   content: "";

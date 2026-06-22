@@ -22,7 +22,7 @@ export default function GlobalCoolingPage() {
       <GroundBase data={GroundBaseData} />
       <LocalBenefits data={LocalBenefitsData} />
       <OurApproach data={OurApproachData} />
-      <CanWeBuild data={CanWeBuildData} />
+      <CanWeBuild className="can_we_build" data={CanWeBuildData} />
     </>
   );
 }
