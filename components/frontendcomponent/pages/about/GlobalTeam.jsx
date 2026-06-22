@@ -1,5 +1,6 @@
 import Button from "../../atoms/Button";
 import Motion from "../../molecules/Motion";
+import Motion from "../../molecules/Motion";
 import TabContainer from "../../organisms/TabContainer";
 
 export default function GlobalTeam() {
@@ -24,6 +25,7 @@ export default function GlobalTeam() {
           swiperType="grid"
         />
         <div className="btn_wrap">
+          <Button href="/science-and-research">Work with us</Button>
           <Button href="/science-and-research">Work with us</Button>
         </div>
       </div>

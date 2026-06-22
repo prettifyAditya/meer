@@ -4,6 +4,7 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SlideBtn from "../../atoms/SlideBtn";
 import Motion from "../../molecules/Motion";
+import Motion from "../../molecules/Motion";
 
 const ProjectHighlight = () => {
   return (

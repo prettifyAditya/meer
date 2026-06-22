@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useModal } from "@/hooks/useModal";
 import Motion from "../../molecules/Motion";
+import Motion from "../../molecules/Motion";
 
 export default function TheoryChange({ data }) {
   if (!data) return null;
@@ -18,6 +19,28 @@ export default function TheoryChange({ data }) {
   return (
     <section>
       <div className="theory_sec sec-pad-all">
+        <Motion variant="fadeUp">
+          <div className="heading">
+            <h2>Theory of Change</h2>
+            <p>From Local Cooling → Global Impact</p>
+          </div>
+        </Motion>
+        <Motion variant="fadeUp">
+          <div className="theory_nav">
+            {data.map((item) => (
+              <div
+                key={item.id}
+                className={`theory_icon ${activeTab === item.id ? "active" : ""}`}
+                onClick={() => setActiveTab(item.id)}
+              >
+                <figure>
+                  <img src={item.iconSrc} alt="" />
+                </figure>
+                <p>{item.tabname}</p>
+              </div>
+            ))}
+          </div>
+        </Motion>
         <Motion variant="fadeUp">
           <div className="heading">
             <h2>Theory of Change</h2>
