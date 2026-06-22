@@ -7,7 +7,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 import Motion from "../../molecules/Motion";
-import Motion from "../../molecules/Motion";
 
 export default function StrmWorks() {
   const swiperRef = useRef(null);

@@ -7,7 +7,6 @@ import SlideBtn from "../../atoms/SlideBtn";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Motion from "../../molecules/Motion";
-import Motion from "../../molecules/Motion";
 
 const WhatWeDo = () => {
   return (
@@ -199,6 +198,5 @@ const slideData = [
   {
     image: "/image/home/what-we-do/1.png",
     title: "Scale from individual homes to neighbourhoods and regions",
-  },
   },
 ];

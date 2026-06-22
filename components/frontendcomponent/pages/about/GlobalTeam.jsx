@@ -1,6 +1,5 @@
 import Button from "../../atoms/Button";
 import Motion from "../../molecules/Motion";
-import Motion from "../../molecules/Motion";
 import TabContainer from "../../organisms/TabContainer";
 
 export default function GlobalTeam() {
